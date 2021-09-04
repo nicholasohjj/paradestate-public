@@ -16,23 +16,23 @@ app.use(morgan('tiny'))
 let contacts = [
     { 
       "id": 1,
-      "name": "Arto Hellas", 
-      "number": "040-123456"
+      "name": "CPT WESLEY PEH", 
+      "status": "others"
     },
     { 
       "id": 2,
-      "name": "Ada Lovelace", 
-      "number": "39-44-5323523"
+      "name": "CPY YANG YI", 
+      "status": "attached"
     },
     { 
       "id": 3,
-      "name": "Dan Abramov", 
-      "number": "12-43-234345"
+      "name": "LTA SAMOEUL TAN", 
+      "status": "present"
     },
     { 
       "id": 4,
-      "name": "Mary Poppendieck", 
-      "number": "39-23-6423122"
+      "name": "2LT OOI YAN YI", 
+      "status": "present"
     }
 ]
 

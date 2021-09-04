@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './button'
 
-const List = ({notesToShow, setPersons, persons}) => {
+const Results = ({notesToShow, setPersons, persons}) => {
     return (
       <div>
         <ul>
@@ -16,4 +16,4 @@ const List = ({notesToShow, setPersons, persons}) => {
     )
   }
 
-  export default List
+  export default Results

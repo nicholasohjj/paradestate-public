@@ -9,12 +9,12 @@ const Input = ({text,value,onChange}) => {
     )
   }
   
-const Form = ({addName,newName,handleNameChange,newNumber,handleNumberChange}) => {
+const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) => {
     return (
       <div>
         <form onSubmit={addName}>
-        <Input text="Name " value={newName} onChange={handleNameChange}/>
-        <Input text="Phone number " value={newNumber} onChange={handleNumberChange}/>
+        <Input text="Rank/Name " value={newName} onChange={handleNameChange}/>
+        <Input text="Status (present/attached/others) " value={newStatus} onChange={handleStatusChange}/>
         <div>
           <button type="submit">add</button>
         </div>

@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Form from './components/form'
-import List from './components/list'
+import Results from './components/results' 
 import phoneservice from './components/phoneservice'
 import Filter from './components/filter'
 import Message from './components/message'
+import Greeting from './components/greeting'
 
 
 //App component
 const App = () => {
   const [ persons, setPersons ] = useState([]) 
   const [ newName, setNewName ] = useState('')
-  const [ newNumber, setNewNumber ] = useState('')
+  const [ newStatus, setnewStatus ] = useState('')
   const [ newFilter, setFilter ] = useState('')
   const [ newMessage, setNewMessage ] = useState(null)
 
@@ -25,9 +26,9 @@ const App = () => {
     setNewName(event.target.value)
   }
 
-  const handleNumberChange = (event) => {
+  const handleStatusChange = (event) => {
     console.log(event.target.value)
-    setNewNumber(event.target.value)
+    setnewStatus(event.target.value)
   }
 
   const handleNamefilter = (event) => {
@@ -46,8 +47,8 @@ const App = () => {
     event.preventDefault()
 
     const newPerson = {
-      name: newName.trim(),
-      number: newNumber,
+      name: newName.trim().toUpperCase(),
+      status: newStatus,
     }
 
     const nameCheck = persons.filter(person=> 
@@ -56,10 +57,10 @@ const App = () => {
     
     console.log(nameCheck)
 
-    if (!newName.trim() || !newNumber.trim()) {
+    if (!newName.trim() || !newStatus.trim()) {
       alert("Name/number must be filled")
     } else if (nameCheck.length>0) {
-      if (window.confirm(`${newName} is already added to phonebook. Would you like to update the number?`)) {
+      if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
         return (
           phoneservice
             .update(nameCheck[0].id, newPerson)
@@ -71,7 +72,7 @@ const App = () => {
           setTimeout(()=>setNewMessage(null),5000)
         })
             .catch(error=> {
-              setNewMessage(`${newName} has been already been removed from the srver`)
+              setNewMessage(`${newName} has been already been removed from the server`)
               setTimeout(()=>setNewMessage(null),5000)
             })
         )}
@@ -88,25 +89,27 @@ const App = () => {
             setTimeout(()=>setNewMessage(null),5000)
           })
         }
-        setNewNumber('')
+        setnewStatus('')
         setNewName('')
       }
 
 
   return (
     <div>
-      <h2>Parade State</h2>
+      <h2>Parade State Application</h2>
       <Message message={newMessage}/>
       <Filter newFilter={newFilter} handleNamefilter={handleNamefilter} />
       <h2>Add a new</h2>
       <Form addName={addName}
             newName={newName}
             handleNameChange={handleNameChange}
-            newNumber={newNumber}
-            handleNumberChange={handleNumberChange}/>
-      <h2>Numbers</h2>
+            newStatus={newStatus}
+            handleStatusChange={handleStatusChange}/>
+      <h2>List of Personnel</h2>
+      <Results notesToShow={notesToShow} setPersons={setPersons} persons={persons} />
+      <h2>Parade State</h2>
+      <Greeting />
       
-      <List notesToShow={notesToShow} setPersons={setPersons} persons={persons} />
       </div>
   )
 }
