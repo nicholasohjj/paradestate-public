@@ -10,3 +10,5 @@ const Filter = ({newFilter, handleNamefilter}) => {
   }
 
   export default Filter
+
+  //not relevant

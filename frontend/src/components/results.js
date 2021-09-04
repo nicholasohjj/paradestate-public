@@ -34,11 +34,11 @@ const Status = ({currentStatus}) => {
 }
 
 
-const Results = ({notesToShow, setPersons, persons}) => {
+const Results = ({setPersons, persons}) => {
     return (
       <div>
         <ul>
-          {notesToShow.map(person=>
+          {persons.map(person=>
             <li key={person.name}>
               {person.name}
               <Status currentStatus ={person.status} />

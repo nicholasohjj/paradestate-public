@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Form from './components/form'
 import Results from './components/results' 
 import phoneservice from './components/phoneservice'
-import Filter from './components/filter'
 import Message from './components/message'
 import Greeting from './components/greeting'
 
@@ -12,7 +11,6 @@ const App = () => {
   const [ persons, setPersons ] = useState([]) 
   const [ newName, setNewName ] = useState('')
   const [ newStatus, setnewStatus ] = useState('')
-  const [ newFilter, setFilter ] = useState('')
   const [ newMessage, setNewMessage ] = useState(null)
 
   useEffect(() =>{
@@ -33,16 +31,7 @@ const App = () => {
     setnewStatus(event.target.value)
   }
 
-  const handleNamefilter = (event) => {
-    console.log(event.target.value)
-    setFilter(event.target.value)
-    }
   
-
-  //Filter displayed list
-  const notesToShow = (!newFilter.trim())
-  ? persons
-  : persons.filter(person => person.name.toLowerCase().includes(newFilter.toLowerCase()))
 
   //Adds new element to persons array
   const addName = (event) => {
@@ -101,7 +90,6 @@ const App = () => {
     <div>
       <h2>Parade State Application</h2>
       <Message message={newMessage}/>
-      <Filter newFilter={newFilter} handleNamefilter={handleNamefilter} />
       <h2>Add a new</h2>
       <Form addName={addName}
             newName={newName}
@@ -109,7 +97,7 @@ const App = () => {
             newStatus={newStatus}
             handleStatusChange={handleStatusChange}/>
       <h2>List of Personnel</h2>
-      <Results notesToShow={notesToShow} setPersons={setPersons} persons={persons} />
+      <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
       
