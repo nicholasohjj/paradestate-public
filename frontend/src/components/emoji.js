@@ -11,7 +11,7 @@ const Emoji = ({symbol}) => (
   
   const Emojidisplay = ({currentStatus}) => {
     if (currentStatus==='present') {
-      return <Emoji symbol="🐑"/>
+      return <Emoji symbol="✅"/>
     } else if (currentStatus==='attached') {
       return <Emoji symbol="🅰"/>
     } else if (currentStatus==='others') {

@@ -1,17 +1,25 @@
 import React from 'react'
 import Emojidisplay from './emoji'
 
+
+
 const ParadeState = ({setPersons, persons}) => {
+  
+  let currentstrength = 0
+  persons.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : person.status)
+  const totalstrength = persons.length
+
     return (
       <div>
-        <ul>
+        <p>HQ {currentstrength}/{totalstrength}</p>
+        <ol>
           {persons.map(person=>
             <li key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
             </li>
           )}   
-        </ul>
+        </ol>
       </div>
     )
   }
