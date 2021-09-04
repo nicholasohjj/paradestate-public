@@ -23,23 +23,11 @@ const Absentees = ({setPersons, persons}) => {
     return (
       <div>
         <p>Absentees: {totalAbsentee}</p>
-        <ul id="absentee">
-            <li>
-                <p>- <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
-            </li>
-            <li>
-                <p>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
-            </li>
-            <li>
-                <p>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
-            </li>
-            <li>
-                <p>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
-            </li>
-            <li>
-                <p>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>
-            </li>
-        </ul>
+        <p>- <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
+        <p>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
+        <p>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
+        <p>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
+        <p>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>
       </div>
     )
   }
