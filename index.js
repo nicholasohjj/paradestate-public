@@ -39,7 +39,7 @@ let contacts = [
 app.get('/api/persons',(req, res) => {
         res.json(contacts)
     })
-})
+
 
 
 app.get('/api/info',(req, res) => {
