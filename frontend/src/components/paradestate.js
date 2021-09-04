@@ -1,8 +1,7 @@
 import React from 'react'
-import Button from './button'
-import Emojidisplay from './emoji';
+import Emojidisplay from './emoji'
 
-const Results = ({setPersons, persons}) => {
+const ParadeState = ({setPersons, persons}) => {
     return (
       <div>
         <ul>
@@ -10,7 +9,6 @@ const Results = ({setPersons, persons}) => {
             <li key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
-              <Button person={person} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
           )}   
         </ul>
@@ -18,4 +16,4 @@ const Results = ({setPersons, persons}) => {
     )
   }
 
-  export default Results
+  export default ParadeState

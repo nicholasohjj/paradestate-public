@@ -4,7 +4,7 @@ import Results from './components/results'
 import phoneservice from './components/phoneservice'
 import Message from './components/message'
 import Greeting from './components/greeting'
-
+import ParadeState from './components/paradestate'
 
 //App component
 const App = () => {
@@ -100,7 +100,8 @@ const App = () => {
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
-      
+      <ParadeState setPersons={setPersons} persons={persons} />
+
       </div>
   )
 }
