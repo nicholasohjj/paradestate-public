@@ -21,7 +21,7 @@ let contacts = [
     },
     { 
       "id": 2,
-      "name": "CPY YANG YI", 
+      "name": "CPT YANG YI", 
       "status": "attached"
     },
     { 
@@ -82,7 +82,7 @@ app.post('/api/persons/',(req, res) => {
     const body = req.body
     const generateID = Math.ceil(Math.random()*100)
     
-    if (!body.name || !body.number) {
+    if (!body.name || !body.status) {
         return res.status(400).send(`Error: content missing`)
       }
     

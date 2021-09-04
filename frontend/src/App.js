@@ -18,7 +18,9 @@ const App = () => {
   useEffect(() =>{
     phoneservice
       .getAll()
-      .then(allPersons=>setPersons(allPersons))
+      .then(allPersons=>{
+        setPersons(allPersons)
+      })
   },[])
   
   const handleNameChange = (event) => {
@@ -58,7 +60,7 @@ const App = () => {
     console.log(nameCheck)
 
     if (!newName.trim() || !newStatus.trim()) {
-      alert("Name/number must be filled")
+      alert("Name/status must be filled")
     } else if (nameCheck.length>0) {
       if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
         return (
@@ -95,6 +97,7 @@ const App = () => {
 
 
   return (
+    
     <div>
       <h2>Parade State Application</h2>
       <Message message={newMessage}/>
