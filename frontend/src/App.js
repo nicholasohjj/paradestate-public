@@ -4,6 +4,7 @@ import Results from './components/results'
 import phoneservice from './components/phoneservice'
 import Message from './components/message'
 import Greeting from './components/greeting'
+import Absentees from './components/absentees'
 import ParadeState from './components/paradestate'
 
 //App component
@@ -39,7 +40,7 @@ const App = () => {
 
     const newPerson = {
       name: newName.trim().toUpperCase(),
-      status: newStatus,
+      status: newStatus.toLowerCase(),
     }
 
     const nameCheck = persons.filter(person=> 
@@ -100,6 +101,7 @@ const App = () => {
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
+      <Absentees setPersons={setPersons} persons={persons} />
       <ParadeState setPersons={setPersons} persons={persons} />
 
       </div>

@@ -14,7 +14,7 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
       <div>
         <form onSubmit={addName}>
         <Input text="Rank/Name " value={newName} onChange={handleNameChange}/>
-        <Input text="Status (present/attached/others) " value={newStatus} onChange={handleStatusChange}/>
+        <Input text="Status (PRESENT/MC/MA/OFF/LEAVE/ATTACHED/OTHERS/STAYOUT) " value={newStatus.toLowerCase()} onChange={handleStatusChange}/>
         <div>
           <button type="submit">add</button>
         </div>

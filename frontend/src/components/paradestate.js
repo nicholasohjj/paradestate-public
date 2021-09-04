@@ -6,7 +6,7 @@ import Emojidisplay from './emoji'
 const ParadeState = ({setPersons, persons}) => {
   
   let currentstrength = 0
-  persons.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : person.status)
+  persons.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
   const totalstrength = persons.length
 
     return (
