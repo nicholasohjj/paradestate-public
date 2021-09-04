@@ -105,7 +105,7 @@ const App = () => {
             newNumber={newNumber}
             handleNumberChange={handleNumberChange}/>
       <h2>Numbers</h2>
-      <
+      
       <List notesToShow={notesToShow} setPersons={setPersons} persons={persons} />
       </div>
   )
