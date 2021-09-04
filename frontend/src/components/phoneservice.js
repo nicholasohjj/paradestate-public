@@ -24,3 +24,7 @@ const update = (id,newPerson) => {
 }
 
 export default {getAll, addNew, removePerson, update}
+
+test('should ', () => {
+  
+})
