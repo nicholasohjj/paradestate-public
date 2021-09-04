@@ -33,7 +33,33 @@ let contacts = [
       "id": 4,
       "name": "2LT OOI YAN YI", 
       "status": "present"
+    },
+    { 
+      "id": 5,
+      "name": "3WO DENNIS CHAN", 
+      "status": "present"
+    },
+    { 
+      "id": 6,
+      "name": "SSG M JORGE KISHEN", 
+      "status": "leave"
+    },
+    { 
+      "id": 7,
+      "name": "1SG BRYAN TAN", 
+      "status": "others"
+    },
+    { 
+      "id": 8,
+      "name": "1SG DERRICK NEO", 
+      "status": "others"
+    },
+    { 
+      "id": 9,
+      "name": "PTE NICHOLAS OH JIA JUN", 
+      "status": "present"
     }
+    
 ]
 
 app.get('/api/persons',(req, res) => {
