@@ -1,10 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import phoneservice from './phoneservice'
+
+
 
 
 const Button = ({person, id, setPersons, persons}) => {
 
-  const HandleButton = () => {
+  const [options, setOptions] = useState(false)
+
+  const Options = () => {
+    if (options) {
+      return (
+        <>
+        <button onClick={HandleDelete}>✅</button>
+        <button onClick={HandleUpdate}>😷</button>
+        <button onClick={HandleUpdate}>👨🏻‍⚕️</button>
+        <button onClick={HandleUpdate}>🚫</button>
+        <button onClick={HandleUpdate}>🚪</button>
+        <button onClick={HandleUpdate}>🅰</button>
+        <button onClick={HandleUpdate}>🗒</button>
+        <button onClick={HandleUpdate}>🏠</button>
+        </> 
+      )} else
+      return (
+        <>
+        </>
+      )
+    } 
+
+
+  const HandleDelete = () => {
     if (window.confirm(`Do you want to delete ${person.name}`)) {
       phoneservice
         .removePerson(id)
@@ -12,8 +37,16 @@ const Button = ({person, id, setPersons, persons}) => {
         }
   }
 
+  const HandleUpdate = () => setOptions(!options)
+
+
   return (
-    <button onClick={HandleButton}>Delete</button>
+    <>
+    <button onClick={HandleDelete}>Delete</button>
+    <button onClick={HandleUpdate}>Update</button>
+    <br/>
+    <Options />
+    </>
   )
 }
 

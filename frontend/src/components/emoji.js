@@ -28,6 +28,8 @@ const Emoji = ({symbol}) => (
     return <Emoji symbol="🚪"/>
     } else if (currentStatus==='stayout') {
     return <Emoji symbol="🏠"/>
+    } else {
+    return ''
     }
   }
 
