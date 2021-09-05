@@ -13,7 +13,8 @@ const Results = ({setPersons, persons}) => {
               <br/>
               <Buttons person={person} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
-          )}   
+          )}
+          <br/>   
         </ol>
       </div>
     )
