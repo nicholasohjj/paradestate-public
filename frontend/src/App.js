@@ -4,6 +4,7 @@ import Results from './components/results'
 import phoneservice from './components/phoneservice'
 import Message from './components/message'
 import Greeting from './components/greeting'
+import Summary from './components/summary'
 import Absentees from './components/absentees'
 import ParadeState from './components/paradestate'
 
@@ -85,6 +86,9 @@ const App = () => {
         setNewName('')
       }
 
+      let HQcurrent = 0
+      persons.map(person=> (person.status==='present') ? (HQcurrent = HQcurrent+1) : HQcurrent)
+      const HQtotal = persons.length
 
   return (
     
@@ -101,6 +105,7 @@ const App = () => {
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
+      <Summary HQtotal={HQtotal} />
       <Absentees setPersons={setPersons} persons={persons} />
       <ParadeState setPersons={setPersons} persons={persons} />
 

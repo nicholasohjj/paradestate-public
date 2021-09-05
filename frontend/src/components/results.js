@@ -5,7 +5,7 @@ import Emojidisplay from './emoji';
 const Results = ({setPersons, persons}) => {
     return (
       <div>
-        <ul>
+        <ol>
           {persons.map(person=>
             <li key={person.name}>
               {person.name}
@@ -13,7 +13,7 @@ const Results = ({setPersons, persons}) => {
               <Button person={person} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
           )}   
-        </ul>
+        </ol>
       </div>
     )
   }

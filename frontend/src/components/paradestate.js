@@ -3,7 +3,7 @@ import Emojidisplay from './emoji'
 
 
 
-const ParadeState = ({setPersons, persons}) => {
+const ParadeState = ({persons}) => {
   
   let currentstrength = 0
   persons.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
