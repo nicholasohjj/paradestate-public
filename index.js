@@ -7,9 +7,14 @@ const mongoose = require('mongoose')
 const url =
   'mongodb+srv://SIG11C4I:popkool09@sigparadestate.iquor.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-mongoose.connect(url)
-
+  mongoose.connect(url,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true })
+    
 const noteSchema = new mongoose.Schema({
+  id: Number,
   name: String,
   status: String,
 })
