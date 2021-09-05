@@ -35,8 +35,8 @@ const Options = ({options,person,persons,setPersons}) => {
 
     if (options) {
       return (
-        <>
-          <ButtonGroup style={Optionsstyle} variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
+        <div style={Optionsstyle}>
+          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
             <button value='present'>✅</button>
             <button value='mc'>😷</button>
             <button value='ma'>👨🏻‍⚕️</button>
@@ -46,7 +46,7 @@ const Options = ({options,person,persons,setPersons}) => {
             <button value='others'>🗒</button>
             <button value='stayout'>🏠</button>
           </ButtonGroup>
-        </> 
+        </div> 
       )} else
       return (
         <>
