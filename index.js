@@ -74,11 +74,11 @@ let contacts = [
     
 ]
 
-app.get('/api/persons',(req, res) => {
+app.get('/api/persons', (req, res) => {
   Name.find({}).then(names => {
-    response.json(names)
-    })
-
+    res.json(names)
+  })
+})
 
 
 app.get('/api/info',(req, res) => {
