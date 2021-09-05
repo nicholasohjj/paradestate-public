@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './button'
+import Buttons from './buttons'; 
 import Emojidisplay from './emoji';
 
 const Results = ({setPersons, persons}) => {
@@ -10,7 +10,7 @@ const Results = ({setPersons, persons}) => {
             <li key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
-              <Button person={person} id={person.id} setPersons={setPersons} persons={persons}/>
+              <Buttons person={person} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
           )}   
         </ol>
