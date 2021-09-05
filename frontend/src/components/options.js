@@ -1,6 +1,12 @@
 import React from "react"
 import phoneservice from "./phoneservice"
 import { ButtonGroup } from "@material-ui/core"
+
+const Optionsstyle = {
+  minwidth: 36,
+  minheight: 36
+}
+
 const Options = ({options,person,persons,setPersons}) => {
     
     const UpdateStatus = (event) => {       
@@ -30,7 +36,7 @@ const Options = ({options,person,persons,setPersons}) => {
     if (options) {
       return (
         <>
-          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
+          <ButtonGroup style={Optionsstyle} variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
             <button value='present'>✅</button>
             <button value='mc'>😷</button>
             <button value='ma'>👨🏻‍⚕️</button>
