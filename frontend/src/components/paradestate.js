@@ -1,7 +1,10 @@
 import React from 'react'
 import Emojidisplay from './emoji'
 
-
+const style = {
+  padding: 0,
+  margin: 0
+}
 
 const ParadeState = ({persons}) => {
   
@@ -11,15 +14,13 @@ const ParadeState = ({persons}) => {
 
     return (
       <div>
-        <p>HQ {currentstrength}/{totalstrength}</p>
-        <ol>
+        <p style={style}>HQ {currentstrength}/{totalstrength}</p>
           {persons.map(person=>
-            <li key={person.name}>
+            <p style={style} key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
-            </li>
+            </p>
           )}   
-        </ol>
       </div>
     )
   }
