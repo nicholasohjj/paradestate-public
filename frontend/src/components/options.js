@@ -1,6 +1,6 @@
 import React from "react"
 import phoneservice from "./phoneservice"
-
+import { ButtonGroup } from "@material-ui/core"
 const Options = ({options,person,persons,setPersons}) => {
     
     const UpdateStatus = (event) => {       
@@ -30,14 +30,16 @@ const Options = ({options,person,persons,setPersons}) => {
     if (options) {
       return (
         <>
-        <button value='present' onClick={UpdateStatus}>✅</button>
-        <button value='mc'onClick={UpdateStatus}>😷</button>
-        <button value='ma' onClick={UpdateStatus}>👨🏻‍⚕️</button>
-        <button value='off'onClick={UpdateStatus}>🚫</button>
-        <button value='leave'onClick={UpdateStatus}>🚪</button>
-        <button value='attached' onClick={UpdateStatus}>🅰</button>
-        <button value='others' onClick={UpdateStatus}>🗒</button>
-        <button value='stayout' onClick={UpdateStatus}>🏠</button>
+          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
+            <button value='present'>✅</button>
+            <button value='mc'>😷</button>
+            <button value='ma'>👨🏻‍⚕️</button>
+            <button value='off'>🚫</button>
+            <button value='leave'>🚪</button>
+            <button value='attached'>🅰</button>
+            <button value='others'>🗒</button>
+            <button value='stayout'>🏠</button>
+          </ButtonGroup>
         </> 
       )} else
       return (
