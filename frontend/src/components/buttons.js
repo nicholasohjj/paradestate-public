@@ -29,11 +29,12 @@ const Buttons = ({person, id, setPersons, persons}) => {
         return (
           <>
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}>Update Status</button>
+            <button onClick={HandleShow}>Hide Status</button>
             <Button onClick={HandleDelete}>Delete</Button>
+            </ButtonGroup>
             <br/>
             <Options options={show} person={person} persons={persons} setPersons={setPersons}/>
-            </ButtonGroup>
+
           </>
         )}
 }
