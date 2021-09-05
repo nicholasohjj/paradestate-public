@@ -2,11 +2,27 @@ import React, {useState} from 'react'
 import phoneservice from './phoneservice'
 import Options from './options'
 
+const ShowUpdate = ({person,persons,setPersons}) => {
 
+  const [show, setShow] = useState(false)
+
+  const HandleShow = () => setShow(!show)
+  
+  if (show===false) {
+      return <button onClick={HandleShow}>Update Status</button>
+  } else {
+      return (
+      <>
+          <button onClick ={HandleShow}>Hide Statuses</button>
+          <br/>
+          <Options options={show} person={person} persons={persons} setPersons={setPersons}/>
+      </>
+      )
+  }
+    }
 
 const Button = ({person, id, setPersons, persons}) => {
 
-  const [options, setOptions] = useState(false)
 
   const HandleDelete = () => {
     if (window.confirm(`Do you want to delete ${person.name}`)) {
@@ -16,15 +32,13 @@ const Button = ({person, id, setPersons, persons}) => {
         }
   }
 
-  const HandleUpdate = () => setOptions(!options)
 
 
   return (
     <>
+    <ShowUpdate person={person.name} persons={persons} setPersons={setPersons}/>
     <button onClick={HandleDelete}>Delete</button>
-    <button onClick={HandleUpdate}>Update</button>
     <br/>
-    <Options options={options} person={person.name} persons={persons} setPersons={setPersons}/>
     </>
   )
 }

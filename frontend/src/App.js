@@ -89,7 +89,7 @@ const App = () => {
   return (
     
     <div>
-      <h2>Parade State Application</h2>
+      <h2>Parade State Application (For Internal Use Only)</h2>
       <Message message={newMessage}/>
       <h2>Add a new</h2>
       <Form addName={addName}
