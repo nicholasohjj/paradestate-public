@@ -1,6 +1,6 @@
 {
   "short_name": "Parade State",
-  "name": "Parade State 123",
+  "name": "Parade State Application",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#FF0000"
 }
