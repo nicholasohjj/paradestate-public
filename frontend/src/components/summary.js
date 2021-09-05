@@ -1,7 +1,8 @@
 import React from "react";
 
 const Summarystyle = {
-    margin : 0
+    margin : 0,
+    padding : 0
 }
 
 const Summary = ({persons}) => {
