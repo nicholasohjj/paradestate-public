@@ -86,10 +86,6 @@ const App = () => {
         setNewName('')
       }
 
-      let HQcurrent = 0
-      persons.map(person=> (person.status==='present') ? (HQcurrent = HQcurrent+1) : HQcurrent)
-      const HQtotal = persons.length
-
   return (
     
     <div>
@@ -105,7 +101,7 @@ const App = () => {
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
-      <Summary HQtotal={HQtotal} />
+      <Summary persons={persons} />
       <Absentees setPersons={setPersons} persons={persons} />
       <ParadeState setPersons={setPersons} persons={persons} />
 
