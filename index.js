@@ -2,8 +2,20 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
+const mongoose = require('mongoose')
 
-        
+const url =
+  'mongodb+srv://SIG11C4I:popkool09@sigparadestate.iquor.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+mongoose.connect(url)
+
+const noteSchema = new mongoose.Schema({
+  name: String,
+  status: String,
+})
+
+const Name = mongoose.model('Name', noteSchema)
+
 app.use(cors())
 app.use(express.static('build'))
 app.use(express.json());
@@ -63,7 +75,8 @@ let contacts = [
 ]
 
 app.get('/api/persons',(req, res) => {
-        res.json(contacts)
+  Name.find({}).then(names => {
+    response.json(names)
     })
 
 
