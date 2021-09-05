@@ -15,8 +15,9 @@ const ParadeState = ({persons}) => {
     return (
       <div>
         <p style={style}>HQ {currentstrength}/{totalstrength}</p>
-          {persons.map(person=> 
+          {persons.map((person, index)=> 
             <p style={style} key={person.name}>
+              {index+1}.  
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
             </p>
