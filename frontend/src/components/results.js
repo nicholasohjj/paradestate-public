@@ -10,6 +10,7 @@ const Results = ({setPersons, persons}) => {
             <li key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
+              <br/>
               <Buttons person={person} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
           )}   
