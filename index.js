@@ -80,10 +80,8 @@ let contacts = [
 ]
 
 app.get('/api/persons', (req, res) => {
-  Name.find({}).then(names => {
-    res.json(names)
+    res.json(contacts)
   })
-})
 
 
 app.get('/api/info',(req, res) => {

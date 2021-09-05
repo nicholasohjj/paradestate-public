@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, Select, MenuItem, InputLabel, makeStyles } from '@material-ui/core';
+import { FormControl, Select, MenuItem, InputLabel, makeStyles, TextField } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,22 +11,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-
-const Input = ({text,value,onChange}) => {
-    return (
-      <div>
-      {text}: 
-            <input value={value} onChange={onChange}/>
-      </div>
-    )
-  }
   
 const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) => {
     return (
       <div>
         <form onSubmit={addName}>
-        <Input text="Rank/Name " value ={newName} onChange={handleNameChange}/>
-        
+        <TextField id="outlined-basic" label="Rank/Name" variant="outlined" value ={newName} onChange={handleNameChange}/>
         <FormControl className={useStyles().formControl}>
         <InputLabel id="demo-simple-select-label">Current Status</InputLabel>
         <Select
