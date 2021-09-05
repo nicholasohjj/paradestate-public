@@ -11,4 +11,7 @@ const Filter = ({newFilter, handleNamefilter}) => {
 
   export default Filter
 
+
+  <Input text="Status (PRESENT/MC/MA/OFF/LEAVE/ATTACHED/OTHERS/STAYOUT) " value={newStatus.toLowerCase()} onChange={handleStatusChange}/>
+
   //not relevant

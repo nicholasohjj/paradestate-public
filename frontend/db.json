@@ -2,7 +2,7 @@
   "persons": [
     {
       "name": "CPT WESLEY PEH",
-      "status": "leave",
+      "status": "mc",
       "id": 1
     },
     {
@@ -26,9 +26,9 @@
       "status": "present"
     },
     {
-      "id": 6,
       "name": "SSG M JORGE KISHEN",
-      "status": "leave"
+      "status": "leave",
+      "id": 6
     },
     {
       "id": 7,
