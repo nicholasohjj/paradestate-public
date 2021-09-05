@@ -1,11 +1,11 @@
 import React from 'react'
-import { FormControl, Select, MenuItem, InputLabel, makeStyles, TextField } from '@material-ui/core';
+import { FormControl, Select, MenuItem, InputLabel, makeStyles, TextField, Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120,
+    minWidth: 177,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -16,7 +16,15 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
     return (
       <div>
         <form onSubmit={addName}>
-        <TextField id="outlined-basic" label="Rank/Name" variant="outlined" value ={newName} onChange={handleNameChange}/>
+        <TextField
+          id="standard-multiline-flexible"
+          label="Rank/Name"
+          multiline
+          maxRows={4}
+          value={newName}
+          onChange={handleNameChange}
+        />  
+
         <FormControl className={useStyles().formControl}>
         <InputLabel id="demo-simple-select-label">Current Status</InputLabel>
         <Select
@@ -35,8 +43,9 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
           <MenuItem value='stayout'>Stay Out</MenuItem>
         </Select>
       </FormControl>
+
         <div>
-          <button type="submit">add</button>
+        <Button variant="contained" color="primary" type="submit">Add</Button>
         </div>
         </form>
       </div>
