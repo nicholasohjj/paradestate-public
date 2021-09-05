@@ -1,7 +1,7 @@
 import React from "react";
 
 const Summarystyle = {
-    margin : 0,
+    marginBottom : 0,
     padding : 0
 }
 
