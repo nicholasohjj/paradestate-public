@@ -49,7 +49,7 @@ const App = () => {
     
     console.log(nameCheck)
 
-    if (!newName.trim()) {
+    if (!newName.trim() || !newStatus.trim()) {
       alert("Name/status must be filled")
     } else if (nameCheck.length>0) {
       if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
