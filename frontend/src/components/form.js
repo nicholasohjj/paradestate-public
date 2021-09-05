@@ -32,7 +32,7 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
         <Select
           labelId="status"
           id="status"
-          value ={newName}
+          value ={newStatus}
           onChange = {handleStatusChange}
         >
           <MenuItem value='present'>Present</MenuItem>
