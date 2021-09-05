@@ -119,7 +119,7 @@ app.post('/api/persons/',(req, res) => {
     const newContact = {
         "id": generateID, 
         "name": body.name,
-        "number": body.number
+        "status": body.status
     }
 
     contacts = contacts.concat(newContact)
