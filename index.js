@@ -33,49 +33,92 @@ app.use(morgan('tiny'))
 let contacts = [
   {
     "name": "CPT LOREM IPSUM",
-    "status": "mc",
+    "status": "attached",
+    "reason": "MC FROM XXXXXX TO XXXXXX",
+    "group": "HQ",
     "id": 1
   },
   {
     "id": 2,
     "name": "CPT CHAN MALI CHAN",
-    "status": "attached"
+    "status": "mc",
+    "reason": "MC FROM XXXXXX TO XXXXXX",
+    "group": "HQ",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 3,
     "name": "LTA SAM LAM",
-    "status": "present"
+    "status": "present",
+    "reason": "",
+    "group": "HQ",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 4,
     "name": "2LT MARY JANE",
-    "status": "present"
+    "status": "present",
+    "reason": "",
+    "group": "CCP",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 5,
     "name": "3WO DENNY",
-    "status": "present"
+    "status": "present",
+    "reason": "",
+    "group": "CCP",
+    "excuse": "EXCUSE PT"
   },
   {
+    "id": 6,
     "name": "SSG GEORGE",
     "status": "leave",
-    "id": 6
+    "reason": "COMPASSIONATE LEAVE",
+    "group": "CSP",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 7,
     "name": "1SG KENDRICK",
-    "status": "others"
+    "status": "others",
+    "reason": "OVERSEAS",
+    "group": "CSP",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 8,
     "name": "1SG XIAO MING",
-    "status": "others"
+    "status": "others",
+    "reason": "NIGHTS OUT",
+    "group": "CSP",
+    "excuse": "EXCUSE PT"
   },
   {
     "id": 9,
     "name": "PTE NICK",
-    "status": "present"
-  }
+    "status": "present",
+    "group": "CSP",
+    "excuse": "EXCUSE PT"
+  },
+  {
+    "name": "FSDFDS",
+    "status": "mc",
+    "id": 11,
+    "group": "ccp",
+    "excuse": "EXCUSE PT"
+  },
+  {
+    "name": "ASDSA",
+    "status": "present",
+    "id": 12
+  },
+  {
+    "name": "DSDS",
+    "status": "ma",
+    "group": "CCP",
+    "id": 13
+  } 
     
 ]
 
