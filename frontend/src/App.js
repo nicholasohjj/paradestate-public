@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import Title from './components/Title/title'
+import Message from './components/message'
 import Form from './components/InsertNew/form'
 import Results from './components/results' 
 import phoneservice from './components/phoneservice'
-import Message from './components/message'
 import Greeting from './components/greeting'
 import Summary from './components/summary'
 import Absentees from './components/absentees'
@@ -99,9 +100,8 @@ const App = () => {
       }
 
   return (
-    
     <div>
-      <h2>Parade State Application (For Internal Use Only)</h2>
+      <Title/>
       <Message message={newMessage}/>
       <Form addName={addName}
             newName={newName}
