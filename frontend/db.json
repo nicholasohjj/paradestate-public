@@ -1,72 +1,54 @@
 {
   "persons": [
     {
-      "name": "CPT WESLEY PEH",
+      "name": "CPT LOREM IPSUM",
       "status": "mc",
       "id": 1
     },
     {
       "id": 2,
-      "name": "CPT YANG YI",
+      "name": "CPT CHAN MALI CHAN",
       "status": "attached"
     },
     {
       "id": 3,
-      "name": "LTA SAMOEUL TAN",
+      "name": "LTA SAM LAM",
       "status": "present"
     },
     {
       "id": 4,
-      "name": "2LT OOI YAN YI",
+      "name": "2LT MARY JANE",
       "status": "present"
     },
     {
       "id": 5,
-      "name": "3WO DENNIS CHAN",
+      "name": "3WO DENNY",
       "status": "present"
     },
     {
-      "name": "SSG M JORGE KISHEN",
+      "name": "SSG GEORGE",
       "status": "leave",
       "id": 6
     },
     {
       "id": 7,
-      "name": "1SG BRYAN TAN",
+      "name": "1SG KENDRICK",
       "status": "others"
     },
     {
       "id": 8,
-      "name": "1SG DERRICK NEO",
+      "name": "1SG XIAO MING",
       "status": "others"
     },
     {
       "id": 9,
-      "name": "PTE NICHOLAS OH JIA JUN",
+      "name": "PTE NICK",
       "status": "present"
     },
     {
       "id": 10,
       "name": "PTE TEST SERVER",
       "status": "present"
-    },
-    {
-      "name": "SDFDS",
-      "status": "off",
-      "personId": "api",
-      "id": 11
-    },
-    {
-      "name": "AFASD",
-      "status": "off",
-      "personId": "api",
-      "id": 12
-    },
-    {
-      "name": "ASASD",
-      "status": "off",
-      "personId": "api",
-      "id": 13
     }
   ]
 }

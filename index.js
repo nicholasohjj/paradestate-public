@@ -31,51 +31,51 @@ morgan.token('data',(req,res) => {
 app.use(morgan('tiny'))
 
 let contacts = [
-    { 
-      "id": 1,
-      "name": "CPT WESLEY PEH", 
-      "status": "others"
-    },
-    { 
-      "id": 2,
-      "name": "CPT YANG YI", 
-      "status": "attached"
-    },
-    { 
-      "id": 3,
-      "name": "LTA SAMOEUL TAN", 
-      "status": "present"
-    },
-    { 
-      "id": 4,
-      "name": "2LT OOI YAN YI", 
-      "status": "present"
-    },
-    { 
-      "id": 5,
-      "name": "3WO DENNIS CHAN", 
-      "status": "present"
-    },
-    { 
-      "id": 6,
-      "name": "SSG M JORGE KISHEN", 
-      "status": "leave"
-    },
-    { 
-      "id": 7,
-      "name": "1SG BRYAN TAN", 
-      "status": "others"
-    },
-    { 
-      "id": 8,
-      "name": "1SG DERRICK NEO", 
-      "status": "others"
-    },
-    { 
-      "id": 9,
-      "name": "PTE NICHOLAS OH JIA JUN", 
-      "status": "present"
-    }
+  {
+    "name": "CPT LOREM IPSUM",
+    "status": "mc",
+    "id": 1
+  },
+  {
+    "id": 2,
+    "name": "CPT CHAN MALI CHAN",
+    "status": "attached"
+  },
+  {
+    "id": 3,
+    "name": "LTA SAM LAM",
+    "status": "present"
+  },
+  {
+    "id": 4,
+    "name": "2LT MARY JANE",
+    "status": "present"
+  },
+  {
+    "id": 5,
+    "name": "3WO DENNY",
+    "status": "present"
+  },
+  {
+    "name": "SSG GEORGE",
+    "status": "leave",
+    "id": 6
+  },
+  {
+    "id": 7,
+    "name": "1SG KENDRICK",
+    "status": "others"
+  },
+  {
+    "id": 8,
+    "name": "1SG XIAO MING",
+    "status": "others"
+  },
+  {
+    "id": 9,
+    "name": "PTE NICK",
+    "status": "present"
+  }
     
 ]
 
