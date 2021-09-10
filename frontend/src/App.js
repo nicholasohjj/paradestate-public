@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Form from './components/form'
+import Form from './components/InsertNew/form'
 import Results from './components/results' 
 import phoneservice from './components/phoneservice'
 import Message from './components/message'
@@ -13,6 +13,8 @@ const App = () => {
   const [ persons, setPersons ] = useState([]) 
   const [ newName, setNewName ] = useState('')
   const [ newStatus, setnewStatus ] = useState('')
+  const [ newGroup, setnewGroup ] = useState('')
+  const [ newexcuse, setnewExcuse ] = useState('')
   const [ newMessage, setNewMessage ] = useState(null)
 
   useEffect(() =>{
@@ -33,7 +35,15 @@ const App = () => {
     setnewStatus(event.target.value)
   }
 
+  const handleGroupChange = (event) => {
+    console.log(event.target.value)
+    setnewGroup(event.target.value)
+  }
   
+  const handleExcuseChange = (event) => {
+    console.log(event.target.value)
+    setnewExcuse(event.target.value)
+  }
 
   //Adds new element to persons array
   const addName = (event) => {
@@ -42,6 +52,8 @@ const App = () => {
     const newPerson = {
       name: newName.trim().toUpperCase(),
       status: newStatus.toLowerCase(),
+      group: newGroup.toUpperCase(),
+      excuse: newexcuse.trim
     }
 
     const nameCheck = persons.filter(person=> 
@@ -50,8 +62,8 @@ const App = () => {
     
     console.log(nameCheck)
 
-    if (!newName.trim() || !newStatus.trim()) {
-      alert("Name/status must be filled")
+    if (!newName.trim() || !newStatus.trim() || !newGroup.trim()) {
+      alert("Name/status/Group must be filled")
     } else if (nameCheck.length>0) {
       if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
         return (
@@ -91,12 +103,15 @@ const App = () => {
     <div>
       <h2>Parade State Application (For Internal Use Only)</h2>
       <Message message={newMessage}/>
-      <h2>Add a new</h2>
       <Form addName={addName}
             newName={newName}
             handleNameChange={handleNameChange}
             newStatus={newStatus}
-            handleStatusChange={handleStatusChange}/>
+            handleStatusChange={handleStatusChange}
+            newGroup = {newGroup} 
+            handleGroupChange = {handleGroupChange}
+            newexcuse ={newexcuse}
+            handleExcuseChange = {handleExcuseChange}/>
       <h2>List of Personnel</h2>
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>

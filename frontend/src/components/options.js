@@ -35,8 +35,8 @@ const Options = ({options,person,persons,setPersons}) => {
 
     if (options) {
       return (
-        <div style={Optionsstyle}>
-          <ButtonGroup variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
+        <div >
+          <ButtonGroup style={Optionsstyle} variant="contained" color="secondary" aria-label="contained primary button group" onClick={UpdateStatus}>
             <button value='present'>✅</button>
             <button value='mc'>😷</button>
             <button value='ma'>👨🏻‍⚕️</button>

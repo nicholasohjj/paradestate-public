@@ -11,8 +11,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-  
-const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) => {
+
+
+const Formcontent = ({addName,
+               newName,
+               handleNameChange,
+               newStatus,
+               handleStatusChange,
+               newGroup,
+               handleGroupChange,
+               newexcuse,
+               handleExcuseChange}) => {
     return (
       <div>
         <form onSubmit={addName}>
@@ -49,6 +58,36 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
           </div>
 
           <div>
+            <FormControl className={useStyles().formControl}>
+              <InputLabel id="demo-simple-select-label">Group</InputLabel>
+              <Select
+              labelId="group"
+              id="group"
+              value ={newGroup}
+              onChange = {handleGroupChange}
+              >
+              <MenuItem value='HQ'>HQ</MenuItem>
+              <MenuItem value='CCP'>FG1 - CCP</MenuItem>
+              <MenuItem value='CSP'>FG2 - CSP</MenuItem>
+              <MenuItem value='OTHERS'>Others</MenuItem>
+
+              </Select>
+            </FormControl>
+          </div>
+
+          <div>
+          <TextField
+              id="standard-multiline-flexible"
+              label="Medical Excuses"
+              multiline
+              maxRows={4}
+              value={newexcuse}
+              onChange={handleExcuseChange}
+              />
+
+          </div>
+
+          <div>
             <Button variant="contained" color="primary" type="submit">Add</Button>
           </div>
           
@@ -57,4 +96,4 @@ const Form = ({addName,newName,handleNameChange,newStatus,handleStatusChange}) =
     )
   }
 
-  export default Form
+  export default Formcontent

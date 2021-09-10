@@ -2,6 +2,7 @@ import React from 'react'
 import Buttons from './buttons'; 
 import Emojidisplay from './emoji';
 
+
 const Results = ({setPersons, persons}) => {
     return (
       <div>
@@ -10,8 +11,9 @@ const Results = ({setPersons, persons}) => {
             <li key={person.name}>
               {person.name}
               <Emojidisplay currentStatus ={person.status} />
+              {person.group}
               <br/>
-              <Buttons person={person} id={person.id} setPersons={setPersons} persons={persons}/>
+              <Buttons person={person.name} id={person.id} setPersons={setPersons} persons={persons}/>
             </li>
           )}
         </ol>
