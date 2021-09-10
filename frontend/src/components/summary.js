@@ -1,5 +1,9 @@
 import React from "react";
 
+const style = {
+    padding: 0,
+    margin: 0
+  }
 
 const Summary = ({persons}) => {
     let HQcurrent = 0
@@ -7,7 +11,7 @@ const Summary = ({persons}) => {
     const HQtotal = persons.length
 
     return (
-        <div>
+        <div style={style}>
         <p>Total Strength: {HQtotal}</p>
         <p>Present Strength: {HQcurrent}</p>
         </div>

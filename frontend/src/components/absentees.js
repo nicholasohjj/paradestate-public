@@ -1,6 +1,11 @@
 import React from 'react'
 import Emojidisplay from './emoji'
 
+const style = {
+  padding: 0,
+  margin: 0
+}
+
 const Absentees = ({setPersons, persons}) => {
   
   let mc = 0
@@ -20,7 +25,7 @@ const Absentees = ({setPersons, persons}) => {
 
   const totalAbsentee = mc + ma + off + leave + attached + others + stayout
       return (
-      <div>
+      <div style={style}>
         <p>Absentees: {totalAbsentee}</p>
           <p>- <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
           <p>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
