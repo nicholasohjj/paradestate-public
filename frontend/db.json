@@ -2,26 +2,25 @@
   "persons": [
     {
       "name": "CPT LOREM IPSUM",
-      "status": "attached",
-      "reason": "MC FROM XXXXXX TO XXXXXX",
-      "group": "HQ",
+      "status": "ma",
+      "reason": "",
+      "group": "hq",
+      "excuse": "EXCUSE PT",
       "id": 1
     },
     {
-      "id": 2,
       "name": "CPT CHAN MALI CHAN",
-      "status": "mc",
-      "reason": "MC FROM XXXXXX TO XXXXXX",
-      "group": "HQ",
-      "excuse": "EXCUSE PT"
+      "status": null,
+      "reason": "",
+      "group": "csp",
+      "excuse": "EXCUSE PT",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "LTA SAM LAM",
-      "status": "present",
-      "reason": "",
-      "group": "HQ",
-      "excuse": "EXCUSE PT"
+      "status": "off",
+      "group": "OTHERS",
+      "id": 3
     },
     {
       "id": 4,
@@ -64,11 +63,11 @@
       "excuse": "EXCUSE PT"
     },
     {
-      "id": 9,
       "name": "PTE NICK",
       "status": "present",
-      "group": "CSP",
-      "excuse": "EXCUSE PT"
+      "group": "hq",
+      "excuse": "EXCUSE PT",
+      "id": 9
     },
     {
       "name": "FSDFDS",

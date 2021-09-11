@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import phoneservice from './phoneservice'
-import Options from './options'
+import phoneservice from '../../services/phoneservice'
+import UpdateStatus from './updateStatus'
+import UpdateGroup from './updateGroup'
 import { Button, ButtonGroup} from '@material-ui/core'
 
 const Buttons = ({person, id, setPersons, persons}) => {
@@ -21,7 +22,7 @@ const Buttons = ({person, id, setPersons, persons}) => {
       return (
         <>
           <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-          <button onClick={HandleShow}>Update Status</button>
+          <button onClick={HandleShow}>Update</button>
           <Button onClick={HandleDelete}>Delete</Button>
           </ButtonGroup>
         </>
@@ -29,11 +30,15 @@ const Buttons = ({person, id, setPersons, persons}) => {
         return (
           <>
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}>Hide Status</button>
+            <button onClick={HandleShow}>Hide</button>
             <Button onClick={HandleDelete}>Delete</Button>
             </ButtonGroup>
             <br/>
-            <Options options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
+            <UpdateStatus options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <Button onClick={HandleDelete}>Delete</Button>
+            </ButtonGroup>
 
           </>
         )}

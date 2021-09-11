@@ -12,8 +12,9 @@ const Summary = ({persons}) => {
 
     return (
         <div style={style}>
-        <p>Total Strength: {HQtotal}</p>
-        <p>Present Strength: {HQcurrent}</p>
+        <p style={style}>Total Strength: {HQtotal}</p>
+        <p style={style}>Present Strength: {HQcurrent}</p>
+        <br/>
         </div>
     )
 }

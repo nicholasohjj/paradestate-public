@@ -1,5 +1,6 @@
 import React from "react"
 
+//For future expansion
 const Title = () => {
     return (
         //Insert logo below

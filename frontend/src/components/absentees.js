@@ -6,7 +6,7 @@ const style = {
   margin: 0
 }
 
-const Absentees = ({setPersons, persons}) => {
+const Absentees = ({persons}) => {
   
   let mc = 0
   persons.map(person=> (person.status==='mc') ? (mc = mc+1) : mc)
@@ -25,15 +25,16 @@ const Absentees = ({setPersons, persons}) => {
 
   const totalAbsentee = mc + ma + off + leave + attached + others + stayout
       return (
-      <div style={style}>
-        <p>Absentees: {totalAbsentee}</p>
-          <p>- <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
-          <p>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
-          <p>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
-          <p>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
-          <p>- <Emojidisplay currentStatus ="attached" /> ATTACHED OUT: {attached} </p>
-          <p>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>
-          <p>- <Emojidisplay currentStatus ="stayout" /> STAY OUT: {stayout} </p>
+      <div>
+        <p style={style}>Absentees: {totalAbsentee}</p>
+          <p style={style}> - <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="attached" /> ATTACHED OUT: {attached} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="stayout" /> STAY OUT: {stayout} </p>
+          <br/>
       </div>
     )
   }
