@@ -120,7 +120,6 @@ const App = () => {
             handleExcuseChange = {handleExcuseChange}
             newRole ={newRole}
             handleRoleChange = {handleRoleChange}/>
-      <h2>List of Personnel</h2>
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
