@@ -25,7 +25,8 @@ const UpdateGroup = ({options,person,persons,setPersons}) => {
             status: person.status,
             reason: person.reason,
             group: event.target.getAttribute("value"),
-            excuse: person.excuse
+            excuse: person.excuse,
+            role: person.role
         }
     
 

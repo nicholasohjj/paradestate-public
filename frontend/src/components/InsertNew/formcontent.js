@@ -21,7 +21,10 @@ const Formcontent = ({addName,
                newGroup,
                handleGroupChange,
                newexcuse,
-               handleExcuseChange}) => {
+               handleExcuseChange,
+               newRole,
+               handleRoleChange
+              }) => {
     return (
       <div>
         <form onSubmit={addName}>
@@ -70,6 +73,24 @@ const Formcontent = ({addName,
               <MenuItem value='CCP'>FG1 - CCP</MenuItem>
               <MenuItem value='CSP'>FG2 - CSP</MenuItem>
               <MenuItem value='OTHERS'>Others</MenuItem>
+
+              </Select>
+            </FormControl>
+          </div>
+
+          <div>
+            <FormControl className={useStyles().formControl}>
+              <InputLabel id="demo-simple-select-label">Role</InputLabel>
+              <Select
+              labelId="role"
+              id="role"
+              value ={newRole}
+              onChange = {handleRoleChange}
+              >
+              <MenuItem value='hq'>Coy HQ</MenuItem>
+              <MenuItem value='sevenspec'>7th Mono Spec</MenuItem>
+              <MenuItem value='ic2'>IC2 Opr</MenuItem>
+              <MenuItem value='is'>IS Opr</MenuItem>
 
               </Select>
             </FormControl>

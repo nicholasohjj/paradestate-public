@@ -1,5 +1,5 @@
 import React from 'react'
-import Emojidisplay from './emoji'
+import Emojidisplay from '../emoji'
 
 const style = {
   padding: 0,

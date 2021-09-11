@@ -11,7 +11,7 @@ if(dd<10) dd=`0${dd}`
 if(mm<10) mm=`0${mm}`
 if(hours<10) hours=`0${hours}`
 if(minutes<10) minutes=`0${minutes}`
-const CurrentDate = `${mm}${dd}${yy}`
+const CurrentDate = `${dd}${mm}${yy}`
 const CurrentTime = `${hours}${minutes}`
 
 let greeting = ''

@@ -25,7 +25,8 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
             status: event.target.getAttribute("value"),
             reason: person.reason,
             group: person.group,
-            excuse: person.excuse
+            excuse: person.excuse,
+            role: person.role
         }
     
 
@@ -60,7 +61,7 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
           open={Boolean(anchorEl)}
           onClick={HandleUpdateStatus}
           onClose={handleClose}>
-            <MenuItem value='present'>✅</MenuItem>
+            <MenuItem value='present' >✅</MenuItem>
             <MenuItem value='mc'>😷</MenuItem>
             <MenuItem value='ma'>👨🏻‍⚕️</MenuItem>
             <MenuItem value='off'>🚫</MenuItem>

@@ -11,7 +11,9 @@ const Form = ({addName,
     newGroup,
     handleGroupChange,
     newexcuse,
-    handleExcuseChange,}) => {
+    handleExcuseChange,
+    newRole,
+    handleRoleChange}) => {
     
     const [show, setShow] = useState(false)
 
@@ -41,6 +43,8 @@ const Form = ({addName,
               handleGroupChange = {handleGroupChange}
               newexcuse ={newexcuse}
               handleExcuseChange = {handleExcuseChange}
+              newRole = {newRole}
+              handleRoleChange = {handleRoleChange}
               />
   
             </>

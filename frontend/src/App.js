@@ -4,8 +4,7 @@ import Form from './components/insertnew/form'
 import Results from './components/personnellist/personnelList' 
 import phoneservice from './services/phoneservice'
 import Greeting from './components/greeting'
-import Summary from './components/summary'
-import Absentees from './components/absentees'
+import Summary from './components/summary/summary'
 import ParadeState from './components/paradestate'
 
 //App component
@@ -15,6 +14,8 @@ const App = () => {
   const [ newStatus, setnewStatus ] = useState('')
   const [ newGroup, setnewGroup ] = useState('')
   const [ newexcuse, setnewExcuse ] = useState('')
+  const [ newRole, setnewRole ] = useState('')
+
   const [ newMessage, setNewMessage ] = useState(null)
 
   useEffect(() =>{
@@ -45,6 +46,11 @@ const App = () => {
     setnewExcuse(event.target.value)
   }
 
+  const handleRoleChange = (event) => {
+    console.log(event.target.value)
+    setnewRole(event.target.value)
+  }
+
   //Adds new element to persons array
   const addName = (event) => {
     event.preventDefault()
@@ -53,7 +59,8 @@ const App = () => {
       name: newName.trim().toUpperCase(),
       status: newStatus.toLowerCase(),
       group: newGroup.toUpperCase(),
-      excuse: newexcuse.trim
+      excuse: newexcuse.trim,
+      role: newRole
     }
 
     const nameCheck = persons.filter(person=> 
@@ -110,13 +117,14 @@ const App = () => {
             newGroup = {newGroup} 
             handleGroupChange = {handleGroupChange}
             newexcuse ={newexcuse}
-            handleExcuseChange = {handleExcuseChange}/>
+            handleExcuseChange = {handleExcuseChange}
+            newRole ={newRole}
+            handleRoleChange = {handleRoleChange}/>
       <h2>List of Personnel</h2>
       <Results setPersons={setPersons} persons={persons} />
       <h2>Parade State</h2>
       <Greeting />
       <Summary persons={persons} />
-      <Absentees persons={persons} />
       <ParadeState setPersons={setPersons} persons={persons} />
 
       </div>

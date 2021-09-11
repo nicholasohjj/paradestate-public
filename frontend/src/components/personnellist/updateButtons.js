@@ -37,7 +37,6 @@ const Buttons = ({person, id, setPersons, persons}) => {
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
             <UpdateStatus options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
-            <Button onClick={HandleDelete}>Delete</Button>
             </ButtonGroup>
 
           </>
