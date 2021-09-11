@@ -33,92 +33,85 @@ app.use(morgan('tiny'))
 let contacts = [
   {
     "name": "CPT LOREM IPSUM",
-    "status": "attached",
-    "reason": "MC FROM XXXXXX TO XXXXXX",
-    "group": "HQ",
+    "status": "present",
+    "reason": "",
+    "group": "hq",
+    "excuse": "EXCUSE PT",
+    "role": "hq",
     "id": 1
   },
   {
-    "id": 2,
     "name": "CPT CHAN MALI CHAN",
-    "status": "mc",
-    "reason": "MC FROM XXXXXX TO XXXXXX",
-    "group": "HQ",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 3,
-    "name": "LTA SAM LAM",
-    "status": "present",
-    "reason": "",
-    "group": "HQ",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 4,
-    "name": "2LT MARY JANE",
-    "status": "present",
-    "reason": "",
-    "group": "CCP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 5,
-    "name": "3WO DENNY",
-    "status": "present",
-    "reason": "",
-    "group": "CCP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 6,
-    "name": "SSG GEORGE",
-    "status": "leave",
-    "reason": "COMPASSIONATE LEAVE",
-    "group": "CSP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 7,
-    "name": "1SG KENDRICK",
-    "status": "others",
-    "reason": "OVERSEAS",
-    "group": "CSP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 8,
-    "name": "1SG XIAO MING",
-    "status": "others",
-    "reason": "NIGHTS OUT",
-    "group": "CSP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "id": 9,
-    "name": "PTE NICK",
-    "status": "present",
-    "group": "CSP",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "name": "FSDFDS",
-    "status": "mc",
-    "id": 11,
-    "group": "ccp",
-    "excuse": "EXCUSE PT"
-  },
-  {
-    "name": "ASDSA",
-    "status": "present",
-    "id": 12
-  },
-  {
-    "name": "DSDS",
     "status": "ma",
-    "group": "CCP",
-    "id": 13
-  } 
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE PT FROM XXXXXX TO XXXXXX",
+    "role": "hq",
+    "id": 2
+  },
+  {
+    "name": "LTA SAM LAM",
+    "status": "leave",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE RMJ FROM XXXXXX TO XXXXXX",
+    "role": "hq",
+    "id": 3
+  },
+  {
+    "name": "2LT MARY JANE",
+    "status": "off",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE PT",
+    "role": "hq",
+    "id": 4
+  },
+  {
+    "name": "3WO DENNY",
+    "status": "stayout",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE PT",
+    "role": "hq",
+    "id": 5
+  },
+  {
+    "name": "SSG GEORGE",
+    "status": "mc",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE PT",
+    "role": "sevenspec",
+    "id": 6
+  },
+  {
+    "name": "1SG KENDRICK",
+    "status": "ma",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE HEAVY LOAD FROM XXXXXX TO XXXXXX",
+    "role": "sevenspec",
+    "id": 7
+  },
+  {
+    "name": "1SG XIAO MING",
+    "status": "leave",
+    "reason": "TEST",
+    "group": "csp",
+    "excuse": "EXCUSE PT",
+    "role": "is",
+    "id": 8
+  },
+  {
+    "name": "PTE NICK",
+    "status": "stayout",
+    "reason": "",
+    "group": "csp",
+    "excuse": "EXCUSE PT",
+    "role": "ic2",
+    "id": 9
+  }, 
     
 ]
 
