@@ -6,22 +6,34 @@ const style = {
 }
 
 const Roles = ({persons}) => {
-  
-  let hq = 0
-  persons.map(person=> (person.role==='hq') ? (hq = hq+1) : hq)
-  let sevenspec = 0
-  persons.map(person=> (person.role==='7spec') ? (sevenspec = sevenspec+1) : sevenspec)
-  let ic2 = 0
-  persons.map(person=> (person.role==='ic2') ? (ic2 = ic2+1) : ic2)
-  let is = 0
-  persons.map(person=> (person.role==='is') ? (is = is+1) : is)
+
+  const HQrolelist = persons.filter(person=> (person.role==='hq'))
+  let HQcurrent = 0
+  HQrolelist.map(person=> (person.status==='present') ? (HQcurrent = HQcurrent+1) : HQcurrent)
+  const HQtotal = HQrolelist.length
+
+  const SevenSpecrolelist = persons.filter(person=> (person.role==='7spec'))
+  let Sevenspeccurrent = 0
+  SevenSpecrolelist.map(person=> (person.status==='present') ? (Sevenspeccurrent = Sevenspeccurrent+1) : Sevenspeccurrent)
+  const SevenSpectotal = SevenSpecrolelist.length
+
+  const IC2rolelist = persons.filter(person=> (person.role==='ic2'))
+  let IC2current = 0
+  IC2rolelist.map(person=> (person.status==='present') ? (IC2current = IC2current+1) : IC2current)
+  const IC2total = IC2rolelist.length
+
+
+  const ISrolelist = persons.filter(person=> (person.role==='is'))
+  let IScurrent = 0
+  ISrolelist.map(person=> (person.status==='present') ? (IScurrent = IScurrent+1) : IScurrent)
+  const IStotal = ISrolelist.length
 
       return (
       <div>
-          <p style={style}> -Coy HQ: {hq} </p>
-          <p style={style}> -7th Mono Spec: {sevenspec} </p>
-          <p style={style}> -IC2 Opr: {ic2} </p>
-          <p style={style}> -IS Opr: {is} </p>
+          <p style={style}> -Coy HQ: {HQcurrent}/{HQtotal} </p>
+          <p style={style}> -7th Mono Spec: {Sevenspeccurrent}/{SevenSpectotal} </p>
+          <p style={style}> -IC2 Opr: {IC2current}/{IC2total} </p>
+          <p style={style}> -IS Opr: {IScurrent}/{IStotal} </p>
           <br/>
       </div>
     )

@@ -4,7 +4,7 @@
       "name": "CPT LOREM IPSUM",
       "status": "present",
       "reason": "",
-      "group": "hq",
+      "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
       "id": 1
@@ -83,8 +83,8 @@
     },
     {
       "name": "SDFSDF",
-      "status": "others",
-      "group": "CSP",
+      "status": "ma",
+      "group": "ccp",
       "role": "is",
       "id": 10
     }

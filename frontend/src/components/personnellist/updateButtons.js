@@ -3,6 +3,7 @@ import phoneservice from '../../services/phoneservice'
 import UpdateStatus from './updateStatus'
 import UpdateGroup from './updateGroup'
 import { Button, ButtonGroup} from '@material-ui/core'
+import UpdateRole from './updateRole'
 
 const Buttons = ({person, id, setPersons, persons}) => {
 
@@ -37,6 +38,8 @@ const Buttons = ({person, id, setPersons, persons}) => {
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
             <UpdateStatus options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <UpdateRole options={show} person={person} persons={persons} setPersons={setPersons}/>
+
             </ButtonGroup>
 
           </>
