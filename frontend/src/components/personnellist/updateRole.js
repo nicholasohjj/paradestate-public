@@ -36,7 +36,8 @@ const UpdateRole = ({options,person,persons,setPersons}) => {
     
     console.log(nameCheck)
 
-    return (
+    if (event.target.getAttribute("value")) {
+      return (
         phoneservice
           .update(nameCheck[0].id, newPerson)
           .then(updatedList=> {setPersons(persons.map(person=>
@@ -44,7 +45,7 @@ const UpdateRole = ({options,person,persons,setPersons}) => {
                 ? person
                 : updatedList))
       }))
-
+    }
     }
 
 

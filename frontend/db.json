@@ -2,9 +2,9 @@
   "persons": [
     {
       "name": "CPT LOREM IPSUM",
-      "status": "present",
+      "status": "leave",
       "reason": "",
-      "group": "csp",
+      "group": null,
       "excuse": "EXCUSE PT",
       "role": "hq",
       "id": 1
@@ -13,7 +13,7 @@
       "name": "CPT CHAN MALI CHAN",
       "status": "ma",
       "reason": "",
-      "group": "csp",
+      "group": "hq",
       "excuse": "EXCUSE PT",
       "role": "hq",
       "id": 2

@@ -35,8 +35,9 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
         )
     
     console.log(nameCheck)
-
-    return (
+    
+    if (event.target.getAttribute("value")) {
+      return (
         phoneservice
           .update(nameCheck[0].id, newPerson)
           .then(updatedList=> {setPersons(persons.map(person=>
@@ -44,7 +45,7 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
                 ? person
                 : updatedList))
       }))
-
+    }
     }
 
 
@@ -61,14 +62,14 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
           open={Boolean(anchorEl)}
           onClick={HandleUpdateStatus}
           onClose={handleClose}>
-            <MenuItem value='present' >✅</MenuItem>
-            <MenuItem value='mc'>😷</MenuItem>
-            <MenuItem value='ma'>👨🏻‍⚕️</MenuItem>
-            <MenuItem value='off'>🚫</MenuItem>
-            <MenuItem value='leave'>🚪</MenuItem>
-            <MenuItem value='attached'>🅰</MenuItem>
-            <MenuItem value='others'>🗒</MenuItem>
-            <MenuItem value='stayout'>🏠</MenuItem>
+            <MenuItem value='present' >Present ✅</MenuItem>
+            <MenuItem value='mc'>MC 😷</MenuItem>
+            <MenuItem value='ma'>MA 👨🏻‍⚕️</MenuItem>
+            <MenuItem value='off'>Off 🚫</MenuItem>
+            <MenuItem value='leave'>Leave 🚪</MenuItem>
+            <MenuItem value='attached'>Attached Out 🅰</MenuItem>
+            <MenuItem value='others'>Others 🗒</MenuItem>
+            <MenuItem value='stayout'>Stay Out 🏠</MenuItem>
             </Menu>
 
         </div> 

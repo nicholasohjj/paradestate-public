@@ -9,7 +9,7 @@ const style = {
 const HQ = ({persons}) => {
     
     const HQList = persons.filter(person=> (String(person.group)).toLowerCase()==='hq') 
-    console.log(HQList)
+    console.log(`List of HQ personnel: ${JSON.stringify(HQList)}`)
     let currentstrength = 0
     HQList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = HQList.length

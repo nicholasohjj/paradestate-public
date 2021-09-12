@@ -9,7 +9,7 @@ const style = {
 const CSP = ({persons}) => {
     
     const CSPList = persons.filter(person=> (String(person.group)).toLowerCase()==='csp') 
-    console.log(CSPList)
+    console.log(`List of CSP personnel: ${JSON.stringify(CSPList)}`)
     let currentstrength = 0
     CSPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = CSPList.length

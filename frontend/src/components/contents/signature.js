@@ -1,12 +1,17 @@
 import React from "react";
 
+const style = {
+    padding: 0,
+    margin: 0
+  }
+
 const Signature = ({newauthor}) => {
     return (
-        <>
-        <p>Done by:</p>
-        {newauthor}
+        <div>
+        <p style={style}>Done by:</p>
+        {newauthor.toUpperCase()}
 
-        </>
+        </div>
     )
 }
 

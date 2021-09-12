@@ -9,7 +9,7 @@ const style = {
 const CCP = ({persons}) => {
     
     const CCPList = persons.filter(person=> (String(person.group)).toLowerCase()==='ccp') 
-    console.log(CCPList)
+    console.log(`List of CCP personnel: ${JSON.stringify(CCPList)}`)
     let currentstrength = 0
     CCPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = CCPList.length

@@ -48,14 +48,14 @@ const Formcontent = ({addName,
               value ={newStatus}
               onChange = {handleStatusChange}
               >
-              <MenuItem value='present'>Present</MenuItem>
-              <MenuItem value='mc'>MC</MenuItem>
-              <MenuItem value='ma'>MA</MenuItem>
-              <MenuItem value='off'>Off</MenuItem>
-              <MenuItem value='leave'>Leave</MenuItem>
-              <MenuItem value='attached'>Attached Out</MenuItem>
-              <MenuItem value='others'>Others</MenuItem>
-              <MenuItem value='stayout'>Stay Out</MenuItem>
+              <MenuItem value='present'>Present ✅</MenuItem>
+              <MenuItem value='mc'>MC 😷</MenuItem>
+              <MenuItem value='ma'>MA 👨🏻‍⚕️</MenuItem>
+              <MenuItem value='off'>Off 🚫</MenuItem>
+              <MenuItem value='leave'>Leave 🚪</MenuItem>
+              <MenuItem value='attached'>Attached Out 🅰</MenuItem>
+              <MenuItem value='others'>Others 🗒</MenuItem>
+              <MenuItem value='stayout'>Stay Out 🏠</MenuItem>
               </Select>
             </FormControl>
           </div>

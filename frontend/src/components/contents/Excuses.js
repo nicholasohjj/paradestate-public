@@ -24,7 +24,7 @@ const Excuses = ({persons}) => {
   
     
     const ExcuseList = persons.filter(person=> person.excuse)
-    console.log(ExcuseList)
+    console.log(`List of personnel with excuses: ${JSON.stringify(ExcuseList)}` )
     const currentstrength = ExcuseList.length
     return (
         <div>

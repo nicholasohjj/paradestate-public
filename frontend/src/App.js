@@ -39,64 +39,52 @@ const App = () => {
   },[])
   
   const handleNameChange = (event) => {
-    console.log(event.target.value)
+    console.log(`Name: ${event.target.value}`)
     setNewName(event.target.value)
   }
 
   const handleStatusChange = (event) => {
-    console.log(event.target.value)
-    setnewStatus(event.target.value)
-
-    if (event.target.value=='mc') {
-      setnewReason('MC FROM XXXXXX TO XXXXXX')
-    } else if (event.target.value=='ma') {
-      setnewReason('MA AT XXXXXX')
-    } else if (event.target.value=='off') {
-      setnewReason(`off ON XXXXXX`)
-    } else if (event.target.value=='others') {
-      setnewReason(`others`)
-    } else {
-      setnewReason(`nil`)
-    }
+    console.log(`Status: ${event.target.value}`)
+      setnewStatus(event.target.value)
   }
 
   const handleGroupChange = (event) => {
-    console.log(event.target.value)
+    console.log(`Group: ${event.target.value}`)
     setnewGroup(event.target.value)
   }
   
   const handleExcuseChange = (event) => {
-    console.log(event.target.value)
+    console.log(`Excuse: ${event.target.value}`)
     setnewExcuse(event.target.value)
   }
 
   const handleRoleChange = (event) => {
-    console.log(event.target.value)
+    console.log(`Role: ${event.target.value}`)
     setnewRole(event.target.value)
   }
 
   const handlecdochange = (event) => {
-      console.log(event.target.value)
+      console.log(`CDO: ${event.target.value}`)
       setnewcdo((event.target.value))
     }
 
   const handlecdschange = (event) => {
-      console.log(event.target.value)
+      console.log(`CDS: ${event.target.value}`)
       setnewcds(event.target.value)
     }
 
   const handlecoschange = (event) => {
-      console.log(event.target.value)
+      console.log(`COS: ${event.target.value}`)
       setnewcos(event.target.value)
     }
 
     const handleaschange = (event) => {
-      console.log(event.target.value)
+      console.log(`Armskote: ${event.target.value}`)
       setnewas(event.target.value)
     }
 
     const handleauthorchange = (event) => {
-      console.log(event.target.value)
+      console.log(`Done by: ${event.target.value}`)
       setnewauthor(event.target.value)
     }
 
@@ -119,8 +107,8 @@ const App = () => {
     
     console.log(nameCheck)
 
-    if (!newName.trim() || !newStatus.trim() || !newGroup.trim()) {
-      alert("Name/status/Group must be filled")
+    if (!newName.trim() || !newStatus.trim() || !newGroup.trim() || !newRole.trim()) {
+      alert("All fields (besides medical excuses) must be filled")
     } else if (nameCheck.length>0) {
       if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
         return (
@@ -179,7 +167,9 @@ const App = () => {
                 newcos={newcos}
                 handlecoschange={handlecoschange}
                 newas={newas}
-                handleaschange={handleaschange}/>
+                handleaschange={handleaschange}
+                newauthor = {newauthor}
+                handleauthorchange ={handleauthorchange}/>
       <h2>Parade State</h2>
       <Greeting />
       <Summary persons={persons}
