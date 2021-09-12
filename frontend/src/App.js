@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Message from './components/message'
 import Form from './components/insertnew/form'
-import Results from './components/personnellist/personnelList' 
+import Results from './components/personnellist/personnelList'
+import Settings from './components/settings' 
 import phoneservice from './services/phoneservice'
 import Greeting from './components/greeting'
 import Summary from './components/summary/summary'
@@ -15,6 +16,15 @@ const App = () => {
   const [ newGroup, setnewGroup ] = useState('')
   const [ newexcuse, setnewExcuse ] = useState('')
   const [ newRole, setnewRole ] = useState('')
+  
+  
+  const [newcdo, setnewcdo] = useState('')
+  const [newcds, setnewcds] = useState('')
+  const [newcos, setnewcos] = useState('')
+  const [newas, setnewas] = useState('')
+  const [newauthor, setnewauthor] = useState('')
+
+
 
   const [ newMessage, setNewMessage ] = useState(null)
 
@@ -50,6 +60,31 @@ const App = () => {
     console.log(event.target.value)
     setnewRole(event.target.value)
   }
+
+  const handlecdochange = (event) => {
+      console.log(event.target.value)
+      setnewcdo((event.target.value))
+    }
+
+  const handlecdschange = (event) => {
+      console.log(event.target.value)
+      setnewcds(event.target.value)
+    }
+
+  const handlecoschange = (event) => {
+      console.log(event.target.value)
+      setnewcos(event.target.value)
+    }
+
+    const handleaschange = (event) => {
+      console.log(event.target.value)
+      setnewas(event.target.value)
+    }
+
+    const handleauthorchange = (event) => {
+      console.log(event.target.value)
+      setnewauthor(event.target.value)
+    }
 
   //Adds new element to persons array
   const addName = (event) => {
@@ -97,7 +132,7 @@ const App = () => {
               setTimeout(()=>setNewMessage(null),5000)
             })
           .catch(error=> {
-            setNewMessage(`${newName} has been already been added to the server`)
+            setNewMessage(`${newName} has already been added to the server`)
             setTimeout(()=>setNewMessage(null),5000)
           })
         }
@@ -121,10 +156,28 @@ const App = () => {
             newRole ={newRole}
             handleRoleChange = {handleRoleChange}/>
       <Results setPersons={setPersons} persons={persons} />
+      <h2>Settings</h2>
+      <Settings newcdo={newcdo}
+                handlecdochange={handlecdochange}
+                newcds={newcds}
+                handlecdschange={handlecdschange}
+                newcos={newcos}
+                handlecoschange={handlecoschange}
+                newas={newas}
+                handleaschange={handleaschange}/>
       <h2>Parade State</h2>
       <Greeting />
-      <Summary persons={persons} />
-      <ParadeState setPersons={setPersons} persons={persons} />
+      <Summary persons={persons}
+               newcdo={newcdo}
+               newcds={newcds}
+               newcos={newcos}
+               newas={newas}
+               newauthor = {newauthor}
+               handleauthorchange ={handleauthorchange}
+               />
+      <ParadeState setPersons={setPersons}
+                  persons={persons}
+                  newauthor={newauthor} />
 
       </div>
   )

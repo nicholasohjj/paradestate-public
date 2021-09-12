@@ -75,7 +75,7 @@
     {
       "name": "PTE NICK",
       "status": "others",
-      "reason": "",
+      "reason": "nil",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",

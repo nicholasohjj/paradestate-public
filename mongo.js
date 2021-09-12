@@ -8,10 +8,15 @@ if (process.argv.length < 3) {
 const password = process.argv[2]
 const name = process.argv[3]
 const status = process.argv[4]
+const reason = process.argv[5]
+const group = process.argv[6]
+const excuse = process.argv[7]
+const role = process.argv[8]
+
 
 const url =
 
-  `mongodb+srv://SIG11C4I:${password}@sigparadestate.iquor.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+  `mongodb+srv://SIG11C4I:${password}@sigparadestate.iquor.mongodb.net/paradestate-app?retryWrites=true&w=majority`
 
 mongoose.connect(url,{
     useNewUrlParser: true,
@@ -22,7 +27,12 @@ mongoose.connect(url,{
 const contactSchema = new mongoose.Schema({
   id: Number,
   name: String,
-  status: String
+  status: String,
+  reason: String,
+  group: String,
+  excuse: String,
+  role: String
+
 })
 
 const Contact = mongoose.model('Contact', contactSchema)
@@ -30,7 +40,11 @@ const Contact = mongoose.model('Contact', contactSchema)
 const contact = new Contact({
   id: Math.ceil(Math.random()*100),
   name: name,
-  status: status
+  status: status,
+  reason: reason,
+  group: group,
+  excuse: excuse,
+  role: role
 })
 
 if (!name && !status) {

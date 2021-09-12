@@ -7,13 +7,22 @@ const style = {
     margin: 0
   }
 
-const Summary = ({persons}) => {
+const Summary = ({persons,
+                newcdo,
+                newcds,
+                newcos,
+                newas}) => {
     let currentstrength = 0
     persons.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = persons.length
 
     return (
-        <div style={style}>
+        <div>
+        <p style={style}>CDO: {newcdo.toUpperCase()}</p>
+        <p style={style}>CDS: {newcds.toUpperCase()}</p>
+        <p style={style}>COS: {newcos.toUpperCase()}</p>
+        <p style={style}>ARMSKOTE: {newas.toUpperCase()}</p>
+        <br/>
         <p style={style}>Total Strength: {totalstrength}</p>
         <p style={style}>Present Strength: {currentstrength}</p>
         <br/>
