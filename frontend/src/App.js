@@ -13,6 +13,8 @@ const App = () => {
   const [ persons, setPersons ] = useState([]) 
   const [ newName, setNewName ] = useState('')
   const [ newStatus, setnewStatus ] = useState('')
+  const [ newReason, setnewReason ] = useState('')
+
   const [ newGroup, setnewGroup ] = useState('')
   const [ newexcuse, setnewExcuse ] = useState('')
   const [ newRole, setnewRole ] = useState('')
@@ -44,6 +46,18 @@ const App = () => {
   const handleStatusChange = (event) => {
     console.log(event.target.value)
     setnewStatus(event.target.value)
+
+    if (event.target.value=='mc') {
+      setnewReason('MC FROM XXXXXX TO XXXXXX')
+    } else if (event.target.value=='ma') {
+      setnewReason('MA AT XXXXXX')
+    } else if (event.target.value=='off') {
+      setnewReason(`off ON XXXXXX`)
+    } else if (event.target.value=='others') {
+      setnewReason(`others`)
+    } else {
+      setnewReason(`nil`)
+    }
   }
 
   const handleGroupChange = (event) => {
@@ -93,6 +107,7 @@ const App = () => {
     const newPerson = {
       name: newName.trim().toUpperCase(),
       status: newStatus.toLowerCase(),
+      reason: newReason,
       group: newGroup.toUpperCase(),
       excuse: newexcuse.trim,
       role: newRole
