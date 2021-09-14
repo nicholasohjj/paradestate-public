@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Message from './components/message'
 import Form from './components/insertnew/form'
-import Results from './components/personnellist/personnelList'
+import Personnellist from './components/personnellist/personnelList'
 import Settings from './components/settings' 
 import phoneservice from './services/phoneservice'
-import Greeting from './components/greeting'
+import Greeting from './components/title/greeting'
 import Summary from './components/summary/summary'
 import ParadeState from './components/paradestate'
 
@@ -37,31 +37,6 @@ const App = () => {
         setPersons(allPersons)
       })
   },[])
-  
-  const handleNameChange = (event) => {
-    console.log(`Name: ${event.target.value}`)
-    setNewName(event.target.value)
-  }
-
-  const handleStatusChange = (event) => {
-    console.log(`Status: ${event.target.value}`)
-      setnewStatus(event.target.value)
-  }
-
-  const handleGroupChange = (event) => {
-    console.log(`Group: ${event.target.value}`)
-    setnewGroup(event.target.value)
-  }
-  
-  const handleExcuseChange = (event) => {
-    console.log(`Excuse: ${event.target.value}`)
-    setnewExcuse(event.target.value)
-  }
-
-  const handleRoleChange = (event) => {
-    console.log(`Role: ${event.target.value}`)
-    setnewRole(event.target.value)
-  }
 
   const handlecdochange = (event) => {
       console.log(`CDO: ${event.target.value}`)
@@ -149,16 +124,17 @@ const App = () => {
       <Message message={newMessage}/>
       <Form addName={addName}
             newName={newName}
-            handleNameChange={handleNameChange}
+            setNewName={setNewName}
             newStatus={newStatus}
-            handleStatusChange={handleStatusChange}
+            setnewStatus={setnewStatus}
             newGroup = {newGroup} 
-            handleGroupChange = {handleGroupChange}
+            setnewGroup = {setnewGroup}
             newexcuse ={newexcuse}
-            handleExcuseChange = {handleExcuseChange}
+            setnewExcuse = {setnewExcuse}
             newRole ={newRole}
-            handleRoleChange = {handleRoleChange}/>
-      <Results setPersons={setPersons} persons={persons} />
+            setnewRole = {setnewRole}
+            setnewReason={setnewReason}/>
+      <Personnellist setPersons={setPersons} persons={persons} newReason={newReason} setnewReason={setnewReason} />
       <h2>Settings</h2>
       <Settings newcdo={newcdo}
                 handlecdochange={handlecdochange}

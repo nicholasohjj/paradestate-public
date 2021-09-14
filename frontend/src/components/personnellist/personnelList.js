@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import Buttons from './updateButtons'; 
+import Updatebuttons from './updateButtons'; 
 import Emojidisplay from '../emoji';
 import Reason from '../reason';
 import {ButtonGroup} from '@material-ui/core'
 
 
-const Results = ({setPersons, persons}) => {
+const Personnellist = ({setPersons, persons}) => {
   const [show, setShow] = useState(false)
 
   const HandleShow = () => setShow(!show)
@@ -31,7 +31,10 @@ const Results = ({setPersons, persons}) => {
                 <Emojidisplay currentStatus ={person.status} />
                 <Reason person = {person} />
                 <br/>
-                <Buttons person={person} id={person.id} setPersons={setPersons} persons={persons}/>
+                <Updatebuttons person={person}
+                               id={person.id}
+                               setPersons={setPersons}
+                               persons={persons}/>
               </li>
             )}
           </ol>
@@ -42,4 +45,4 @@ const Results = ({setPersons, persons}) => {
     
   }
 
-  export default Results
+  export default Personnellist

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormControl, Select, MenuItem, InputLabel, makeStyles, TextField, Button } from '@material-ui/core';
-
+import Newdate from '../newdate';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -12,19 +12,65 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const Formcontent = ({addName,
                newName,
-               handleNameChange,
+               setNewName,
                newStatus,
-               handleStatusChange,
+               setnewStatus,
                newGroup,
-               handleGroupChange,
+               setnewGroup,
                newexcuse,
-               handleExcuseChange,
+               setnewExcuse,
                newRole,
-               handleRoleChange
+               setnewRole,
+               setnewReason
               }) => {
+
+  const handleNameChange = (event) => {
+    console.log(`Name: ${event.target.value}`)
+    setNewName(event.target.value)
+  }
+
+  const handleStatusChange = (event) => {
+  console.log(`Status: ${event.target.value}`)
+    setnewStatus(event.target.value)
+
+    let detailresponse = ''
+    if (event.target.value === 'mc') {
+      detailresponse = prompt('Details',`MC FROM ${Newdate} TO ${Newdate}`)
+    } else if (event.target.value === 'ma') {
+      detailresponse = prompt('Details',`MA AT`)
+    } else if (event.target.value === 'off') {
+      detailresponse = prompt('Details',`OFF ON ${Newdate}`)
+    } else if (event.target.value === 'leave') {
+      detailresponse = prompt('Details',`LEAVE ON ${Newdate}`)
+    } else if (event.target.value === 'attachedout') {
+      detailresponse = prompt('Details',`ATTACHED OUT TO`)
+    } else if (event.target.value === 'others') {
+      detailresponse = prompt('Details',``)
+    } else {
+      detailresponse = ''
+    }
+    console.log(`Reason: ${detailresponse}`)
+    setnewReason(detailresponse)
+    }
+
+
+const handleGroupChange = (event) => {
+  console.log(`Group: ${event.target.value}`)
+  setnewGroup(event.target.value)
+}
+
+const handleExcuseChange = (event) => {
+  console.log(`Excuse: ${event.target.value}`)
+  setnewExcuse(event.target.value)
+}
+
+const handleRoleChange = (event) => {
+  console.log(`Role: ${event.target.value}`)
+  setnewRole(event.target.value)
+}
+
     return (
       <div>
         <form onSubmit={addName}>

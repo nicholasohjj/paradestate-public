@@ -3,16 +3,16 @@
     {
       "name": "CPT LOREM IPSUM",
       "status": "leave",
-      "reason": "",
+      "reason": "LEAVE ON 140921",
       "group": null,
-      "excuse": "EXCUSE PT",
+      "excuse": "EXCUSE TEST FROM 140921 TO 140921",
       "role": "hq",
       "id": 1
     },
     {
       "name": "CPT CHAN MALI CHAN",
-      "status": "ma",
-      "reason": "",
+      "status": "attached",
+      "reason": "ATTACHED OUT TO ",
       "group": "hq",
       "excuse": "EXCUSE PT",
       "role": "hq",
@@ -20,8 +20,8 @@
     },
     {
       "name": "LTA SAM LAM",
-      "status": "leave",
-      "reason": "",
+      "status": "off",
+      "reason": "OFF ON 140921",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
@@ -29,7 +29,7 @@
     },
     {
       "name": "2LT MARY JANE",
-      "status": "others",
+      "status": "mc",
       "reason": "",
       "group": "csp",
       "excuse": "EXCUSE PT",
@@ -38,8 +38,8 @@
     },
     {
       "name": "3WO DENNY",
-      "status": "others",
-      "reason": "",
+      "status": "ma",
+      "reason": "MA AT",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
@@ -56,7 +56,7 @@
     },
     {
       "name": "1SG KENDRICK",
-      "status": "ma",
+      "status": "attached",
       "reason": "",
       "group": "csp",
       "excuse": "EXCUSE PT",
@@ -65,17 +65,17 @@
     },
     {
       "name": "1SG XIAO MING",
-      "status": "leave",
+      "status": "present",
       "reason": "TEST",
-      "group": "csp",
+      "group": "hq",
       "excuse": "EXCUSE PT",
       "role": "hq",
       "id": 8
     },
     {
       "name": "PTE NICK",
-      "status": "others",
-      "reason": "nil",
+      "status": "present",
+      "reason": "",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
@@ -83,10 +83,34 @@
     },
     {
       "name": "SDFSDF",
-      "status": "ma",
+      "status": "mc",
       "group": "ccp",
       "role": "is",
       "id": 10
+    },
+    {
+      "name": "TEST",
+      "status": "off",
+      "reason": "OFF ON 140921",
+      "group": "CCP",
+      "role": "sevenspec",
+      "id": 11
+    },
+    {
+      "name": "TEST123",
+      "status": "off",
+      "reason": "",
+      "group": "CSP",
+      "role": "ic2",
+      "id": 12
+    },
+    {
+      "name": "PTE NICHOLAS",
+      "status": "off",
+      "reason": "OFF ON 140921",
+      "group": "CCP",
+      "role": "hq",
+      "id": 13
     }
   ]
 }

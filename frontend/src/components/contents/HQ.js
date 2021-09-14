@@ -1,5 +1,6 @@
 import React from "react"
 import Emojidisplay from "../emoji"
+import Reason from "../reason"
 
 const style = {
     padding: 0,
@@ -21,6 +22,8 @@ const HQ = ({persons}) => {
                 {index+1}.  
                 {' ' + person.name}
                 <Emojidisplay currentStatus ={person.status} />
+                <Reason person = {person} />
+
               </p>
                         
             )}   

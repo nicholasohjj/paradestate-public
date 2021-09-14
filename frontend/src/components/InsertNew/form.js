@@ -5,15 +5,17 @@ import {ButtonGroup} from '@material-ui/core'
 
 const Form = ({addName,
     newName,
-    handleNameChange,
+    setNewName,
     newStatus,
-    handleStatusChange,
+    setnewStatus,
     newGroup,
-    handleGroupChange,
+    setnewGroup,
     newexcuse,
-    handleExcuseChange,
+    setnewExcuse,
     newRole,
-    handleRoleChange}) => {
+    setnewRole,
+    setnewReason,
+    }) => {
     
     const [show, setShow] = useState(false)
 
@@ -36,15 +38,16 @@ const Form = ({addName,
               <Formcontent 
               addName={addName}
               newName={newName}
-              handleNameChange={handleNameChange}
+              setNewName={setNewName}
               newStatus={newStatus}
-              handleStatusChange={handleStatusChange}
+              setnewStatus={setnewStatus}
               newGroup = {newGroup} 
-              handleGroupChange = {handleGroupChange}
+              setnewGroup = {setnewGroup}
               newexcuse ={newexcuse}
-              handleExcuseChange = {handleExcuseChange}
+              setnewExcuse = {setnewExcuse}
               newRole = {newRole}
-              handleRoleChange = {handleRoleChange}
+              setnewRole = {setnewRole}
+              setnewReason={setnewReason}
               />
               <br/>
   

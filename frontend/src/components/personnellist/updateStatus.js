@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import phoneservice from "../../services/phoneservice"
 import { Button, Menu, MenuItem } from "@material-ui/core"
-
+import Newdate from "../newdate"
 
 const UpdateStatus = ({options,person,persons,setPersons}) => {
   
@@ -19,16 +19,35 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
   const HandleUpdateStatus = (event,value) => {  
     setAnchorEl(null);
 
+    let returnValue = event.target.getAttribute("value")
+
+    let newReason = ''
+    if (returnValue === 'mc') {
+      newReason = prompt('Details',`MC FROM ${Newdate} TO ${Newdate}`)
+    } else if (returnValue === 'ma') {
+      newReason = prompt('Details',`MA AT`)
+    } else if (returnValue === 'off') {
+      newReason = prompt('Details',`OFF ON ${Newdate}`)
+    } else if (returnValue === 'leave') {
+      newReason = prompt('Details',`LEAVE ON ${Newdate}`)
+    } else if (returnValue === 'attached') {
+      newReason = prompt('Details',`ATTACHED OUT TO `)
+    } else if (returnValue === 'others') {
+      newReason = prompt('Details',``)
+    } else {
+      newReason = ''
+    }
+    console.log(newReason)
+
     console.log(value)
         const newPerson = {
             name: person.name,
             status: event.target.getAttribute("value"),
-            reason: person.reason,
+            reason: newReason,
             group: person.group,
             excuse: person.excuse,
             role: person.role
         }
-    
 
   const nameCheck = persons.filter(person=> 
       person.name.toLowerCase().includes(newPerson.name.toLowerCase())
@@ -37,6 +56,8 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
     console.log(nameCheck)
     
     if (event.target.getAttribute("value")) {
+
+      
       return (
         phoneservice
           .update(nameCheck[0].id, newPerson)
