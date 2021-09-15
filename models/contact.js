@@ -18,12 +18,33 @@ mongoose.connect(url,{
 
 const contactSchema = new mongoose.Schema({
     id: Number,
-    name: String,
-    status: String,
-    reason: String,
-    group: String,
-    excuse: String,
-    role: String
+    name: {
+      type: String,
+      minlength: 5,
+      required:true
+    },
+    status: {
+      type: String,
+      required:true
+    },
+    reason: {
+      type: String,
+      minlength: 5,
+      required:true
+    },
+    group: {
+      type: String,
+      required:true
+    },
+    excuse: {
+      type: String,
+      minlength: 5,
+      required:true
+    },
+    role: {
+      type: String,
+      required:true
+    },
   })
 
   contactSchema.set('toJSON', {

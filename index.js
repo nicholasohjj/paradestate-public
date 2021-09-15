@@ -15,6 +15,8 @@ const errorHandler = (error, req, res, next) => {
 
 if (error.name === 'CastError') {
   return res.status(400).send({ error: 'malformatted id' })
+} else if (error.name === 'ValidationError') {
+  return response.status(400).json({ error: error.message })
 } 
 
 next(error)
@@ -76,9 +78,7 @@ const generateID = Math.ceil(Math.random()*100)
 
 app.post('/api/persons/',(req, res) => {
   const body = req.body
-
-  
-  if (!body.name || !body.excuse) {
+  if (!body.content===undefined) {
       return res.status(400).send(`Error: content missing`)
     }
 
@@ -93,10 +93,11 @@ app.post('/api/persons/',(req, res) => {
   })
 
 
-  contact.save().then(savedContact => {
+  contact.save()
+    .then(savedContact => {
       res.json(savedContact)
   })
-
+    .catch(error => next(error))
 })
 
 app.put('/api/persons/:id', (req, res, next) => {
