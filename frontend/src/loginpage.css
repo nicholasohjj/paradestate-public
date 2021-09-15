@@ -5,7 +5,7 @@
     
     .main {
         background-color: #FFFFFF;
-        width: 400px;
+        width:fit-content;
         height: 400px;
         margin: 7em auto;
         border-radius: 1.5em;
@@ -81,6 +81,7 @@
         border: 2px solid rgba(0, 0, 0, 0.18) !important;
         
     }
+
     
 
     
