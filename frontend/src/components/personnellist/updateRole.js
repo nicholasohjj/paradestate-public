@@ -63,7 +63,7 @@ const UpdateRole = ({options,person,persons,setPersons}) => {
           onClick={HandleUpdateStatus}
           onClose={handleClose}>
             <MenuItem value='hq' >Coy HQ</MenuItem>
-            <MenuItem value='7spec'>7th Mono Spec</MenuItem>
+            <MenuItem value='sevenspec'>7th Mono Spec</MenuItem>
             <MenuItem value='ic2'>IC2 Opr</MenuItem>
             <MenuItem value='is'>IS Opr</MenuItem>
             </Menu>

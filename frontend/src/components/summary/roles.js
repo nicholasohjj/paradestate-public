@@ -12,7 +12,7 @@ const Roles = ({persons}) => {
   HQrolelist.map(person=> (person.status==='present') ? (HQcurrent = HQcurrent+1) : HQcurrent)
   const HQtotal = HQrolelist.length
 
-  const SevenSpecrolelist = persons.filter(person=> (person.role==='7spec'))
+  const SevenSpecrolelist = persons.filter(person=> (person.role==='sevenspec'))
   let Sevenspeccurrent = 0
   SevenSpecrolelist.map(person=> (person.status==='present') ? (Sevenspeccurrent = Sevenspeccurrent+1) : Sevenspeccurrent)
   const SevenSpectotal = SevenSpecrolelist.length
