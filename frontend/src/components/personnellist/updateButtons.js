@@ -29,6 +29,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
           </ButtonGroup>
         </>
       )} else {
+        setTimeout(HandleShow,10000)
         return (
           <>
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">

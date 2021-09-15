@@ -48,7 +48,10 @@ const Formcontent = ({addName,
       detailresponse = prompt('Details',`ATTACHED OUT TO`)
     } else if (event.target.value === 'others') {
       detailresponse = prompt('Details',``)
-    } else {
+    } else if (event.target.value === 'oncourse') {
+      detailresponse = prompt('Details',``)
+    }
+    else {
       detailresponse = ''
     }
     console.log(`Reason: ${detailresponse}`)
@@ -100,6 +103,7 @@ const handleRoleChange = (event) => {
               <MenuItem value='mc'>MC 😷</MenuItem>
               <MenuItem value='ma'>MA 👨🏻‍⚕️</MenuItem>
               <MenuItem value='off'>Off 🚫</MenuItem>
+              <MenuItem value='oncourse'>On Course 👨🏻‍🎓</MenuItem>
               <MenuItem value='leave'>Leave 🚪</MenuItem>
               <MenuItem value='attached'>Attached Out 🅰</MenuItem>
               <MenuItem value='others'>Others 🗒</MenuItem>

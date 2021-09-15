@@ -34,7 +34,10 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
       newReason = prompt('Details',`ATTACHED OUT TO `)
     } else if (returnValue === 'others') {
       newReason = prompt('Details',``)
-    } else {
+    } else if (returnValue === 'oncourse') {
+      newReason = prompt('Details',``)
+    }
+     else {
       newReason = ''
     }
 
@@ -92,6 +95,7 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
             <MenuItem value='mc'>MC 😷</MenuItem>
             <MenuItem value='ma'>MA 👨🏻‍⚕️</MenuItem>
             <MenuItem value='off'>Off 🚫</MenuItem>
+            <MenuItem value='oncourse'>On Course 👨🏻‍🎓</MenuItem>
             <MenuItem value='leave'>Leave 🚪</MenuItem>
             <MenuItem value='attached'>Attached Out 🅰</MenuItem>
             <MenuItem value='others'>Others 🗒</MenuItem>
