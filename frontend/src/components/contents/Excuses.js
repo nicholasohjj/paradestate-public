@@ -26,7 +26,6 @@ const Excuses = ({persons}) => {
     const ExcuseList = persons.filter(person=> person.excuse && (person.excuse!=='nil'))
     console.log(`List of personnel with excuses: ${JSON.stringify(ExcuseList)}` )
     const currentstrength = ExcuseList.length
-    
     return (
         <div>
           <p style={style}>STATUSES: {currentstrength}</p>

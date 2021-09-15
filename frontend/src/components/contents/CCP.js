@@ -14,9 +14,7 @@ const CCP = ({persons}) => {
     let currentstrength = 0
     CCPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = CCPList.length
-
-    if (totalstrength) {
-      return (
+    return (
         <div>
           <p style={style}>FG1 - CCP: {currentstrength}/{totalstrength}</p>
             {CCPList.map((person, index)=> 
@@ -30,7 +28,9 @@ const CCP = ({persons}) => {
             )}   
         </div>
       )
-    }
 }
+
+
+  
 
   export default CCP
