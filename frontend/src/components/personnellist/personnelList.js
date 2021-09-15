@@ -14,14 +14,14 @@ const Personnellist = ({setPersons, persons}) => {
     return (
       <>
         <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-        <button onClick={HandleShow}><h3>Show Personnel List</h3></button>
+        <button onClick={HandleShow}><h3>Edit</h3></button>
         </ButtonGroup>
       </>
     )} else {
       return (
         <div>
           <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}><h3>Hide Personnel List</h3></button>
+            <button onClick={HandleShow}><h3>Hide</h3></button>
           </ButtonGroup>
           <br/>
           <ol>
