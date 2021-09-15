@@ -53,7 +53,7 @@ if (!name && !status) {
     result.forEach(contact => {
       console.log(contact.name, contact.status)
     })
-    mongoose.connection.close()
+    mongoose.connection.close() 
   })
 } else {
   contact.save().then(result=> {
