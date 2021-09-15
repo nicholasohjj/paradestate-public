@@ -14,6 +14,8 @@ const Absentees = ({persons}) => {
   persons.map(person=> (person.status==='ma') ? (ma = ma+1) : ma)
   let off = 0
   persons.map(person=> (person.status==='off') ? (off = off+1) : off)
+  let oncourse = 0
+  persons.map(person=> (person.status==='oncourse') ? (oncourse = oncourse+1) : oncourse)
   let leave = 0
   persons.map(person=> (person.status==='leave') ? (leave = leave+1) : leave)
   let attached = 0
@@ -30,6 +32,7 @@ const Absentees = ({persons}) => {
           <p style={style}> - <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
           <p style={style}>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
           <p style={style}>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
+          <p style={style}>- <Emojidisplay currentStatus ="oncourse" /> ON COURSE: {oncourse} </p>
           <p style={style}>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
           <p style={style}>- <Emojidisplay currentStatus ="attached" /> ATTACHED OUT: {attached} </p>
           <p style={style}>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>

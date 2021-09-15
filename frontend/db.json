@@ -92,9 +92,10 @@
     },
     {
       "name": "TEST",
-      "status": "off",
-      "reason": "OFF ON 140921",
-      "group": "CCP",
+      "status": "oncourse",
+      "reason": "nil",
+      "group": "CSP",
+      "excuse": "nil",
       "role": "sevenspec",
       "id": 11
     },
@@ -123,6 +124,15 @@
       "excuse": "nil",
       "role": "sevenspec",
       "id": 14
+    },
+    {
+      "name": "TEST123",
+      "status": "oncourse",
+      "reason": "nil",
+      "group": "CSP",
+      "excuse": "nil",
+      "role": "sevenspec",
+      "id": 15
     }
   ]
 }
