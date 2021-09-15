@@ -85,7 +85,7 @@ const Appcontent = () => {
     if (!newName.trim() || !newStatus.trim() || !newGroup.trim() || !newRole.trim()) {
       alert("All fields (besides medical excuses) must be filled")
     } else if (nameCheck.length>0) {
-      if (window.confirm(`${newName} is already added to phonebook. Would you like to update the status?`)) {
+      if (window.confirm(`${newName.toUpperCase()} is already added to phonebook. Would you like to update the status?`)) {
         return (
           phoneservice
             .update(nameCheck[0].id, newPerson)
@@ -93,11 +93,11 @@ const Appcontent = () => {
                 person.id !== nameCheck[0].id
                   ? person
                   : updatedList))
-          setNewMessage(`${newName} has been updated`)
+          setNewMessage(`${newName.toUpperCase()} has been updated`)
           setTimeout(()=>setNewMessage(null),5000)
         })
             .catch(error=> {
-              setNewMessage(`${newName} has been already been removed from the server`)
+              setNewMessage(`${newName.toUpperCase()} has been already been removed from the server`)
               setTimeout(()=>setNewMessage(null),5000)
             })
         )}
@@ -106,11 +106,11 @@ const Appcontent = () => {
           .addNew(newPerson)
           .then(updatedList => {
               setPersons(persons.concat(updatedList))
-              setNewMessage(`${newName} has been added`)
+              setNewMessage(`${newName.toUpperCase()} has been added`)
               setTimeout(()=>setNewMessage(null),5000)
             })
           .catch(error=> {
-            setNewMessage(`${newName} has already been added to the server`)
+            setNewMessage(`${newName.toUpperCase()} has already been added to the server`)
             setTimeout(()=>setNewMessage(null),5000)
           })
         }
