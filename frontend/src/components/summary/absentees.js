@@ -25,7 +25,7 @@ const Absentees = ({persons}) => {
   let stayout = 0
   persons.map(person=> (person.status==='stayout') ? (stayout = stayout+1) : stayout)
 
-  const totalAbsentee = mc + ma + off + leave + attached + others + stayout
+  const totalAbsentee = mc + ma + off + leave + attached + others + stayout + oncourse
       return (
       <div>
         <p style={style}>Absentees: {totalAbsentee}</p>
