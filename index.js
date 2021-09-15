@@ -64,7 +64,7 @@ app.get('/api/persons/:id',(req, res, next) => {
   .catch(error => next(error))
 })
 
-app.delete('/api/persons/:id',(req, res) => {
+app.delete('/api/persons/:id',(req, res,next) => {
   Contact.findByIdAndRemove(req.params.id)
     .then(result => {
       res.status(204).end()
@@ -74,7 +74,7 @@ app.delete('/api/persons/:id',(req, res) => {
 
 const generateID = Math.ceil(Math.random()*100)
 
-app.post('/api/persons/',(req, res) => {
+app.post('/api/persons/',(req, res, next) => {
   const body = req.body
   if (!body.content===undefined) {
       return res.status(400).send(`Error: content missing`)
