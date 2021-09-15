@@ -116,6 +116,11 @@ const Appcontent = () => {
         }
         setnewStatus('')
         setNewName('')
+        setnewReason('')
+        setnewGroup('')
+        setnewExcuse('')
+        setnewRole('')
+
       }
 
   return (
