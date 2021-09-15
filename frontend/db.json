@@ -91,15 +91,6 @@
       "id": 10
     },
     {
-      "name": "TEST",
-      "status": "oncourse",
-      "reason": "nil",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 11
-    },
-    {
       "name": "123",
       "status": "ma",
       "reason": "MA AT",
