@@ -14,7 +14,9 @@ const CSP = ({persons}) => {
     let currentstrength = 0
     CSPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = CSPList.length
-    return (
+
+    if (totalstrength) {
+      return (
         <div>
           <p style={style}>FG2 - CSP: {currentstrength}/{totalstrength}</p>
             {CSPList.map((person, index)=> 
@@ -29,6 +31,8 @@ const CSP = ({persons}) => {
             )}   
         </div>
       )
+    }
+
 }
 
 
