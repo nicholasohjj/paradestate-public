@@ -11,7 +11,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
   const [show, setShow] = useState(false)
 
   const HandleDelete = () => {
-    if (window.confirm(`Do you want to delete ${person.name}`)) {
+    if (window.confirm(`Are you sure you want to permanently delete ${person.name}?`)) {
       phoneservice
         .removePerson(id)
         setPersons(persons.filter(person=>person.id !==id))
