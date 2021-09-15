@@ -37,6 +37,11 @@ const UpdateStatus = ({options,person,persons,setPersons}) => {
     } else {
       newReason = ''
     }
+
+    if (newReason) {
+      newReason = newReason.toUpperCase()
+    }
+
     console.log(newReason)
 
     console.log(value)
