@@ -70,9 +70,9 @@ const App = () => {
     const newPerson = {
       name: newName.trim().toUpperCase(),
       status: newStatus.toLowerCase(),
-      reason: newReason,
+      reason: (newReason) ? newReason : 'nil',
       group: newGroup.toUpperCase(),
-      excuse: newexcuse.trim,
+      excuse: (newexcuse) ? newexcuse.trim : 'nil',
       role: newRole
     }
 
@@ -134,7 +134,7 @@ const App = () => {
             newRole ={newRole}
             setnewRole = {setnewRole}
             setnewReason={setnewReason}/>
-      <Personnellist setPersons={setPersons} persons={persons} newReason={newReason} setnewReason={setnewReason} />
+      <Personnellist setPersons={setPersons} persons={persons}/>
       <h2>Settings</h2>
       <Settings newcdo={newcdo}
                 handlecdochange={handlecdochange}

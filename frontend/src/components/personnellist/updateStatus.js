@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import phoneservice from "../../services/phoneservice"
 import { Button, Menu, MenuItem } from "@material-ui/core"
-import Newdate from "../newdate"
+import Newdate from "../reusable/newdate"
 
 const UpdateStatus = ({options,person,persons,setPersons}) => {
   

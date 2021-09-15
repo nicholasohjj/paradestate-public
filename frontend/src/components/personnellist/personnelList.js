@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Updatebuttons from './updateButtons'; 
-import Emojidisplay from '../emoji';
+import Emojidisplay from '../reusable/emoji';
 import Reason from '../reason';
 import {ButtonGroup} from '@material-ui/core'
 

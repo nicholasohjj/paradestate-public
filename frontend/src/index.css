@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
   position: relative;
   display: block;
-  font-family: sans-serif;
+  font-family: Helvetica,Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to right,#b7ffbf,#00ab08);

@@ -1,5 +1,5 @@
 import React from "react"
-import Emojidisplay from "../emoji"
+import Emojidisplay from "../reusable/emoji"
 import Reason from "../reason"
 
 const style = {

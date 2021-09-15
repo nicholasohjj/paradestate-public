@@ -72,12 +72,13 @@ app.delete('/api/persons/:id',(req, res) => {
     .catch(error => next(error))
 })
 
+const generateID = Math.ceil(Math.random()*100)
+
 app.post('/api/persons/',(req, res) => {
   const body = req.body
-  const generateID = Math.ceil(Math.random()*100)
 
   
-  if (!body.name || !body.number) {
+  if (!body.name || !body.excuse) {
       return res.status(400).send(`Error: content missing`)
     }
 

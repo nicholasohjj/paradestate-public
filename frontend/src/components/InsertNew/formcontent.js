@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormControl, Select, MenuItem, InputLabel, makeStyles, TextField, Button } from '@material-ui/core';
-import Newdate from '../newdate';
+import Newdate from '../reusable/newdate';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -52,7 +52,9 @@ const Formcontent = ({addName,
       detailresponse = ''
     }
     console.log(`Reason: ${detailresponse}`)
-    setnewReason(detailresponse)
+    if (detailresponse) {
+      setnewReason(detailresponse.toUpperCase())
+    }
     }
 
 

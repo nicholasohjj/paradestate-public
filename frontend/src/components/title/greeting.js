@@ -1,5 +1,5 @@
 import React from "react";
-import Newdate from '../newdate'
+import Newdate from '../reusable/newdate'
 
 let Today = new Date();
 let hours = Today.getHours()
