@@ -44,7 +44,7 @@ const Formcontent = ({addName,
       detailresponse = prompt('Details',`OFF ON ${Newdate}`)
     } else if (event.target.value === 'leave') {
       detailresponse = prompt('Details',`LEAVE ON ${Newdate}`)
-    } else if (event.target.value === 'attachedout') {
+    } else if (event.target.value === 'attached') {
       detailresponse = prompt('Details',`ATTACHED OUT TO`)
     } else if (event.target.value === 'others') {
       detailresponse = prompt('Details',``)
