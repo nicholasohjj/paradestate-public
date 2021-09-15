@@ -29,7 +29,6 @@ const contactSchema = new mongoose.Schema({
     },
     reason: {
       type: String,
-      minlength: 5,
       required:true
     },
     group: {
@@ -38,7 +37,6 @@ const contactSchema = new mongoose.Schema({
     },
     excuse: {
       type: String,
-      minlength: 5,
       required:true
     },
     role: {
