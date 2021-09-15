@@ -18,7 +18,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
         }
   }
 
-  const HandleShow = () => setShow(!show)
+  const HandleShow = () => setShow(!show) 
   
   if (show===false) {
       return (
