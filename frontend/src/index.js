@@ -18,14 +18,7 @@ const theme = {
     brand800: "#553EB5",
     brand900: "#382683",
   }, grid: {
-    containerWidth: {
-        xs: "540px",
-        sm: "720px",
-        md: "960px",
-        lg: "1156px",
-        xl: "1156px"
-    },
-    gutterWidth: "100%",
+    containerWidth: "100%"
   }
 };
 
