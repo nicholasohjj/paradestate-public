@@ -21,6 +21,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
           <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
         </Div>
       )} else {
+        setTimeout(HandleShow,10000)
         return (
           <>
           <Div d="flex">
