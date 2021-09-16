@@ -16,6 +16,7 @@ const Personnellist = ({setPersons, persons}) => {
       <>
       <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
+        id="edit"
         suffix={
         <Icon
         name="Down"
@@ -39,6 +40,7 @@ const Personnellist = ({setPersons, persons}) => {
         <>
       <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
+        id="edit"
         suffix={
         <Icon
         name="Up"

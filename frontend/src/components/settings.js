@@ -46,6 +46,7 @@ const Settings = ({
           <Input
     rounded="xl"
     value={newcdo}
+    id="cdo"
     onChange={handlecdochange}
     placeholder="CDO (Rank/Name)"
     p={{ x: "2.5rem" }}
@@ -69,6 +70,7 @@ const Settings = ({
     rounded="xl"
     value={newcds}
     onChange={handlecdschange}
+    id="cds"
     placeholder="CDS (Rank/Name)"
     p={{ x: "2.5rem" }}
     prefix={

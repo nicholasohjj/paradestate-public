@@ -34,7 +34,7 @@ const Loginpage = ({access,setnewaccess}) => {
 
 
             >
-                Sign In</Text>
+                Login</Text>
 
                 <Input
                 onChange = {Handlelogin}

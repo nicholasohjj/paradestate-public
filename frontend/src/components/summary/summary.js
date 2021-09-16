@@ -1,6 +1,7 @@
 import React from "react";
 import Absentees from "./absentees";
 import Roles from "./roles";
+import {Text} from "atomize";
 
 const style = {
     padding: 0,
@@ -18,17 +19,17 @@ const Summary = ({persons,
 
     return (
         <div>
-        <p style={style}>CDO: {newcdo.toUpperCase()}</p>
-        <p style={style}>CDS: {newcds.toUpperCase()}</p>
-        <p style={style}>COS: {newcos.toUpperCase()}</p>
-        <p style={style}>ARMSKOTE: {newas.toUpperCase()}</p>
+        <Text style={style}>CDO: {newcdo.toUpperCase()}</Text>
+        <Text style={style}>CDS: {newcds.toUpperCase()}</Text>
+        <Text style={style}>COS: {newcos.toUpperCase()}</Text>
+        <Text style={style}>ARMSKOTE: {newas.toUpperCase()}</Text>
         <br/>
-        <p style={style}>Total Strength: {totalstrength}</p>
-        <p style={style}>Present Strength: {currentstrength}</p> 
+        <Text style={style}>Total Strength: {totalstrength}</Text>
+        <Text style={style}>Present Strength: {currentstrength}</Text> 
         <br/>
         <Roles persons ={persons} />
         <Absentees persons={persons} />
-        <p style={style}>PRESENT IN CAMP: {currentstrength}</p>
+        <Text style={style}>PRESENT IN CAMP: {currentstrength}</Text>
         <br/>
         </div>
     )
