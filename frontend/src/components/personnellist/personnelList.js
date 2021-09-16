@@ -16,6 +16,7 @@ const Personnellist = ({setPersons, persons}) => {
       <>
       <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
+            rounded="xl"
         id="edit"
         suffix={
         <Icon

@@ -27,6 +27,7 @@ const Form = ({addName,
         return (
           <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
+            rounded="xl"
             prefix={
             <Icon
               name="EyeSolid"
@@ -49,6 +50,7 @@ const Form = ({addName,
             <>
             <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
+            rounded="xl"
             prefix={
             <Icon
               name="EyeSolid"
