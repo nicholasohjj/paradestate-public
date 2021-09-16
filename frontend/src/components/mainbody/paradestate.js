@@ -1,9 +1,10 @@
 import React from 'react'
-import HQ from './contents/hq' 
-import CCP from './contents/CCP';
-import CSP from './contents/CSP'
-import Excuses from './contents/Excuses'
-import Signature from "./contents/signature"
+import HQ from './hq' 
+import CCP from './CCP';
+import CSP from './CSP'
+import Excuses from './Excuses'
+import Signature from "./signature"
+import Tradecourse from './Tradecourse';
 
 const ParadeState = ({persons, newauthor}) => {
   return (
@@ -14,9 +15,12 @@ const ParadeState = ({persons, newauthor}) => {
     <br/>
     <CSP persons={persons}/>
     <br/>
+    <Tradecourse persons={persons} />
+    <br/>
     <Excuses persons={persons}/>
     <br/>
     <Signature newauthor={newauthor}/>
+    
     </>
 
   )

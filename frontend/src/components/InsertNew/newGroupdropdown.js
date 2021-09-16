@@ -22,8 +22,8 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
         <Anchor d="block" p={{ y: "0.25rem" }} value='csp'>
             {"FG2 - CSP"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='others'>
-            {"Others"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='tradecourse'>
+            {"TRADE COURSE"}
         </Anchor>
       </Div>
     );
