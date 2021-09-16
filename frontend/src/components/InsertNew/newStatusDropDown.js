@@ -30,7 +30,7 @@ const NewStatusDropDown = ({setnewStatus,newStatus,setnewReason}) => {
         detailresponse = prompt('Details',``)
       }
       else {
-        detailresponse = ''
+        detailresponse = 'nil'
       }
       console.log(`Reason: ${detailresponse}`)
       if (detailresponse) {
