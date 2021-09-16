@@ -35,9 +35,6 @@ const ModalSize = ({ isOpen, onClose, person }) => {
         >
           Close
         </Button>
-        <Button onClick={onClose} bg="info700">
-          OK
-        </Button>
       </Div>
     </Modal>
   );

@@ -35,14 +35,15 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
     }
     
     return (
-      <Dropdown  
-      isOpen={showModal}
-      onClick={Handleclick}
-      menu={menuList}
-    >
-      {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
-    </Dropdown>
-      );
+      <Dropdown
+        isOpen={showModal}
+        menu={menuList}
+        onClick={Handleclick}
+      >
+        {(newGroup)? `STATUS: ${newGroup.toUpperCase()}`: "STATUS"}
+      </Dropdown>
+    );
 }
 
-export default NewGroupdropdown;
+export default NewGroupdropdown
+;

@@ -1,7 +1,6 @@
 import React from "react"
 import phoneservice from "../../services/phoneservice"
-import {Button} from "@material-ui/core"
-
+import { Div, Button } from "atomize"
 
 const UpdateExcuse = ({options,person,persons,setPersons}) => {
     
@@ -40,11 +39,14 @@ const UpdateExcuse = ({options,person,persons,setPersons}) => {
 
     if (options) {
       return (
-        <div >
-          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={Handleupdateexcuse}>
+          <Div d="flex">
+          <Button 
+          bg="white"
+          textColor="black"
+          aria-controls="simple-menu" aria-haspopup="true" onClick={Handleupdateexcuse}>
         Excuses
       </Button>
-        </div> 
+        </Div> 
       )
 }
     }
