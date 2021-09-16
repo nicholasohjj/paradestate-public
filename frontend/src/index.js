@@ -17,8 +17,6 @@ const theme = {
     brand700: "#6F5CC3",
     brand800: "#553EB5",
     brand900: "#382683",
-  }, grid: {
-    containerWidth: "100%"
   }
 };
 
