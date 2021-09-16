@@ -36,7 +36,6 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
                           setPersons={setPersons}/>
             <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
             <RoleModal options={show} person={person} persons={persons} setPersons={setPersons}/>
-            <UpdateRole options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
 
           </Div>
