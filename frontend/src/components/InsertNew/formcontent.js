@@ -25,13 +25,13 @@ const Formcontent = ({addName,
         <form onSubmit={addName}>
           <NewName newName={newName} setNewName={setNewName}/>
           <br/>
+          <NewExcuse newexcuse={newexcuse} setnewExcuse={setnewExcuse}/>
+          <br/>
           <NewStatusDropDown setnewStatus={setnewStatus} newStatus={newStatus} setnewReason={setnewReason}/>
           <br/>
           <NewGroupdropdown setnewGroup={setnewGroup} newGroup={newGroup}/>
           <br/>
           <NewRoleDropDown setnewRole={setnewRole} newRole={newRole}/>
-          <br/>
-          <NewExcuse newexcuse={newexcuse} setnewExcuse={setnewExcuse}/>
           <br/>
           <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
           <Button suffix={

@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Icon } from "atomize";
+import { Input, Icon, Div } from "atomize";
 
 const NewExcuse = ({newexcuse,setnewExcuse}) => {
 
@@ -9,7 +9,9 @@ const NewExcuse = ({newexcuse,setnewExcuse}) => {
       }
 
   return (
+    <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
     <Input
+    rounded="xl"
     value={newexcuse}
     onChange={handleExcuseChange}
     placeholder="Medical Excuses"
@@ -27,6 +29,8 @@ const NewExcuse = ({newexcuse,setnewExcuse}) => {
         />
       }
     />
+      </Div>
+    
   );
 }
 

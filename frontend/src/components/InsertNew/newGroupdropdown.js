@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Div, Dropdown, Anchor} from "atomize";
+import {Icon, Div, Dropdown, Anchor} from "atomize";
 
 
 
@@ -36,9 +36,18 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
     
     return (
       <Dropdown
+        rounded="xl"
         isOpen={showModal}
         menu={menuList}
         onClick={Handleclick}
+        bg="info100"
+        focusBg="info200"
+        borderColor="info600"
+        focusBorderColor="info800"
+        textColor="info800"
+        textWeight="500"
+        openSuffix={<Icon name="Up" color="info700" size="16px" />}
+        closeSuffix={<Icon name="Down" color="info700" size="16px" />}
       >
         {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
       </Dropdown>

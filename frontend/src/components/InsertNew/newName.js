@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Icon } from "atomize";
+import {Div, Input, Icon } from "atomize";
 
 const NewName = ({newName,setNewName}) => {
 
@@ -9,7 +9,9 @@ const NewName = ({newName,setNewName}) => {
       }
 
   return (
-    <Input
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+<Input
+    rounded="xl"
     value={newName}
     onChange={handleNameChange}
     placeholder="Rank/Name"
@@ -27,6 +29,8 @@ const NewName = ({newName,setNewName}) => {
         />
       }
     />
+      </Div>
+    
   );
 }
 

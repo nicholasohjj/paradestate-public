@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Div, Dropdown, Anchor} from "atomize";
+import {Icon, Div, Dropdown, Anchor} from "atomize";
 import Newdate from "../reusable/newdate"
 
 
@@ -77,13 +77,25 @@ const NewStatusDropDown = ({setnewStatus,newStatus,setnewReason}) => {
     }
     
     return (
-        <Dropdown
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+      <Dropdown
+          rounded="xl"
           isOpen={showModal}
           menu={menuList}
           onClick={Handleclick}
+          bg="info100"
+        focusBg="info200"
+        borderColor="info600"
+        focusBorderColor="info800"
+        textColor="info800"
+        textWeight="500"
+        openSuffix={<Icon name="Up" color="info700" size="16px" />}
+        closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
           {(newStatus)? `STATUS: ${newStatus.toUpperCase()}`: "STATUS"}
         </Dropdown>
+      </Div>
+        
       );
 }
 
