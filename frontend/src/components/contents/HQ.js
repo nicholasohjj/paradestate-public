@@ -1,8 +1,6 @@
 import React from "react"
 import Emojidisplay from "../reusable/emoji"
 import Reason from "../reason"
-import { Text, scrollTo } from "atomize"
-
 
 const style = {
     padding: 0,
@@ -20,14 +18,13 @@ const HQ = ({persons}) => {
         <div>
           <p style={style}>HQ: {currentstrength}/{totalstrength}</p>
             {HQList.map((person, index)=> 
-              <Text style={style} key={person.name}
-              onClick={() => scrollTo("#edit")}>
+              <p style={style} key={person.name}>
                 {index+1}.  
                 {' ' + person.name}
                 <Emojidisplay currentStatus ={person.status} />
                 <Reason person = {person} />
 
-              </Text>
+              </p>
                         
             )}   
         </div>

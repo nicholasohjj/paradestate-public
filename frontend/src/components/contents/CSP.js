@@ -1,7 +1,7 @@
 import React from "react"
 import Emojidisplay from "../reusable/emoji"
 import Reason from "../reason"
-import { Text, scrollTo } from "atomize"
+import { Text } from "atomize"
 
 const style = {
     padding: 0,
@@ -19,9 +19,7 @@ const CSP = ({persons}) => {
         <div>
           <p style={style}>FG2 - CSP: {currentstrength}/{totalstrength}</p>
             {CSPList.map((person, index)=> 
-              <Text style={style} key={person.name}
-              onClick={() => scrollTo("#edit")}>
-                {index+1}.  
+              <Text style={style} key={person.name}>                {index+1}.  
                 {' ' + person.name}
                 <Emojidisplay currentStatus ={person.status} />
                 <Reason person = {person} />
