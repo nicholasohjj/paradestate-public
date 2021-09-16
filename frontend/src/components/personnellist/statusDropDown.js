@@ -30,7 +30,7 @@ const StatusDropDown = ({person,persons,setPersons}) => {
         newReason = prompt('Details',``)
       }
        else {
-        newReason = ''
+        newReason = 'nil'
       }
   
       if (newReason) {
