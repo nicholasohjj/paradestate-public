@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import UpdateStatus from './updateStatus'
 import UpdateExcuse from './updateExcuse'
 import DetailModal from './detailmodal'
 import DeleteModal from './deletemodal'
-import RoleModal from './rolemodal'
-import GroupModal from './groupmodal'
-import StatusModal from './statusmodal'
+import RoleDropDown from './roleDropDown'
+import Groupdropdown from './groupDropDown'
+import StatusDropDown from './statusDropDown'
 import { Div, Button } from 'atomize'
 
 const Updatebuttons = ({person, id, setPersons, persons}) => {
@@ -30,13 +29,9 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
           </Div>
           <Div d="flex">
-            <UpdateStatus options={show} 
-                          person={person}
-                          persons={persons}
-                          setPersons={setPersons}/>
-            <StatusModal options={show} person={person} persons={persons} setPersons={setPersons}/>
-            <GroupModal options={show} person={person} persons={persons} setPersons={setPersons}/>
-            <RoleModal options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <StatusDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <Groupdropdown options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <RoleDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
 
           </Div>

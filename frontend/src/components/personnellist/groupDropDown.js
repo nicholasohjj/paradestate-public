@@ -4,18 +4,18 @@ import phoneservice from "../../services/phoneservice";
 
 
 
-const RoleModal = ({person,persons,setPersons}) => {
+const Groupdropdown = ({person,persons,setPersons}) => {
 
-    const HandleUpdateStatus = (event) => {
+    const HandleUpdateGroup = (event) => {
       setshowModal(!showModal)
         console.log(event.target.getAttribute("value"))
             const newPerson = {
-                name: person.name,
-                status: person.status,
-                reason: person.reason,
-                group: person.group,
-                excuse: person.excuse,
-                role: event.target.getAttribute("value")
+              name: person.name,
+              status: person.status,
+              reason: person.reason,
+              group: event.target.getAttribute("value"),
+              excuse: person.excuse,
+              role: person.role
             }
     const nameCheck = persons.filter(person=> 
         person.name.toLowerCase().includes(newPerson.name.toLowerCase()))
@@ -35,18 +35,18 @@ const RoleModal = ({person,persons,setPersons}) => {
           }
     
     const menuList = (
-      <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={HandleUpdateStatus}>
+      <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={HandleUpdateGroup}>
         <Anchor d="block" p={{ y: "0.25rem" }} value='hq' >
-            {"Coy HQ"}  
+            {"HQ"}  
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='sevenspec' >
-            {"7th Mono Spec"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='ccp' >
+            {"FG1 - CCP"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='ic2'>
-            {"IC2 Opr"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='csp'>
+            {"FG2 - CSP"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='is'>
-            {"IS Opr"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='others'>
+            {"Others"}
         </Anchor>
       </Div>
     );
@@ -63,10 +63,11 @@ const RoleModal = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
+          targetHover
         >
-          ROLE
+          GROUP
         </Dropdown>
       );
 }
 
-export default RoleModal;
+export default Groupdropdown;

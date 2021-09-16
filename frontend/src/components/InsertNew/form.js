@@ -34,9 +34,8 @@ const Form = ({addName,
               color="white"
               m={{ r: "0.5rem" }}
               />}
-              bg="warning700"
-              hoverBg="warning800"
-              rounded="circle"
+              bg="black"
+              hoverBg="black400"
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"
@@ -57,9 +56,8 @@ const Form = ({addName,
               color="white"
               m={{ r: "0.5rem" }}
               />}
-              bg="warning700"
-              hoverBg="warning800"
-              rounded="circle"
+              bg="black"
+              hoverBg="black400"
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"

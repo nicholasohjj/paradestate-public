@@ -6,7 +6,7 @@ import Newdate from "../reusable/newdate"
 
 
 
-const StatusModal = ({person,persons,setPersons}) => {
+const StatusDropDown = ({person,persons,setPersons}) => {
 
     const HandleUpdateStatus = (event) => {
       setshowModal(!showModal)
@@ -108,11 +108,12 @@ const StatusModal = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
+          targetHover
         >
           STATUS
         </Dropdown>
       );
 }
 
-export default StatusModal
+export default StatusDropDown
 ;

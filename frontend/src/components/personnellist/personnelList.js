@@ -18,11 +18,13 @@ const Personnellist = ({setPersons, persons}) => {
         <Button
         suffix={
         <Icon
-        name="LongRight"
+        name="Down"
         size="16px"
         color="white"
         m={{ l: "1rem" }}
       />}
+      bg="black"
+      hoverBg="black400"
       shadow="3"
       hoverShadow="4"
       m={{ r: "1rem" }}
@@ -39,11 +41,13 @@ const Personnellist = ({setPersons, persons}) => {
         <Button
         suffix={
         <Icon
-        name="LongRight"
+        name="Up"
         size="16px"
         color="white"
         m={{ l: "1rem" }}
       />}
+      bg="black"
+      hoverBg="black400"
       shadow="3"
       hoverShadow="4"
       m={{ r: "1rem" }}
