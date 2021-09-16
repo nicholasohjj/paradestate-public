@@ -28,7 +28,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <DetailModal person={person}/>
             <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
           </Div>
-          <Div d="flex" >
+          <Div d="flex" maxW={{ xs: 'auto', md: '100vw' }}>
             <StatusDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
             <Groupdropdown options={show} person={person} persons={persons} setPersons={setPersons}/>
             <RoleDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
