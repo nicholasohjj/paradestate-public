@@ -63,7 +63,6 @@ const Groupdropdown = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
-          targetHover
         >
           GROUP
         </Dropdown>

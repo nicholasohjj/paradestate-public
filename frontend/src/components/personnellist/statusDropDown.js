@@ -108,7 +108,6 @@ const StatusDropDown = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
-          targetHover
         >
           STATUS
         </Dropdown>

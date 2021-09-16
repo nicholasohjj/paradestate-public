@@ -78,9 +78,8 @@ const NewStatusDropDown = ({setnewStatus,newStatus,setnewReason}) => {
     return (
         <Dropdown
           isOpen={showModal}
-          onClick={Handleclick}
           menu={menuList}
-          targetHover
+          onClick={Handleclick}
         >
           {(newStatus)? `STATUS: ${newStatus.toUpperCase()}`: "STATUS"}
         </Dropdown>

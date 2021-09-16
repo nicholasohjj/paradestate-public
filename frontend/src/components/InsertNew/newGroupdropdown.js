@@ -35,14 +35,13 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
     }
     
     return (
-        <Dropdown
-          isOpen={showModal}
-          onClick={Handleclick}
-          menu={menuList}
-          targetHover
-        >
-          {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
-        </Dropdown>
+      <Dropdown  
+      isOpen={showModal}
+      onClick={Handleclick}
+      menu={menuList}
+    >
+      {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
+    </Dropdown>
       );
 }
 

@@ -63,7 +63,6 @@ const RoleDropDown = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
-          targetHover
         >
           ROLE
         </Dropdown>

@@ -39,7 +39,6 @@ const NewRoleDropDown = ({setnewRole, newRole}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
-          targetHover
         >
           {(newRole)? `ROLE: ${newRole.toUpperCase()}`: "ROLE"}
         </Dropdown>
