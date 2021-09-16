@@ -54,5 +54,4 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
     );
 }
 
-export default NewGroupdropdown
-;
+export default NewGroupdropdown;

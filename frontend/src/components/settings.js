@@ -3,16 +3,41 @@ import {Icon, Div, Input } from "atomize";
 
 const Settings = ({
     newcdo,
-    handlecdochange,
+    setnewcdo,
     newcds,
-    handlecdschange,
+    setnewcds,
     newcos,
-    handlecoschange,
+    setnewcos,
     newas,
-    handleaschange,
+    setnewas,
     newauthor,
-    handleauthorchange
+    setnewauthor
 }) => {
+
+  const handlecdochange = (event) => {
+    console.log(`CDO: ${event.target.value}`)
+    setnewcdo((event.target.value))
+  }
+
+  const handlecdschange = (event) => {
+    console.log(`CDS: ${event.target.value}`)
+    setnewcds(event.target.value)
+  }
+
+  const handlecoschange = (event) => {
+    console.log(`COS: ${event.target.value}`)
+    setnewcos(event.target.value)
+  }
+
+  const handleaschange = (event) => {
+    console.log(`Armskote: ${event.target.value}`)
+    setnewas(event.target.value)
+  }
+
+  const handleauthorchange = (event) => {
+    console.log(`Done by: ${event.target.value}`)
+    setnewauthor(event.target.value)
+  }
 
     return (
         <Div>

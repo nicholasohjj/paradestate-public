@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import UpdateExcuse from './updateExcuse'
+import ExcuseModal from './updateExcuse'
 import DetailModal from './detailmodal'
 import DeleteModal from './deletemodal'
 import RoleDropDown from './roleDropDown'
@@ -34,7 +34,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <RoleDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
           </Div>
           <Div d="flex">
-          <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <ExcuseModal person={person} persons={persons} setPersons={setPersons} />
           </Div>
 
           </>

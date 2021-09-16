@@ -22,11 +22,15 @@ const Roles = ({persons}) => {
   IC2rolelist.map(person=> (person.status==='present') ? (IC2current = IC2current+1) : IC2current)
   const IC2total = IC2rolelist.length
 
-
   const ISrolelist = persons.filter(person=> (person.role==='is'))
   let IScurrent = 0
   ISrolelist.map(person=> (person.status==='present') ? (IScurrent = IScurrent+1) : IScurrent)
   const IStotal = ISrolelist.length
+
+  const Sixmonolist = persons.filter(person=> (person.role==='sixmono'))
+  let Sixmonocurrent = 0
+  Sixmonolist.map(person=> (person.status==='present') ? (Sixmonocurrent = Sixmonocurrent+1) : Sixmonocurrent)
+  const Sixmonototal = Sixmonolist.length
 
       return (
       <div>
@@ -34,6 +38,7 @@ const Roles = ({persons}) => {
           <p style={style}> -7th Mono Spec: {Sevenspeccurrent}/{SevenSpectotal} </p>
           <p style={style}> -IC2 Opr: {IC2current}/{IC2total} </p>
           <p style={style}> -IS Opr: {IScurrent}/{IStotal} </p>
+
           <br/>
       </div>
     )

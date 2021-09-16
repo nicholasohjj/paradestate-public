@@ -24,10 +24,12 @@ const Summary = ({persons,
         <p style={style}>ARMSKOTE: {newas.toUpperCase()}</p>
         <br/>
         <p style={style}>Total Strength: {totalstrength}</p>
-        <p style={style}>Present Strength: {currentstrength}</p>
+        <p style={style}>Present Strength: {currentstrength}</p> 
         <br/>
         <Roles persons ={persons} />
         <Absentees persons={persons} />
+        <p style={style}>PRESENT IN CAMP: {currentstrength}</p>
+        <br/>
         </div>
     )
 }

@@ -19,14 +19,11 @@ const Appcontent = () => {
   const [ newexcuse, setnewExcuse ] = useState('')
   const [ newRole, setnewRole ] = useState('')
   
-  
   const [newcdo, setnewcdo] = useState('')
   const [newcds, setnewcds] = useState('')
   const [newcos, setnewcos] = useState('')
   const [newas, setnewas] = useState('')
   const [newauthor, setnewauthor] = useState('')
-
-
 
   const [ newMessage, setNewMessage ] = useState(null)
 
@@ -38,30 +35,7 @@ const Appcontent = () => {
       })
   },[])
 
-  const handlecdochange = (event) => {
-      console.log(`CDO: ${event.target.value}`)
-      setnewcdo((event.target.value))
-    }
 
-  const handlecdschange = (event) => {
-      console.log(`CDS: ${event.target.value}`)
-      setnewcds(event.target.value)
-    }
-
-  const handlecoschange = (event) => {
-      console.log(`COS: ${event.target.value}`)
-      setnewcos(event.target.value)
-    }
-
-    const handleaschange = (event) => {
-      console.log(`Armskote: ${event.target.value}`)
-      setnewas(event.target.value)
-    }
-
-    const handleauthorchange = (event) => {
-      console.log(`Done by: ${event.target.value}`)
-      setnewauthor(event.target.value)
-    }
 
   //Adds new element to persons array
   const addName = (event) => {
@@ -142,15 +116,15 @@ const Appcontent = () => {
             setnewReason={setnewReason}/>
       <Personnellist setPersons={setPersons} persons={persons}/>
       <Settings newcdo={newcdo}
-                handlecdochange={handlecdochange}
+                setnewcdo={setnewcdo}
                 newcds={newcds}
-                handlecdschange={handlecdschange}
+                setnewcds={setnewcds}
                 newcos={newcos}
-                handlecoschange={handlecoschange}
+                setnewcos={setnewcos}
                 newas={newas}
-                handleaschange={handleaschange}
+                setnewas={setnewas}
                 newauthor = {newauthor}
-                handleauthorchange ={handleauthorchange}/>
+                setnewauthor ={setnewauthor}/>
       <h2>Parade State</h2>
       <Greeting />
       <Summary persons={persons}
@@ -158,8 +132,6 @@ const Appcontent = () => {
                newcds={newcds}
                newcos={newcos}
                newas={newas}
-               newauthor = {newauthor}
-               handleauthorchange ={handleauthorchange}
                />
       <ParadeState setPersons={setPersons}
                   persons={persons}
