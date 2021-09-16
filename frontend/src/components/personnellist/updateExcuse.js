@@ -42,7 +42,6 @@ const UpdateExcuse = ({options,person,persons,setPersons}) => {
           <Div d="flex">
           <Button 
           bg="white"
-          maxW={{ xs: 'auto', md: '100vw' }} 
           textColor="black"
           aria-controls="simple-menu" aria-haspopup="true" onClick={Handleupdateexcuse}>
         Excuses
