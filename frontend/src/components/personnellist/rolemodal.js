@@ -4,9 +4,10 @@ import phoneservice from "../../services/phoneservice";
 
 
 
-const RoleModal = ({options,person,persons,setPersons}) => {
+const RoleModal = ({person,persons,setPersons}) => {
 
-    const HandleUpdateStatus = (event) => {  
+    const HandleUpdateStatus = (event) => {
+      setshowModal(!showModal)
         console.log(event.target.getAttribute("value"))
             const newPerson = {
                 name: person.name,
@@ -34,18 +35,18 @@ const RoleModal = ({options,person,persons,setPersons}) => {
           }
     
     const menuList = (
-      <Div p={{ x: "4rem", y: "0.5rem" }} onClick ={HandleUpdateStatus}>
+      <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={HandleUpdateStatus}>
         <Anchor d="block" p={{ y: "0.25rem" }} value='hq' >
-            "Coy HQ"    
+            {"Coy HQ"}  
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='sevenspec' >
-            7th Mono Spec
+            {"7th Mono Spec"}
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='ic2'>
-            IC2 Opr
+            {"IC2 Opr"}
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='is'>
-            IS Opr
+            {"IS Opr"}
         </Anchor>
       </Div>
     );
