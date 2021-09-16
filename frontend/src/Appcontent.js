@@ -57,7 +57,7 @@ const Appcontent = () => {
     console.log(nameCheck)
 
     if (!newName.trim() || !newStatus.trim() || !newGroup.trim() || !newRole.trim()) {
-      alert("All fields (besides medical excuses) must be filled")
+      alert("All fields (other than medical excuses) must be filled.")
     } else if (nameCheck.length>0) {
       if (window.confirm(`${newName.toUpperCase()} is already added to phonebook. Would you like to update the status?`)) {
         return (
