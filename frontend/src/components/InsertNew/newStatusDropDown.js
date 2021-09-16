@@ -6,13 +6,14 @@ import Newdate from "../reusable/newdate"
 
 
 const NewStatusDropDown = ({setnewStatus,newStatus,setnewReason}) => {
+  
+  let detailresponse = ''
 
     const handleStatusChange = (event) => {
       setshowModal(!showModal)
       console.log(`Status: ${event.target.getAttribute("value")}`)
       setnewStatus(event.target.getAttribute("value"))
   
-      let detailresponse = ''
       if (event.target.getAttribute("value") === 'mc') {
         detailresponse = prompt('Details',`MC FROM ${Newdate} TO ${Newdate}`)
       } else if (event.target.getAttribute("value") === 'ma') {

@@ -29,13 +29,14 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
           </Div>
           <Div d="flex">
-            <StatusDropDown person={person} persons={persons} setPersons={setPersons}/>
-            <Groupdropdown   person={person} persons={persons} setPersons={setPersons}/>
-            <RoleDropDown person={person} persons={persons} setPersons={setPersons}/>
-            <br/>
-            <UpdateExcuse  person={person} persons={persons} setPersons={setPersons}/>
-
+            <StatusDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <Groupdropdown options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <RoleDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
           </Div>
+          <Div d="flex">
+          <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
+          </Div>
+
           </>
         )}
 }

@@ -140,7 +140,6 @@ const Appcontent = () => {
             setnewRole = {setnewRole}
             setnewReason={setnewReason}/>
       <Personnellist setPersons={setPersons} persons={persons}/>
-      <h2>Settings</h2>
       <Settings newcdo={newcdo}
                 handlecdochange={handlecdochange}
                 newcds={newcds}

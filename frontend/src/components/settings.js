@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField} from '@material-ui/core';
+import {Icon, Div, Input } from "atomize";
 
 const Settings = ({
     newcdo,
@@ -15,66 +15,118 @@ const Settings = ({
 }) => {
 
     return (
-        <>
-          <div>
-            <TextField
-              id="standard-multiline-flexible"
-              label="CDO (Rank/Name)"
-              multiline
-              maxRows={4}
-              value={newcdo}
-              onChange={handlecdochange}
-              />  
-          </div>
+        <Div>
+          <h1>Settings</h1>
+          <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+          <Input
+    rounded="xl"
+    value={newcdo}
+    onChange={handlecdochange}
+    placeholder="CDO (Rank/Name)"
+    p={{ x: "2.5rem" }}
+    prefix={
+    <Icon
+    name="UserSolid"
+    color="warning800"
+    size="16px"
+    cursor="pointer"
+    pos="absolute"
+    top="50%"
+    left="0.75rem"
+    transform="translateY(-50%)"
+        />
+      }
+    />
+          </Div>
 
-          <div>
-            <TextField
-              id="standard-multiline-flexible"
-              label="CDS (Rank/Name)"
-              multiline
-              maxRows={4}
-              value={newcds}
-              onChange={handlecdschange}
-              />  
-          </div>
+          <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+          <Input
+    rounded="xl"
+    value={newcds}
+    onChange={handlecdschange}
+    placeholder="CDS (Rank/Name)"
+    p={{ x: "2.5rem" }}
+    prefix={
+    <Icon
+    name="UserSolid"
+    color="warning800"
+    size="16px"
+    cursor="pointer"
+    pos="absolute"
+    top="50%"
+    left="0.75rem"
+    transform="translateY(-50%)"
+        />
+      }
+      />
+      </Div>
 
-          <div>
-            <TextField
-              id="standard-multiline-flexible"
-              label="COS (Rank/Name)"
-              multiline
-              maxRows={4}
-              value={newcos}
-              onChange={handlecoschange}
-              />  
-          </div>
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+          <Input
+    rounded="xl"
+    value={newcos}
+    onChange={handlecoschange}
+    placeholder="COS (Rank/Name)"
+    p={{ x: "2.5rem" }}
+    prefix={
+    <Icon
+    name="UserSolid"
+    color="warning800"
+    size="16px"
+    cursor="pointer"
+    pos="absolute"
+    top="50%"
+    left="0.75rem"
+    transform="translateY(-50%)"
+        />
+      }
+      />
+      </Div>
 
-          <div>
-            <TextField
-              id="standard-multiline-flexible"
-              label="A/S (Rank/Name)"
-              multiline
-              maxRows={4}
-              value={newas}
-              onChange={handleaschange}
-              />  
-          </div>
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+          <Input
+    rounded="xl"
+    value={newas}
+    onChange={handleaschange}
+    placeholder="A/S (Rank/Name)"
+    p={{ x: "2.5rem" }}
+    prefix={
+    <Icon
+    name="UserSolid"
+    color="warning800"
+    size="16px"
+    cursor="pointer"
+    pos="absolute"
+    top="50%"
+    left="0.75rem"
+    transform="translateY(-50%)"
+        />
+      }
+      />
+      </Div>
 
-          <div>
-            <TextField
-              id="standard-multiline-flexible"
-              label="Done By: (Rank/Name)"
-              multiline
-              maxRows={4}
-              value={newauthor}
-              onChange={handleauthorchange}
-              />  
-          </div>
-
-
-
-
-        </>
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+          <Input
+    rounded="xl"
+    value={newauthor}
+    onChange={handleauthorchange}
+    placeholder="Done By: (Rank/Name)"
+    p={{ x: "2.5rem" }}
+    prefix={
+    <Icon
+    name="UserSolid"
+    color="warning800"
+    size="16px"
+    cursor="pointer"
+    pos="absolute"
+    top="50%"
+    left="0.75rem"
+    transform="translateY(-50%)"
+        />
+      }
+      />
+      </Div>
+        </Div>
     )
 }
 

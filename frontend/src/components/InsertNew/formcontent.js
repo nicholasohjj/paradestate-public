@@ -4,7 +4,7 @@ import NewRoleDropDown from './newRoledropdown'
 import NewStatusDropDown from './newStatusDropDown'
 import NewName from './newName'
 import NewExcuse from './newExcuse';
-import {Icon,Button} from "atomize";
+import {Div, Icon,Button} from "atomize";
 
 const Formcontent = ({addName,
                newName,
@@ -21,7 +21,7 @@ const Formcontent = ({addName,
               }) => {
 
     return (
-      <div>
+      <Div>
         <form onSubmit={addName}>
           <NewName newName={newName} setNewName={setNewName}/>
           <br/>
@@ -33,6 +33,7 @@ const Formcontent = ({addName,
           <br/>
           <NewExcuse newexcuse={newexcuse} setnewExcuse={setnewExcuse}/>
           <br/>
+          <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
           <Button suffix={
       <Icon
         name="LongRight"
@@ -43,9 +44,9 @@ const Formcontent = ({addName,
       bg="black"
       hoverBg="black400"
       variant="contained" color="primary" type="submit">Add</Button>
-          
+      </Div>
         </form>
-      </div>
+      </Div>
     )
   }
 

@@ -14,7 +14,7 @@ const Personnellist = ({setPersons, persons}) => {
   if (show===false) {
     return (
       <>
-      <Div d="flex">
+      <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
         suffix={
         <Icon
@@ -36,8 +36,8 @@ const Personnellist = ({setPersons, persons}) => {
       </>
     )} else {
       return (
-        <div>
-      <Div d="flex">
+        <>
+      <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
         suffix={
         <Icon
@@ -71,7 +71,7 @@ const Personnellist = ({setPersons, persons}) => {
               </li>
             )}
           </ol>
-        </div>
+        </>
       )
   }
 

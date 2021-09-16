@@ -25,7 +25,7 @@ const Form = ({addName,
 
     if (show===false) {
         return (
-          <Div d="flex">
+          <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
             prefix={
             <Icon
@@ -47,7 +47,7 @@ const Form = ({addName,
         )} else {
           return (
             <>
-            <Div d="flex">
+            <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
             prefix={
             <Icon

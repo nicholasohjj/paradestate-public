@@ -59,7 +59,7 @@ const RoleDropDown = ({person,persons,setPersons}) => {
     
     return (
         <Dropdown  
-          w="fit-content"
+          w="5rem"
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}

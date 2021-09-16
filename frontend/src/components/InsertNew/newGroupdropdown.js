@@ -40,7 +40,7 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
         menu={menuList}
         onClick={Handleclick}
       >
-        {(newGroup)? `STATUS: ${newGroup.toUpperCase()}`: "STATUS"}
+        {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
       </Dropdown>
     );
 }

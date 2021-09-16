@@ -59,7 +59,7 @@ const Groupdropdown = ({person,persons,setPersons}) => {
     
     return (
         <Dropdown
-          w="fit-content"
+          w="6rem"
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
