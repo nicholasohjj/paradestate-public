@@ -32,6 +32,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <StatusDropDown person={person} persons={persons} setPersons={setPersons}/>
             <Groupdropdown   person={person} persons={persons} setPersons={setPersons}/>
             <RoleDropDown person={person} persons={persons} setPersons={setPersons}/>
+            <br/>
             <UpdateExcuse  person={person} persons={persons} setPersons={setPersons}/>
 
           </Div>
