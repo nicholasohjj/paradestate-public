@@ -59,12 +59,12 @@ const DeleteModal = ({id, setPersons, persons, person}) => {
     return (
         <>
           <Button
-            bg="info700"
-            hoverBg="info600"
+            bg="danger700"
+            hoverBg="danger600"
             m={{ b: "1rem" }}
             onClick={Handleclick}
           >
-            Delete
+            <Icon name="Delete" size="20px" />
           </Button>
           <AlignCenterModal
             isOpen={showModal}

@@ -20,19 +20,19 @@ const Personnellist = ({setPersons, persons}) => {
         id="edit"
         suffix={
         <Icon
-        name="Down"
+        name="Up"
         size="16px"
         color="white"
         m={{ l: "1rem" }}
       />}
-      bg="black"
-      hoverBg="black400"
+      bg="info700"
+      hoverBg="info600"
       shadow="3"
       hoverShadow="4"
       m={{ r: "1rem" }}
       onClick={HandleShow}
       >
-    Edit
+    <Icon color='white' name="EditSolid" size="20px" />
     </Button>
     </Div>
       </>
@@ -41,22 +41,23 @@ const Personnellist = ({setPersons, persons}) => {
         <>
       <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
         <Button
+        rounded="xl"
         id="edit"
         suffix={
         <Icon
-        name="Up"
+        name="Down"
         size="16px"
         color="white"
         m={{ l: "1rem" }}
       />}
-      bg="black"
-      hoverBg="black400"
+      bg="info700"
+      hoverBg="info600"
       shadow="3"
       hoverShadow="4"
       m={{ r: "1rem" }}
       onClick={HandleShow}
       >
-    Hide
+    <Icon color='white' name="EditSolid" size="20px" />
     </Button>
     </Div>
           <br/>

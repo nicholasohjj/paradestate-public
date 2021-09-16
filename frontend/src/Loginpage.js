@@ -25,7 +25,7 @@ const Loginpage = ({access,setnewaccess}) => {
         
 >
             <Text p={{ xs: '1rem', md: '4rem' }}
-            textAlign={{ xs: "center", lg: "left" }}
+            textAlign='center'
             textWeight="600"
             textSize="display1"
             fontFamily="Helvetica"
@@ -58,6 +58,18 @@ const Loginpage = ({access,setnewaccess}) => {
             </Button>
           }
         />
+
+<Text p={{ xs: '1rem', md: '4rem' }}
+            textAlign='center'
+            textWeight="600"
+            textSize="tiny"
+            fontFamily="Helvetica"
+            pos="relative"
+
+
+
+            >
+                If you are not authorised to use this system, please do not attempt to login.</Text>
         </Div>
 
       );

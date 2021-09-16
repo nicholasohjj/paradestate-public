@@ -5,7 +5,7 @@ import DeleteModal from './deletemodal'
 import RoleDropDown from './roleDropDown'
 import Groupdropdown from './groupDropDown'
 import StatusDropDown from './statusDropDown'
-import { Div, Button } from 'atomize'
+import { Div, Button, Icon } from 'atomize'
 
 const Updatebuttons = ({person, id, setPersons, persons}) => {
 
@@ -16,7 +16,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
   if (show===false) {
       return (  
         <Div d="flex">
-          <Button color="warning700" onClick={HandleShow}>Update</Button>
+          <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem" }} onClick={HandleShow}><Icon name="Edit" size="20px" /></Button>
           <DetailModal person={person}/>
           <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
         </Div>
@@ -25,7 +25,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
         return (
           <>
           <Div d="flex">
-            <Button onClick={HandleShow}>Hide</Button>
+            <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem" }} onClick={HandleShow}><Icon name="Edit" size="20px" /></Button>
             <DetailModal person={person}/>
             <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
           </Div>

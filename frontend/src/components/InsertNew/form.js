@@ -28,21 +28,21 @@ const Form = ({addName,
           <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
             rounded="xl"
-            prefix={
-            <Icon
-              name="EyeSolid"
-              size="16px"
-              color="white"
-              m={{ r: "0.5rem" }}
-              />}
-              bg="black"
-              hoverBg="black400"
+              bg="success700"
+              hoverBg="success600"
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"
               onClick={HandleShow}
+              suffix={
+                <Icon
+                name="Up"
+                size="16px"
+                color="white"
+                m={{ l: "1rem" }}
+              />}
               >
-                Insert New
+                <Icon pos="relative" name="Add" size="20px" />
             </Button>
           </Div>
         )} else {
@@ -51,21 +51,21 @@ const Form = ({addName,
             <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
             rounded="xl"
-            prefix={
-            <Icon
-              name="EyeSolid"
+            suffix={
+              <Icon
+              name="Down"
               size="16px"
               color="white"
-              m={{ r: "0.5rem" }}
-              />}
-              bg="black"
-              hoverBg="black400"
+              m={{ l: "1rem" }}
+            />}
+              bg="success700"
+              hoverBg="success600"
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"
               onClick={HandleShow}
               >
-                Hide
+                <Icon pos="relative" name="Add" size="20px" />
             </Button>
             </Div>
             <>

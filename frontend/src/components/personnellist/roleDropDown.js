@@ -72,7 +72,7 @@ const RoleDropDown = ({person,persons,setPersons}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          ROLE
+          Role
         </Dropdown>
       );
 }

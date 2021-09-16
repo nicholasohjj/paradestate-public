@@ -110,8 +110,8 @@ const StatusDropDown = ({person,persons,setPersons}) => {
           isOpen={showModal}
           onClick={Handleclick}
           menu={menuList}
-          bg="info100"
-        focusBg="info200"
+          bg="info200"
+        focusBg="info300"
         borderColor="info600"
         focusBorderColor="info800"
         textColor="info800"
@@ -119,7 +119,7 @@ const StatusDropDown = ({person,persons,setPersons}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          STATUS
+          Status
         </Dropdown>
       );
 }
