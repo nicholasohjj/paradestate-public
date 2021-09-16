@@ -30,11 +30,13 @@ const StatusDropDown = ({person,persons,setPersons}) => {
         newReason = prompt('Details',``)
       }
        else {
-        newReason = 'nil'
+        newReason = ''
       }
   
       if (newReason) {
         newReason = newReason.toUpperCase()
+      } else {
+        newReason = 'nil'
       }
   
       console.log(newReason)

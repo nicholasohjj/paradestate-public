@@ -6,7 +6,7 @@ import Settings from './components/settings'
 import phoneservice from './services/phoneservice'
 import Greeting from './components/title/greeting'
 import Summary from './components/summary/summary'
-import ParadeState from './components/mainbody/paradestate'
+import ParadeState from './components/contents/paradestate'
 
 //App component
 const Appcontent = () => {
