@@ -33,4 +33,4 @@ const CCP = ({persons}) => {
 
   
 
-  export default CCP
+  export default CCP 

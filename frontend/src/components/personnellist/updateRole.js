@@ -16,10 +16,10 @@ const UpdateRole = ({options,person,persons,setPersons}) => {
   };
 
     
-  const HandleUpdateStatus = (event,value) => {  
+  const HandleUpdateStatus = (event) => {  
     setAnchorEl(null);
 
-    console.log(value)
+    console.log(event.target.getAttribute("value"))
         const newPerson = {
             name: person.name,
             status: person.status,

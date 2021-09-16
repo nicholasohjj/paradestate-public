@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import Formcontent from "./formcontent";
-import {ButtonGroup} from '@material-ui/core'
+import { Div, Button, Icon } from "atomize";
+
+
 
 
 const Form = ({addName,
@@ -23,17 +25,50 @@ const Form = ({addName,
 
     if (show===false) {
         return (
-          <>
-            <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}><h3>Insert New</h3></button>
-            </ButtonGroup>
-          </>
+          <Div d="flex">
+            <Button
+            prefix={
+            <Icon
+              name="EyeSolid"
+              size="16px"
+              color="white"
+              m={{ r: "0.5rem" }}
+              />}
+              bg="warning700"
+              hoverBg="warning800"
+              rounded="circle"
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              >
+                Insert New
+            </Button>
+          </Div>
         )} else {
           return (
             <>
-              <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-              <button onClick={HandleShow}><h3>Hide</h3></button>
-              </ButtonGroup>
+            <Div d="flex">
+            <Button
+            prefix={
+            <Icon
+              name="EyeSolid"
+              size="16px"
+              color="white"
+              m={{ r: "0.5rem" }}
+              />}
+              bg="warning700"
+              hoverBg="warning800"
+              rounded="circle"
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              >
+                Hide
+            </Button>
+            </Div>
+            <>
               <br/>
               <Formcontent 
               addName={addName}
@@ -49,8 +84,8 @@ const Form = ({addName,
               setnewRole = {setnewRole}
               setnewReason={setnewReason}
               />
-              <br/>
-  
+              <br/>  
+            </>
             </>
           )}
   }

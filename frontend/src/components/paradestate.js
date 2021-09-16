@@ -1,8 +1,8 @@
 import React from 'react'
 import HQ from './contents/hq' 
-import CCP from './contents/ccp'
-import CSP from './contents/csp'
-import Excuses from './contents/excuses'
+import CCP from './contents/CCP';
+import CSP from './contents/CSP'
+import Excuses from './contents/Excuses'
 import Signature from "./contents/signature"
 
 const ParadeState = ({persons, newauthor}) => {

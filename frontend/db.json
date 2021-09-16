@@ -1,21 +1,12 @@
 {
   "persons": [
     {
-      "name": "CPT LOREM IPSUM",
-      "status": "mc",
-      "reason": "MC FROM 140921 TO 140921",
-      "group": "hq",
-      "excuse": "EXCUSE PHYSICAL TRAINING FROM 140921 TO 140921",
-      "role": "hq",
-      "id": 1
-    },
-    {
       "name": "CPT CHAN MALI CHAN",
       "status": "attached",
       "reason": "EFEF",
       "group": "hq",
       "excuse": "EXCUSE PT",
-      "role": "hq",
+      "role": "is",
       "id": 2
     },
     {

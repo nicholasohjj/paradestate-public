@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import Updatebuttons from './updateButtons'; 
 import Emojidisplay from '../reusable/emoji';
 import Reason from '../reason';
-import {ButtonGroup} from '@material-ui/core'
+import { Div, Button, Icon } from "atomize";
+
 
 
 const Personnellist = ({setPersons, persons}) => {
@@ -13,16 +14,44 @@ const Personnellist = ({setPersons, persons}) => {
   if (show===false) {
     return (
       <>
-        <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-        <button onClick={HandleShow}><h3>Edit</h3></button>
-        </ButtonGroup>
+      <Div d="flex">
+        <Button
+        suffix={
+        <Icon
+        name="LongRight"
+        size="16px"
+        color="white"
+        m={{ l: "1rem" }}
+      />}
+      shadow="3"
+      hoverShadow="4"
+      m={{ r: "1rem" }}
+      onClick={HandleShow}
+      >
+    Edit
+    </Button>
+    </Div>
       </>
     )} else {
       return (
         <div>
-          <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}><h3>Hide</h3></button>
-          </ButtonGroup>
+      <Div d="flex">
+        <Button
+        suffix={
+        <Icon
+        name="LongRight"
+        size="16px"
+        color="white"
+        m={{ l: "1rem" }}
+      />}
+      shadow="3"
+      hoverShadow="4"
+      m={{ r: "1rem" }}
+      onClick={HandleShow}
+      >
+    Hide
+    </Button>
+    </Div>
           <br/>
           <ol>
             {persons.map(person=>

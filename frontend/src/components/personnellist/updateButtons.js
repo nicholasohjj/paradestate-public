@@ -1,54 +1,45 @@
 import React, {useState} from 'react'
-import phoneservice from '../../services/phoneservice'
 import UpdateStatus from './updateStatus'
 import UpdateGroup from './updateGroup'
-import { Button, ButtonGroup} from '@material-ui/core'
 import UpdateRole from './updateRole'
 import UpdateExcuse from './updateExcuse'
+import DetailModal from './detailmodal'
+import DeleteModal from './deletemodal'
+import RoleModal from './rolemodal'
+import { Div, Button } from 'atomize'
 
 const Updatebuttons = ({person, id, setPersons, persons}) => {
 
   const [show, setShow] = useState(false)
 
-  const HandleDelete = () => {
-    if (window.confirm(`Are you sure you want to permanently delete ${person.name}?`)) {
-      phoneservice
-        .removePerson(id)
-        setPersons(persons.filter(person=>person.id !==id))
-        }
-  }
-
   const HandleShow = () => setShow(!show)
   
   if (show===false) {
-      return (
-        <>
-          <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-          <button onClick={HandleShow}>Update</button>
-          <Button onClick={HandleDelete}>Delete</Button>
-          </ButtonGroup>
-        </>
+      return (  
+        <Div d="flex">
+          <Button color="warning700" onClick={HandleShow}>Update</Button>
+          <DetailModal person={person}/>
+          <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
+        </Div>
       )} else {
-        setTimeout(HandleShow,10000)
         return (
           <>
-            <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-            <button onClick={HandleShow}>Hide</button>
-            <Button onClick={HandleDelete}>Delete</Button>
-            </ButtonGroup>
-            <br/>
-            <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
+          <Div d="flex">
+            <Button onClick={HandleShow}>Hide</Button>
+            <DetailModal person={person}/>
+            <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
+          </Div>
+          <Div d="flex">
             <UpdateStatus options={show} 
                           person={person}
                           persons={persons}
                           setPersons={setPersons}/>
             <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <RoleModal options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateRole options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
 
-
-            </ButtonGroup>
-
+          </Div>
           </>
         )}
 }
