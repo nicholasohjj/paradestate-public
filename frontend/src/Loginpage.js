@@ -16,7 +16,7 @@ const Loginpage = ({access,setnewaccess}) => {
         setnewpass(event.target.value)
     }
 
-    if (pass==='sigparadestate') {
+    if (pass==='sigparadestate7') {
         setnewaccess(!access)
     } 
 
