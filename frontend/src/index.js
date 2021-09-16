@@ -25,7 +25,7 @@ const theme = {
         lg: "1156px",
         xl: "1156px"
     },
-    gutterWidth: "12px",
+    gutterWidth: "100%",
   }
 };
 
