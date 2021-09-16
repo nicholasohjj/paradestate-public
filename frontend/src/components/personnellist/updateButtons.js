@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import UpdateStatus from './updateStatus'
-import UpdateGroup from './updateGroup'
-import UpdateRole from './updateRole'
 import UpdateExcuse from './updateExcuse'
 import DetailModal from './detailmodal'
 import DeleteModal from './deletemodal'
 import RoleModal from './rolemodal'
+import GroupModal from './groupmodal'
+import StatusModal from './statusmodal'
 import { Div, Button } from 'atomize'
 
 const Updatebuttons = ({person, id, setPersons, persons}) => {
@@ -34,7 +34,8 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
                           person={person}
                           persons={persons}
                           setPersons={setPersons}/>
-            <UpdateGroup options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <StatusModal options={show} person={person} persons={persons} setPersons={setPersons}/>
+            <GroupModal options={show} person={person} persons={persons} setPersons={setPersons}/>
             <RoleModal options={show} person={person} persons={persons} setPersons={setPersons}/>
             <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
 
