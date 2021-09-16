@@ -10,15 +10,6 @@
       "id": 3
     },
     {
-      "name": "2LT MARY JANE",
-      "status": "mc",
-      "reason": "",
-      "group": "csp",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
-      "id": 4
-    },
-    {
       "name": "3WO DENNY",
       "status": "ma",
       "reason": "MA AT",
@@ -30,20 +21,11 @@
     {
       "name": "SSG GEORGE",
       "status": "ma",
-      "reason": null,
+      "reason": "nil",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
       "id": 6
-    },
-    {
-      "name": "1SG KENDRICK",
-      "status": "attached",
-      "reason": "",
-      "group": "csp",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
-      "id": 7
     },
     {
       "name": "1SG XIAO MING",
@@ -57,7 +39,7 @@
     {
       "name": "PTE NICK",
       "status": "present",
-      "reason": "",
+      "reason": "nil",
       "group": "csp",
       "excuse": "EXCUSE PT",
       "role": "hq",
@@ -86,6 +68,7 @@
       "status": "ma",
       "reason": "LEAVE ON 150921",
       "group": "CSP",
+      "excuse": "nil",
       "role": "sevenspec",
       "id": 13
     },

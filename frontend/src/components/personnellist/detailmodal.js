@@ -24,7 +24,16 @@ const ModalSize = ({ isOpen, onClose, person }) => {
         p={{ l: "0.5rem", t: "0.25rem" }}
         m={{ b: "2rem" }}
       >
-        {JSON.stringify({person}, null, 2)}
+        <p>NAME: {person.name}</p>
+        <p>STATUS: {person.status.toUpperCase()}</p>
+        <p>REASON: {person.reason.toUpperCase()}</p>
+        <p>GROUP: {person.group.toUpperCase()}</p>
+        <p>EXCUSES: {person.excuse.toUpperCase()}</p>
+        <p>ROLE: {person.role.toUpperCase()}</p>
+
+
+
+
       </Text>
       <Div d="flex" justify="flex-end">
         <Button
