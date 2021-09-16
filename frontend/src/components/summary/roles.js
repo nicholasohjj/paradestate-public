@@ -38,6 +38,7 @@ const Roles = ({persons}) => {
           <p style={style}> -7th Mono Spec: {Sevenspeccurrent}/{SevenSpectotal} </p>
           <p style={style}> -IC2 Opr: {IC2current}/{IC2total} </p>
           <p style={style}> -IS Opr: {IScurrent}/{IStotal} </p>
+          <p style={style}> -6th Mono Opr: {Sixmonocurrent}/{Sixmonototal} </p>
 
           <br/>
       </div>
