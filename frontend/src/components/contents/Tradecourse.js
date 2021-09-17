@@ -17,7 +17,7 @@ const Tradecourse = ({persons}) => {
     if (totalstrength!='0') {
       return (
         <div>
-          <p style={style}>IC2 OPR COURSE TILL 160921: {currentstrength}/{totalstrength}</p>
+          <p style={style}>DRIVING COURSE: {currentstrength}/{totalstrength}</p>
             {TcourseList.map((person, index)=> 
               <Text style={style} key={person.name}>
                 {index+1} .  

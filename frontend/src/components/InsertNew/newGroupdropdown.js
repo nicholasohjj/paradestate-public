@@ -14,16 +14,16 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
     const menuList = (
       <Div p={{ x: "1rem", y: "0.5rem" }} value={newGroup} onClick ={HandleUpdateGroup}>
         <Anchor d="block" p={{ y: "0.25rem" }} value='hq' >
-            {"HQ"}  
+            {"HQ 🏢"}  
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='ccp' >
-            {"FG1 - CCP"}
+            {"FG1 - CCP 1️⃣"}
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='csp'>
-            {"FG2 - CSP"}
+            {"FG2 - CSP 2️⃣"}
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='tradecourse'>
-            {"TRADE COURSE"}
+            {"Driving Course 🚗"}
         </Anchor>
       </Div>
     );
