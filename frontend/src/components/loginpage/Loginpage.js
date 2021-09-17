@@ -73,7 +73,20 @@ const Loginpage = ({access,setnewaccess}) => {
 
             >
                 If you are not authorised to use this system, please do not attempt to login.</Text>
+
+                <Text p={{ xs: '1rem', md: '4rem' }}
+            textAlign='center'
+            textWeight="600"
+            textSize="tiny"
+            fontFamily="Helvetica"
+            pos="relative"
+
+
+
+            >
+                App under maintenance</Text>
         </Div>
+        
 
       );
 }
