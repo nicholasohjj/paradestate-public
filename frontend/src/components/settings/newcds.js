@@ -5,6 +5,11 @@ import { Icon, Div, Dropdown, Anchor} from "atomize";
 
 
 const NewCDS = ({persons,setnewcds}) => {
+  const [showModal, setshowModal] = useState(false)
+
+    const Handleclick = () => {
+        setshowModal(!showModal)
+    }
 
     const handlecdschange = (event) => {
         console.log(`CDS: ${event.target.getAttribute("value")}`)
@@ -16,18 +21,12 @@ const NewCDS = ({persons,setnewcds}) => {
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecdschange}>
         {CDSList.map(person => (
-          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }}>
+          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
             {person.name}
           </Anchor>
         ))}
       </Div>
     );
-
-    const [showModal, setshowModal] = useState(false)
-
-    const Handleclick = () => {
-        setshowModal(!showModal)
-    }
     
     return (
         <Dropdown

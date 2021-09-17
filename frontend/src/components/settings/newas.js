@@ -10,13 +10,17 @@ const NewAS = ({persons,setnewas}) => {
         console.log(`AS: ${event.target.getAttribute("value")}`)
         setnewas(event.target.getAttribute("value"))
       }
+
+    const Handleclick = () => {
+        setshowModal(!showModal)
+    }
     
     const ASList = persons.filter(person=> (String(person.role)).toLowerCase()==='hq') 
     console.log(ASList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handleaschange}>
         {ASList.map(person => (
-          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }}>
+          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
             {person.name}
           </Anchor>
         ))}
@@ -25,9 +29,7 @@ const NewAS = ({persons,setnewas}) => {
 
     const [showModal, setshowModal] = useState(false)
 
-    const Handleclick = () => {
-        setshowModal(!showModal)
-    }
+    
     
     return (
         <Dropdown
@@ -44,7 +46,7 @@ const NewAS = ({persons,setnewas}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          CDO
+          AS
         </Dropdown>
       );
 }

@@ -9,7 +9,6 @@ const Settings = ({
     setnewcdo,
     setnewcds,
     setnewcos,
-    newas,
     setnewas,
     newauthor,
     setnewauthor,
@@ -47,8 +46,8 @@ const Settings = ({
       </Div>
           <NewCDO persons={persons} setnewcdo={setnewcdo}/>
           <NewCDS persons={persons} setnewcds={setnewcds}/>
-          <NewCOS persons={persons} setnewcds={setnewcds}/>
-          <NewAS persons={persons} setnewcds={setnewcds}/>
+          <NewCOS persons={persons} setnewcos={setnewcos}/>
+          <NewAS persons={persons} setnewas={setnewas}/>
 
 
         </Div>
