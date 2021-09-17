@@ -30,7 +30,6 @@ const Appcontent = () => {
 
   return (
     <div>
-      <h2>Parade State Application (For Internal Use Only)</h2>
       <Message message={newMessage}/>
       <Form setNewMessage={setNewMessage} persons={persons} setPersons={setPersons} />
       <Personnellist setPersons={setPersons} persons={persons}/>
