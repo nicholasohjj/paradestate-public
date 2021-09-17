@@ -36,6 +36,7 @@ const NewCDS = ({persons,setnewcds}) => {
           menu={menuList}
           bg="info200"
         focusBg="info300"
+        m={{ r: "0.5rem",y: "0.5rem" }}
         borderColor="info600"
         focusBorderColor="info800"
         textColor="info800"

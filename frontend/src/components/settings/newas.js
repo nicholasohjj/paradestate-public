@@ -40,6 +40,7 @@ const NewAS = ({persons,setnewas}) => {
           bg="info200"
         focusBg="info300"
         borderColor="info600"
+        m={{ r: "0.5rem",y: "0.5rem" }}
         focusBorderColor="info800"
         textColor="info800"
         textWeight="500"

@@ -25,6 +25,7 @@ const Settings = ({
           <h1>Settings</h1>
           <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
           <Input
+                    m={{ r: "0.5rem",y: "0.5rem" }}
     rounded="xl"
     value={newauthor}
     onChange={handleauthorchange}

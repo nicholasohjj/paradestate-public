@@ -43,6 +43,7 @@ const NewCDO = ({persons,setnewcdo}) => {
         focusBg="info300"
         borderColor="info600"
         focusBorderColor="info800"
+        m={{ r: "0.5rem",y: "0.5rem" }}
         textColor="info800"
         textWeight="500"
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
