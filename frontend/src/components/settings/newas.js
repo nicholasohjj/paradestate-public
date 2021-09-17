@@ -46,7 +46,7 @@ const NewAS = ({persons,setnewas}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          AS
+          Armskote
         </Dropdown>
       );
 }

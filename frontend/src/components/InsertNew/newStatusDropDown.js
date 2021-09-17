@@ -95,7 +95,7 @@ const NewStatusDropDown = ({setnewStatus,newStatus,setnewReason}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          {(newStatus)? `STATUS: ${newStatus.toUpperCase()}`: "STATUS"}
+          {(newStatus)? `Status: ${newStatus.toUpperCase()}`: "Status"}
         </Dropdown>
       </Div>
         

@@ -49,7 +49,7 @@ const NewRoleDropDown = ({setnewRole, newRole}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          {(newRole)? `ROLE: ${newRole.toUpperCase()}`: "ROLE"}
+          {(newRole)? `Role: ${newRole.toUpperCase()}`: "Role"}
         </Dropdown>
       );
 }

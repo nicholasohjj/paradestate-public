@@ -69,6 +69,8 @@ const Groupdropdown = ({person,persons,setPersons}) => {
         focusBorderColor="info800"
         textColor="info800"
         textWeight="500"
+        m={{ r: "0.5rem"}}
+
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >

@@ -49,7 +49,7 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
       >
-        {(newGroup)? `GROUP: ${newGroup.toUpperCase()}`: "GROUP"}
+        {(newGroup)? `Group: ${newGroup.toUpperCase()}`: "Group"}
       </Dropdown>
     );
 }
