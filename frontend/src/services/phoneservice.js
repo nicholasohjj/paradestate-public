@@ -7,18 +7,20 @@ const getAll = () => {
   return request.then(response => response.data)
 }
 
-const addNew = (newPerson) => {
+const addNew = async (newPerson) => {
   const request = axios.post(baseUrl, newPerson)
-  return request.then(response => response.data)
+  const response = await request
+  return response.data
 }
 
 const removePerson = (id) => {
   return axios.delete(`${baseUrl}/${id}`)
 }
 
-const update = (id,newPerson) => {
+const update = async (id,newPerson) => {
   const request = axios.put(`${baseUrl}/${id}`, newPerson)
-  return request.then(response=>response.data)
+  const response = await request
+  return response.data
   
 }
 
