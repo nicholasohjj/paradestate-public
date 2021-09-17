@@ -4,9 +4,9 @@ import { Input, Icon, Div } from "atomize";
 const NewExcuse = ({newexcuse,setnewExcuse}) => {
 
     const handleExcuseChange = (event) => {
-        console.log(`Excuse: ${event.target.value}`)
-        setnewExcuse(event.target.value)
-      }
+        console.log(`Excuse: ${event.target.getAttribute("value")}`)
+          setnewExcuse(event.target.value)
+        }
 
   return (
     <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
