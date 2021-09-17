@@ -20,9 +20,9 @@
     <br />
     <a href="https://paradestate-public.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/nicholasohjj/paradestate-public/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/nicholasohjj/paradestate-public/issues">Request Feature</a>
   </p>
 </p>
 
