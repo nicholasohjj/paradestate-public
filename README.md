@@ -15,7 +15,7 @@
   <p align="center">
     A React Web Application to help you streamline your Parade State submissions!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/nicholasohjj/paradestate-public"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://paradestate-public.herokuapp.com/">View Demo</a>
