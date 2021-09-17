@@ -21,7 +21,7 @@ const NewCDO = ({persons,setnewcdo}) => {
     const HQList = persons.filter(person=> (String(person.role)).toLowerCase()==='hq') 
     console.log(HQList)
     const menuList = (
-        <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecdochange}>
+        <Div  p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecdochange}>
           <Anchor value="LTA SAMOEUL TAN" d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
             LTA SAMOEUL TAN
           </Anchor>
@@ -35,7 +35,7 @@ const NewCDO = ({persons,setnewcdo}) => {
     
     
     return (
-        <Dropdown
+        <Dropdown 
         rounded="xl" 
           isOpen={showModal}
           onClick={Handleclick}

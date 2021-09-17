@@ -33,6 +33,7 @@ const NewCOS = ({persons,setnewcos}) => {
    
     return (
         <Dropdown
+        
         rounded="xl" 
           isOpen={showModal}
           onClick={Handleclick}

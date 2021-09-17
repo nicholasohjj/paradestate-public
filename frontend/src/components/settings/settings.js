@@ -25,12 +25,12 @@ const Settings = ({
           <h1>Settings</h1>
           <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
           <Input
-                    m={{ r: "0.5rem",y: "0.5rem" }}
+    m={{ r: "0.5rem",y: "0.5rem" }}
     rounded="xl"
     value={newauthor}
     onChange={handleauthorchange}
     placeholder="Done By: (Rank/Name)"
-    p={{ l: '2rem', r: '3rem' }}
+    p={{ x: "2.5rem" }}
     prefix={
     <Icon
     name="UserSolid"
@@ -45,7 +45,7 @@ const Settings = ({
       }
       />
       </Div>
-          <NewCDO persons={persons} setnewcdo={setnewcdo}/>
+          <NewCDO  persons={persons} setnewcdo={setnewcdo}/>
           <NewCDS persons={persons} setnewcds={setnewcds}/>
           <NewCOS persons={persons} setnewcos={setnewcos}/>
           <NewAS persons={persons} setnewas={setnewas}/>

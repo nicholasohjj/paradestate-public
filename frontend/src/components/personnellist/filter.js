@@ -4,14 +4,16 @@ import { Input,Icon, Div } from 'atomize'
 const Filter = ({newFilter, handleNamefilter}) => {
     return (
       
-      <Div>
+      <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
         <Input
+      
     rounded="xl"
     value={newFilter}
     bg="success00"
 
     onChange={handleNamefilter}
     placeholder="Filter by name"
+    m={{ r: "0.5rem",y: "0.5rem" }}
     p={{ x: "2.5rem" }}
     prefix={
     <Icon
