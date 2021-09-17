@@ -27,6 +27,7 @@ const Form = ({addName,
         return (
           <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
+            textColor="black"
             rounded="xl"
               bg="success700"
               hoverBg="success600"
@@ -36,13 +37,14 @@ const Form = ({addName,
               onClick={HandleShow}
               suffix={
                 <Icon
-                name="Up"
+                name="Add"
                 size="16px"
-                color="white"
+                color="black"
                 m={{ l: "1rem" }}
-              />}
+                
+              />} 
               >
-                <Icon pos="relative" name="Add" size="20px" />
+                Add
             </Button>
           </Div>
         )} else {
@@ -50,22 +52,24 @@ const Form = ({addName,
             <>
             <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
+            textColor="black"
             rounded="xl"
-            suffix={
-              <Icon
-              name="Down"
-              size="16px"
-              color="white"
-              m={{ l: "1rem" }}
-            />}
               bg="success700"
               hoverBg="success600"
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"
               onClick={HandleShow}
+              suffix={
+                <Icon
+                name="Add"
+                size="16px"
+                color="black"
+                m={{ l: "1rem" }}
+                
+              />} 
               >
-                <Icon pos="relative" name="Add" size="20px" />
+                Hide
             </Button>
             </Div>
             <>

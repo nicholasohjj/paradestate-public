@@ -53,7 +53,7 @@ const Settings = ({
     prefix={
     <Icon
     name="UserSolid"
-    color="warning800"
+    color="black"
     size="16px"
     cursor="pointer"
     pos="absolute"
@@ -76,7 +76,7 @@ const Settings = ({
     prefix={
     <Icon
     name="UserSolid"
-    color="warning800"
+    color="black"
     size="16px"
     cursor="pointer"
     pos="absolute"
@@ -98,7 +98,7 @@ const Settings = ({
     prefix={
     <Icon
     name="UserSolid"
-    color="warning800"
+    color="black"
     size="16px"
     cursor="pointer"
     pos="absolute"
@@ -120,7 +120,7 @@ const Settings = ({
     prefix={
     <Icon
     name="UserSolid"
-    color="warning800"
+    color="black"
     size="16px"
     cursor="pointer"
     pos="absolute"
@@ -142,7 +142,7 @@ const Settings = ({
     prefix={
     <Icon
     name="UserSolid"
-    color="warning800"
+    color="black"
     size="16px"
     cursor="pointer"
     pos="absolute"

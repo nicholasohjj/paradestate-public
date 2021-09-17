@@ -14,51 +14,53 @@ const Personnellist = ({setPersons, persons}) => {
   if (show===false) {
     return (
       <>
-      <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
-        <Button
+                <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
+            <Button
+            textColor="black"
             rounded="xl"
-        id="edit"
-        suffix={
-        <Icon
-        name="Up"
-        size="16px"
-        color="white"
-        m={{ l: "1rem" }}
-      />}
-      bg="info700"
-      hoverBg="info600"
-      shadow="3"
-      hoverShadow="4"
-      m={{ r: "1rem" }}
-      onClick={HandleShow}
-      >
-    <Icon color='white' name="EditSolid" size="20px" />
-    </Button>
+              bg="info700"
+              hoverBg="info600"
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              suffix={
+                <Icon
+                name="EditSolid"
+                size="16px"
+                color="black"
+                m={{ l: "1rem" }}
+                
+              />} 
+              >
+                Edit
+            </Button>
     </Div>
       </>
     )} else {
       return (
         <>
       <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
-        <Button
-        rounded="xl"
-        id="edit"
-        suffix={
-        <Icon
-        name="Down"
-        size="16px"
-        color="white"
-        m={{ l: "1rem" }}
-      />}
-      bg="info700"
-      hoverBg="info600"
-      shadow="3"
-      hoverShadow="4"
-      m={{ r: "1rem" }}
-      onClick={HandleShow}
-      >
-    <Icon color='white' name="EditSolid" size="20px" />
-    </Button>
+            <Button
+            textColor="black"
+            rounded="xl"
+              bg="info700"
+              hoverBg="info600"
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              suffix={
+                <Icon
+                name="EditSolid"
+                size="16px"
+                color="black"
+                m={{ l: "1rem" }}
+                
+              />} 
+              >
+                Hide
+            </Button>
     </Div>
           <br/>
           <ol>
