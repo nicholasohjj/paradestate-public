@@ -1,6 +1,7 @@
 // Show Hide Password
 import React, {useState} from "react";
-import { Text, Div, Input, Button, Icon } from "atomize";
+import { Text, Div, Input, Button, Icon, Image } from "atomize";
+import Logo from './Parade State-logos_black.png'
 
 
 
@@ -19,7 +20,6 @@ const Loginpage = ({access,setnewaccess}) => {
     if (pass==='sigparadestate7') {
         setnewaccess(!access)
     } 
-
     return (
         <Div align="center" p={{ x: { xs: '1rem', md: '4rem' }, y: { xs: '2rem', md: '0rem' }}}
         
@@ -30,11 +30,14 @@ const Loginpage = ({access,setnewaccess}) => {
             textSize="display1"
             fontFamily="Helvetica"
             pos="relative"
-
-
-
             >
-                Login</Text>
+              Login
+            </Text>
+            <Image src={Logo}
+             bgSize="cover"
+             bgPos="center"
+             h="20rem"
+             w="20rem" />
 
                 <Input
                 onChange = {Handlelogin}
