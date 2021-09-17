@@ -34,16 +34,18 @@ const Formcontent = ({addName,
           <NewRoleDropDown setnewRole={setnewRole} newRole={newRole}/>
           <br/>
           <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
-          <Button suffix={
-      <Icon
-        name="LongRight"
-        size="16px"
-        color="white"
-        m={{ l: "1rem" }}
-      />}
-      bg="black"
-      hoverBg="black400"
-      variant="contained" color="primary" type="submit">Add</Button>
+          <Button
+            textColor="white"
+            type='submit'
+            rounded="xl"
+              bg="black700"
+              hoverBg="black800"
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4" 
+              >
+                Submit
+            </Button>
       </Div>
         </form>
       </Div>
