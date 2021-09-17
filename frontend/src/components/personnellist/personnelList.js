@@ -3,13 +3,24 @@ import Updatebuttons from './updateButtons';
 import Emojidisplay from '../reusable/emoji';
 import Reason from '../reason';
 import { Div, Button, Icon } from "atomize";
+import Filter from './filter';
 
 
 
 const Personnellist = ({setPersons, persons}) => {
   const [show, setShow] = useState(false)
+  const [ newFilter, setFilter ] = useState('')
 
   const HandleShow = () => setShow(!show)
+
+  const handleNamefilter = (event) => {
+    console.log(event.target.value)
+    setFilter(event.target.value)
+    }
+
+  const personnelToShow = (!newFilter.trim())
+  ? persons
+  : persons.filter(person => person.name.toLowerCase().includes(newFilter.toLowerCase()))
 
   if (show===false) {
     return (
@@ -64,9 +75,9 @@ const Personnellist = ({setPersons, persons}) => {
                 Hide
             </Button>
     </Div>
-          <br/>
+    <Filter newFilter={newFilter} handleNamefilter={handleNamefilter}/>
           <ol>
-            {persons.map(person=>
+            {personnelToShow.map(person=>
               <li key={person.name}>
                 {person.name}
                 <Emojidisplay currentStatus ={person.status} />
