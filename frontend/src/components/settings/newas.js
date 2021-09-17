@@ -15,7 +15,7 @@ const NewAS = ({persons,setnewas}) => {
         setshowModal(!showModal)
     }
     
-    const ASList = persons.filter(person=> (String(person.role)).toLowerCase()==='hq') 
+    const ASList = persons.filter(person=> (String(person.role)).toLowerCase()==='sevenspec') 
     console.log(ASList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handleaschange}>
