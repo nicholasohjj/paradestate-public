@@ -19,7 +19,7 @@ const ParadeState = ({persons, newauthor}) => {
     <br/>
     <Excuses persons={persons}/>
     <br/>
-    <Signature newauthor={newauthor}/>
+    <Signature newauthor={newauthor}/> 
     
     </>
 
