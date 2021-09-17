@@ -111,6 +111,7 @@ const addName = (event) => {
             rounded="xl"
               bg="success700"
               hoverBg="success600"
+              m={{ r: "0.5rem",y: "0.5rem" }}
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"

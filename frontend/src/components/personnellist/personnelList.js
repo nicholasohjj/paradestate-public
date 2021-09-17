@@ -47,6 +47,7 @@ const Personnellist = ({setPersons, persons}) => {
             rounded="xl"
               bg="info700"
               hoverBg="info600"
+              m={{ r: "0.5rem",y: "0.5rem" }}
               p={{ r: "1.5rem", l: "1rem" }}
               shadow="3"
               hoverShadow="4"
