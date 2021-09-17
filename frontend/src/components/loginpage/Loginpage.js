@@ -25,8 +25,8 @@ const Loginpage = ({access,setnewaccess}) => {
 >
             <Text p={{ xs: '1rem', md: '4rem' }}
             textAlign='center'
-            textWeight="600"
-            textSize="display1"
+            textWeight="500"
+            textSize="heading"
             fontFamily="Helvetica"
             pos="relative"
             >
