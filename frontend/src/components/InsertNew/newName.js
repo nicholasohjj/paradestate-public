@@ -28,7 +28,7 @@ const NewName = ({newName,setNewName}) => {
     top="50%"
     left="0.75rem"
     transform="translateY(-50%)"
-    onClick={}
+    onClick={()=> window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
         />
       }
     />
