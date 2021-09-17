@@ -21,7 +21,7 @@ if (CurrentTime<1200 && CurrentTime>= '0000') {
 const Greeting = () => {
     return (
         <>
-        <p>Good {greeting} Commanders, this is the strength for Signal Company as of {CurrentTime} on {Newdate}.</p>
+        <p>Good {greeting} to All, this is the strength for our team as of {CurrentTime} on {Newdate}.</p>
         </>
 
     )

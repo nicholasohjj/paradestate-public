@@ -7,19 +7,19 @@ const style = {
     margin: 0
   }
 
-const Tradecourse = ({persons}) => {
+const Others = ({persons}) => {
     
-    const TcourseList = persons.filter(person=> (String(person.group)).toLowerCase()==='tradecourse') 
-    console.log(`List of Trade Course personnel: ${JSON.stringify(TcourseList)}`)
+    const OthersList = persons.filter(person=> (String(person.group)).toLowerCase()==='others') 
+    console.log(`List of other members: ${JSON.stringify(OthersList)}`)
     let currentstrength = 0
-    TcourseList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
-    const totalstrength = TcourseList.length
+    OthersList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
+    const totalstrength = OthersList.length
     // eslint-disable-next-line eqeqeq
     if (totalstrength!='0') {
       return (
         <div>
-          <p style={style}>DRIVING COURSE: {currentstrength}/{totalstrength}</p>
-            {TcourseList.map((person, index)=> 
+          <p style={style}>OTHERS: {currentstrength}/{totalstrength}</p>
+            {OthersList.map((person, index)=> 
               <Text style={style} key={person.name}>
                 {index+1} .  
                 {' ' + person.name}
@@ -42,4 +42,4 @@ const Tradecourse = ({persons}) => {
 
   
 
-  export default Tradecourse 
+  export default Others 

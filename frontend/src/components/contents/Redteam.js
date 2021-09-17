@@ -8,17 +8,17 @@ const style = {
     margin: 0
   }
 
-const CSP = ({persons}) => {
+const Redteam = ({persons}) => {
     
-    const CSPList = persons.filter(person=> (String(person.group)).toLowerCase()==='csp') 
-    console.log(`List of CSP personnel: ${JSON.stringify(CSPList)}`)
+    const RedteamList = persons.filter(person=> (String(person.group)).toLowerCase()==='redteam') 
+    console.log(`List of Red Team members: ${JSON.stringify(RedteamList)}`)
     let currentstrength = 0
-    CSPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
-    const totalstrength = CSPList.length
+    RedteamList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
+    const totalstrength = RedteamList.length
     return (
         <div>
-          <p style={style}>FG2 - CSP: {currentstrength}/{totalstrength}</p>
-            {CSPList.map((person, index)=> 
+          <p style={style}>RED TEAM: {currentstrength}/{totalstrength}</p>
+            {RedteamList.map((person, index)=> 
               <Text style={style} key={person.name}>                {index+1}.  
                 {' ' + person.name}
                 <Emojidisplay currentStatus ={person.status} />
@@ -34,4 +34,4 @@ const CSP = ({persons}) => {
 
   
 
-  export default CSP
+  export default Redteam

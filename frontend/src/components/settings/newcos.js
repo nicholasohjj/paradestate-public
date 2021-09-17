@@ -18,7 +18,7 @@ const NewCOS = ({persons,setnewcos}) => {
         setnewcos(event.target.getAttribute("value"))
       }
     
-    const COSList = persons.filter(person=> (String(person.role)).toLowerCase()==='sevenspec') 
+    const COSList = persons.filter(person=> (String(person.role)).toLowerCase()==='specs') 
     console.log(COSList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecoschange}>

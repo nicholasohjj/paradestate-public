@@ -1,211 +1,76 @@
 {
   "persons": [
     {
-      "name": "LTA SAM LAM",
-      "status": "mc",
+      "name": "CPT BUANG BIN BAKAR",
+      "status": "present",
       "reason": "nil",
-      "group": "hq",
-      "excuse": "EXCUSE PT",
-      "role": "sevenspec",
+      "group": "HQ",
+      "excuse": "EXCUSE PT FROM 170921",
+      "role": "hq",
+      "id": 1
+    },
+    {
+      "name": "LTA SHARON QU LIN AI",
+      "status": "mc",
+      "reason": "MC FROM 170921 TO 170921",
+      "group": "BLUETEAM",
+      "excuse": "EXCUSE RMJ, HEAVY LOAD FROM 140621 TO 150921",
+      "role": "hq",
+      "id": 2
+    },
+    {
+      "name": "3SG VARON CHEE BAI LING",
+      "status": "off",
+      "reason": "OFF ON 170921",
+      "group": "REDTEAM",
+      "excuse": "EXCUSE SUNLIGHT FROM 180821 TO 210222",
+      "role": "specs",
       "id": 3
     },
     {
-      "name": "3WO DENNY",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "ccp",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
+      "name": "PTE MARY JANE",
+      "status": "attached",
+      "reason": "ATTACHED OUT TO",
+      "group": "BLUETEAM",
+      "excuse": "LIGHT DUTY FROM 080921",
+      "role": "opr",
+      "id": 4
+    },
+    {
+      "name": "PTE NATALIE HO YO",
+      "status": "stayout",
+      "reason": "nil",
+      "group": "BLUETEAM",
+      "excuse": "EXCUSE HEAVY MEALS",
+      "role": "admin",
       "id": 5
     },
     {
-      "name": "SSG GEORGE",
-      "status": "ma",
+      "name": "PTE ISNIN BIN SELASA",
+      "status": "oncourse",
       "reason": "nil",
-      "group": "csp",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
+      "group": "BLUETEAM",
+      "excuse": "EXCUSE CSM FROM 220921 TO 251221",
+      "role": "specs",
       "id": 6
     },
     {
-      "name": "1SG XIAO MING",
-      "status": "present",
-      "reason": "TEST",
-      "group": "hq",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
-      "id": 8
+      "name": "CFC XIAO MING",
+      "status": "leave",
+      "reason": "LEAVE ON 170921",
+      "group": "BLUETEAM",
+      "excuse": "nil",
+      "role": "admin",
+      "id": 7
     },
     {
-      "name": "PTE NICK",
-      "status": "present",
-      "reason": "nil",
-      "group": "csp",
-      "excuse": "EXCUSE PT",
-      "role": "hq",
-      "id": 9
-    },
-    {
-      "name": "SDFSD",
+      "name": "CPL AI LING TAN",
       "status": "others",
-      "reason": "MA AT",
-      "group": "OTHERS",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 10
-    },
-    {
-      "name": "123",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 12
-    },
-    {
-      "name": "TESTT",
-      "status": "ma",
-      "reason": "LEAVE ON 150921",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 13
-    },
-    {
-      "name": "ABCDEF",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 14
-    },
-    {
-      "name": "TEST123",
-      "status": "oncourse",
       "reason": "nil",
-      "group": "hq",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 15
-    },
-    {
-      "name": "HUDISFJLAO",
-      "status": "mc",
-      "reason": "MC FROM 170921 TO 170921",
-      "group": "CCP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 16
-    },
-    {
-      "name": "SDFSDF",
-      "status": "mc",
-      "reason": "MC FROM 170921 TO 170921",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 17
-    },
-    {
-      "name": "ASDASD",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CCP",
-      "excuse": "nil",
-      "role": "ic2",
-      "id": 18
-    },
-    {
-      "name": "DFDSF",
-      "status": "off",
-      "reason": "OFF ON 170921",
-      "group": "CCP",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 19
-    },
-    {
-      "name": "ABCDEFG TEST TEST",
-      "status": "ma",
-      "reason": "MA AT",
       "group": "HQ",
       "excuse": "nil",
-      "role": "hq",
-      "id": 20
-    },
-    {
-      "name": "TEST123FVFV",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CCP",
-      "excuse": "nil",
-      "role": "sevenspec",
-      "id": 21
-    },
-    {
-      "name": "SDFSDFSF",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "HQ",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 22
-    },
-    {
-      "name": "THIS IS A TEST",
-      "status": "off",
-      "reason": "OFF ON 170921",
-      "group": "CSP",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 23
-    },
-    {
-      "name": "THIS IS NOT A TEST",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CSP",
-      "excuse": "oewfjsdlkfj",
-      "role": "hq",
-      "id": 24
-    },
-    {
-      "name": "TESTING TESTING 123",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "CCP",
-      "excuse": "NIL",
-      "role": "hq",
-      "id": 25
-    },
-    {
-      "name": "WHY IS THIS NOT WORKING",
-      "status": "ma",
-      "reason": "MA AT",
-      "group": "HQ",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 26
-    },
-    {
-      "name": "SDFDSFDSFSDF",
-      "status": "mc",
-      "reason": "MC FROM 170921 TO 170921",
-      "group": "HQ",
-      "excuse": "nil",
-      "role": "hq",
-      "id": 27
-    },
-    {
-      "name": "TEST123REWF",
-      "status": "mc",
-      "reason": "MC FROM 170921 TO 170921",
-      "group": "CSP",
-      "excuse": "TEST",
-      "role": "hq",
-      "id": 28
+      "role": "opr",
+      "id": 8
     }
   ]
 }

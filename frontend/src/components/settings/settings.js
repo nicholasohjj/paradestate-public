@@ -3,7 +3,6 @@ import {Button, Icon, Div, Input } from "atomize";
 import NewCDO from "./newcdo";
 import NewCDS from "./newcds";
 import NewCOS from "./newcos";
-import NewAS from "./newas";
 
 
 const Settings = ({
@@ -98,7 +97,6 @@ const Settings = ({
           <NewCDO  persons={persons} setnewcdo={setnewcdo}/>
           <NewCDS persons={persons} setnewcds={setnewcds}/>
           <NewCOS persons={persons} setnewcos={setnewcos}/>
-          <NewAS persons={persons} setnewas={setnewas}/>
         </>
       )
   }

@@ -16,14 +16,14 @@ const NewGroupdropdown = ({setnewGroup,newGroup}) => {
         <Anchor d="block" p={{ y: "0.25rem" }} value='hq' >
             {"HQ 🏢"}  
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='ccp' >
-            {"FG1 - CCP 1️⃣"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='blueteam' >
+            {"Blue Team"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='csp'>
-            {"FG2 - CSP 2️⃣"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='redteam'>
+            {"Red Team"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='tradecourse'>
-            {"Driving Course 🚗"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='others'>
+            {"Others"}
         </Anchor>
       </Div>
     );

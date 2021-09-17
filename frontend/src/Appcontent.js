@@ -15,7 +15,6 @@ const Appcontent = () => {
   const [newcdo, setnewcdo] = useState('')
   const [newcds, setnewcds] = useState('')
   const [newcos, setnewcos] = useState('')
-  const [newas, setnewas] = useState('')
   const [newauthor, setnewauthor] = useState('')
 
   const [ newMessage, setNewMessage ] = useState(null)
@@ -39,8 +38,6 @@ const Appcontent = () => {
                 setnewcds={setnewcds}
                 newcos={newcos}
                 setnewcos={setnewcos}
-                newas={newas}
-                setnewas={setnewas}
                 newauthor = {newauthor}
                 setnewauthor ={setnewauthor}
                 persons={persons}/>
@@ -50,7 +47,6 @@ const Appcontent = () => {
                newcdo={newcdo}
                newcds={newcds}
                newcos={newcos}
-               newas={newas}
                />
       <ParadeState setPersons={setPersons}
                   persons={persons}

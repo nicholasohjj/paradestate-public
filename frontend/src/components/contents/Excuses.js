@@ -28,7 +28,7 @@ const Excuses = ({persons}) => {
     const currentstrength = ExcuseList.length
     return (
         <div>
-          <p style={style}>STATUSES: {currentstrength}</p>
+          <p style={style}>PERSONNEL WITH MEDICAL EXCUSES: {currentstrength}</p>
             {ExcuseList.map((person, index)=> 
               <p style={style} key={person.name}>
                 {index+1}.  

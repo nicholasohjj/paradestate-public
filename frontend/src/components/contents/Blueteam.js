@@ -7,17 +7,17 @@ const style = {
     margin: 0
   }
 
-const CCP = ({persons}) => {
+const Blueteam = ({persons}) => {
     
-    const CCPList = persons.filter(person=> (String(person.group)).toLowerCase()==='ccp') 
-    console.log(`List of CCP personnel: ${JSON.stringify(CCPList)}`)
+    const BlueteamList = persons.filter(person=> (String(person.group)).toLowerCase()==='blueteam') 
+    console.log(`List of Blue Team members: ${JSON.stringify(BlueteamList)}`)
     let currentstrength = 0
-    CCPList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
-    const totalstrength = CCPList.length
+    BlueteamList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
+    const totalstrength = BlueteamList.length
     return (
         <div>
-          <p style={style}>FG1 - CCP: {currentstrength}/{totalstrength}</p>
-            {CCPList.map((person, index)=> 
+          <p style={style}>BLUE TEAM: {currentstrength}/{totalstrength}</p>
+            {BlueteamList.map((person, index)=> 
               <Text style={style} key={person.name}>
                 {index+1} .  
                 {' ' + person.name}
@@ -33,4 +33,4 @@ const CCP = ({persons}) => {
 
   
 
-  export default CCP 
+  export default Blueteam 

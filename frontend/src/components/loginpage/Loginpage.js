@@ -16,7 +16,7 @@ const Loginpage = ({access,setnewaccess}) => {
         setnewpass(event.target.value)
     }
 
-    if (pass==='sigparadestate7') {
+    if (pass==='paradestatepublic') {
         setnewaccess(!access)
     } 
     return (
@@ -30,7 +30,7 @@ const Loginpage = ({access,setnewaccess}) => {
             fontFamily="Helvetica"
             pos="relative"
             >
-              Login
+              Login (Public Version)
             </Text>
             <Div
           bgImg="https://i.ibb.co/cthGK82/Parade-State-logos-black.png://images.unsplash.com/photo-1559963629-38ed0fbd4c86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
@@ -72,7 +72,12 @@ const Loginpage = ({access,setnewaccess}) => {
 
 
             >
-                If you are not authorised to use this system, please do not attempt to login.</Text>
+                If you are not authorised to use this system, please do not attempt to login. </Text>
+                <Text textAlign='center'
+            textWeight="600"
+            textSize="tiny"
+            fontFamily="Helvetica"
+            pos="relative">Password: paradestatepublic</Text>
         </Div>
         
 

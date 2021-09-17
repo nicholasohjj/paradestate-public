@@ -16,7 +16,7 @@ const NewCDS = ({persons,setnewcds}) => {
         setnewcds(event.target.getAttribute("value"))
       }
     
-    const CDSList = persons.filter(person=> (String(person.role)).toLowerCase()==='sevenspec') 
+    const CDSList = persons.filter(person=> (String(person.role)).toLowerCase()==='specs') 
     console.log(CDSList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecdschange}>

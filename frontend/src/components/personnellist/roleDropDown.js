@@ -39,14 +39,14 @@ const RoleDropDown = ({person,persons,setPersons}) => {
         <Anchor d="block" p={{ y: "0.25rem" }} value='hq' >
             {"Coy HQ"}  
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='sevenspec' >
-            {"7th Mono Spec"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='specs' >
+            {"Specialist"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='ic2'>
-            {"IC2 Opr"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='opr'>
+            {"Operator"}
         </Anchor>
-        <Anchor d="block" p={{ y: "0.25rem" }} value='is'>
-            {"IS Opr"}
+        <Anchor d="block" p={{ y: "0.25rem" }} value='admin'>
+            {"Administrator"}
         </Anchor>
       </Div>
     );
