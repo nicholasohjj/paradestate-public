@@ -14,6 +14,7 @@ const Tradecourse = ({persons}) => {
     let currentstrength = 0
     TcourseList.map(person=> (person.status==='present') ? (currentstrength = currentstrength+1) : currentstrength)
     const totalstrength = TcourseList.length
+    // eslint-disable-next-line eqeqeq
     if (totalstrength!='0') {
       return (
         <div>
