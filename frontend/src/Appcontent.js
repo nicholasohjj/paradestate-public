@@ -100,7 +100,6 @@ const Appcontent = () => {
   return (
     <div>
       <h2>Parade State Application (For Internal Use Only)</h2>
-      
       <Message message={newMessage}/>
       <Form addName={addName}
             newName={newName}

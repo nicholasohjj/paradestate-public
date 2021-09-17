@@ -1,7 +1,6 @@
 // Show Hide Password
 import React, {useState} from "react";
-import { Text, Div, Input, Button, Icon, Image } from "atomize";
-import Logo from './Parade State-logos_black.png'
+import { Text, Div, Input, Button, Icon} from "atomize";
 
 
 
@@ -33,11 +32,12 @@ const Loginpage = ({access,setnewaccess}) => {
             >
               Login
             </Text>
-            <Image src={Logo}
-             bgSize="cover"
-             bgPos="center"
-             h="20rem"
-             w="20rem" />
+            <Div
+          bgImg="https://i.ibb.co/cthGK82/Parade-State-logos-black.png://images.unsplash.com/photo-1559963629-38ed0fbd4c86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+          bgSize="cover"
+          bgPos="center"
+          h="10rem"
+        />
 
                 <Input
                 onChange = {Handlelogin}
