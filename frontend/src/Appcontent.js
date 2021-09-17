@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Message from './components/message'
-import Form from './components/insertnew/form'
+import Form from './components/InsertNew/form'
 import Personnellist from './components/personnellist/personnelList'
 import Settings from './components/settings/settings' 
 import phoneservice from './services/phoneservice'
