@@ -63,10 +63,10 @@ const DetailModal = ({person}) => {
           
             bg="success700"
             hoverBg="success600"
-            m={{ r: "0.5rem" }}
+            m={{ r: "0.5rem",y: "0.5rem" }}
             onClick={Handleclick}
           >
-          <Icon name="Menu" size="20px" />
+          <Icon name="Info" size="20px" />
           </Button>
           <ModalSize
             isOpen={showModal}

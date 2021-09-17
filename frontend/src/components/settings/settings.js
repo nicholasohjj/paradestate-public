@@ -1,9 +1,10 @@
-import React from "react";
-import {Icon, Div, Input } from "atomize";
+import React, {useState} from "react";
+import {Button, Icon, Div, Input } from "atomize";
 import NewCDO from "./newcdo";
 import NewCDS from "./newcds";
 import NewCOS from "./newcos";
 import NewAS from "./newas";
+
 
 const Settings = ({
     setnewcdo,
@@ -14,16 +15,65 @@ const Settings = ({
     setnewauthor,
     persons
 }) => {
+  const [show, setShow] = useState(false)
 
+  const HandleShow = () => setShow(!show)
+  
   const handleauthorchange = (event) => {
     console.log(`Done by: ${event.target.value}`)
     setnewauthor(event.target.value)
   }
 
+  if (show===false) {
     return (
-        <Div>
-          <h1>Settings</h1>
-          <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
+      <>
+                <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
+            <Button
+            textColor="white"
+            rounded="xl"
+              bg="black700"
+              hoverBg="black600"
+              m={{ r: "0.5rem",y: "0.5rem" }}
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              suffix={
+                <Icon name="SettingsSolid" size="20px" color="white"
+                m={{ l: "1rem" }}/>
+                } 
+              >
+                Settings
+            </Button>
+    </Div>
+      </>
+    )} else {
+      return (
+        <>
+      <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
+            <Button
+            textColor="white"
+            rounded="xl"
+              bg="black700"
+              hoverBg="black600"
+              m={{ r: "0.5rem",y: "0.5rem" }}
+              p={{ r: "1.5rem", l: "1rem" }}
+              shadow="3"
+              hoverShadow="4"
+              onClick={HandleShow}
+              suffix={
+                <Icon
+                name="SettingsSolid"
+                size="16px"
+                color="white"
+                m={{ l: "1rem" }}
+                
+              />} 
+              >
+                Hide
+            </Button>
+    </Div>
+    <Div d='flex' justify={{ xs: "space-around", lg: "center" }}>
           <Input
     m={{ r: "0.5rem",y: "0.5rem" }}
     rounded="xl"
@@ -49,10 +99,9 @@ const Settings = ({
           <NewCDS persons={persons} setnewcds={setnewcds}/>
           <NewCOS persons={persons} setnewcos={setnewcos}/>
           <NewAS persons={persons} setnewas={setnewas}/>
-
-
-        </Div>
-    )
+        </>
+      )
+  }
 }
 
 export default Settings

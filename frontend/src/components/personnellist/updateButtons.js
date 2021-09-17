@@ -16,7 +16,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
   if (show===false) {
       return (  
         <Div d="flex">
-          <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem" }} onClick={HandleShow}><Icon name="Edit" size="20px" /></Button>
+          <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem",y: "0.5rem" }}onClick={HandleShow}><Icon name="Rename" size="20px" /></Button>
           <DetailModal person={person}/>
           <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
         </Div>
@@ -24,7 +24,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
         return (
           <>
           <Div d="flex">
-            <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem" }} onClick={HandleShow}><Icon name="Edit" size="20px" /></Button>
+            <Button bg="info700" hoverBg="info600" m={{ r: "0.5rem",y: "0.5rem" }} onClick={HandleShow}><Icon name="Rename" size="20px" /></Button>
             <DetailModal person={person}/>
             <DeleteModal id={id} setPersons={setPersons} persons={persons} person={person.name}/>
           </Div>

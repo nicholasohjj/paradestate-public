@@ -61,7 +61,7 @@ const DeleteModal = ({id, setPersons, persons, person}) => {
           <Button
             bg="danger700"
             hoverBg="danger600"
-            m={{ b: "1rem" }}
+            m={{ r: "0.5rem",y: "0.5rem" }}
             onClick={Handleclick}
           >
             <Icon name="Delete" size="20px" />
