@@ -4,7 +4,7 @@ import NewRoleDropDown from './newRoledropdown'
 import NewStatusDropDown from './newStatusDropDown'
 import NewName from './newName'
 import NewExcuse from './newExcuse';
-import {Div, Icon,Button} from "atomize";
+import {Div,Button} from "atomize";
 
 const Formcontent = ({addName,
                newName,

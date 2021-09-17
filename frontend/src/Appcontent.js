@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Message from './components/message'
 import Form from './components/insertnew/form'
 import Personnellist from './components/personnellist/personnelList'
-import Settings from './components/settings' 
+import Settings from './components/settings/settings' 
 import phoneservice from './services/phoneservice'
 import Greeting from './components/title/greeting'
 import Summary from './components/summary/summary'
@@ -123,7 +123,8 @@ const Appcontent = () => {
                 newas={newas}
                 setnewas={setnewas}
                 newauthor = {newauthor}
-                setnewauthor ={setnewauthor}/>
+                setnewauthor ={setnewauthor}
+                persons={persons}/>
       <h2>Parade State</h2>
       <Greeting />
       <Summary persons={persons}
