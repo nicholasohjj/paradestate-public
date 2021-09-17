@@ -19,11 +19,12 @@ const NewAS = ({persons,setnewas}) => {
     console.log(ASList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handleaschange}>
-        {ASList.map(person => (
-          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
-            {person.name}
+          <Anchor value="3SG TOSHIRO MURAKAMI" d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
+            3SG TOSHIRO MURAKAMI
           </Anchor>
-        ))}
+          <Anchor value="3SG JUSTIN LAN" d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
+            3SG JUSTIN LAN
+          </Anchor>
       </Div>
     );
 

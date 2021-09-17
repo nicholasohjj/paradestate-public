@@ -22,11 +22,12 @@ const NewCDO = ({persons,setnewcdo}) => {
     console.log(HQList)
     const menuList = (
         <Div p={{ x: "1rem", y: "0.5rem" }} onClick ={handlecdochange}>
-        {HQList.map(person => (
-          <Anchor value={person.name} d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
-            {person.name}
+          <Anchor value="LTA SAMOEUL TAN" d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
+            LTA SAMOEUL TAN
           </Anchor>
-        ))}
+          <Anchor value="2LT OOI YAN YI" d="block" p={{ y: "0.25rem" }} onClick ={Handleclick}>
+            2LT OOI YAN YI
+          </Anchor>
       </Div>
     );
 
