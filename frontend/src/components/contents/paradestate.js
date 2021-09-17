@@ -15,6 +15,8 @@ const ParadeState = ({persons, newauthor}) => {
     <br/>
     <CSP persons={persons}/>
     <br/>
+    <Tradecourse persons={persons} />
+    <br/>
     <Excuses persons={persons}/>
     <br/>
     <Signature newauthor={newauthor}/>

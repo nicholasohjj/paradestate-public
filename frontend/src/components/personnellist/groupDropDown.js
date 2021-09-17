@@ -46,7 +46,7 @@ const Groupdropdown = ({person,persons,setPersons}) => {
             {"FG2 - CSP"}
         </Anchor>
         <Anchor d="block" p={{ y: "0.25rem" }} value='tradecourse'>
-            {"TRADE COURSE"}
+            {"Trade Course"}
         </Anchor>
       </Div>
     );
