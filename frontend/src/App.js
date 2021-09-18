@@ -1,12 +1,10 @@
 import React from 'react';
-import Loginpage from './components/loginpage/Loginpage';
 import Appcontent from './Appcontent'
 import {
     ClerkProvider,
     SignedIn,
     SignedOut,
     UserButton,
-    useUser,
     RedirectToSignIn,
   } from "@clerk/clerk-react";
   import { useHistory } from "react-router-dom";
@@ -24,6 +22,7 @@ const App = () => {
               <Appcontent />
             </SignedIn>
             <SignedOut>
+              <RedirectToSignIn />
             </SignedOut>
           </ClerkProvider>
         )
