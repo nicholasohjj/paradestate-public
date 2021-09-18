@@ -24,7 +24,6 @@ const App = () => {
               <Appcontent />
             </SignedIn>
             <SignedOut>
-              <RedirectToSignIn />
             </SignedOut>
           </ClerkProvider>
         )
