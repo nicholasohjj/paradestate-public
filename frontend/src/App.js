@@ -1,18 +1,33 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Loginpage from './components/loginpage/Loginpage';
 import Appcontent from './Appcontent'
+import {
+    ClerkProvider,
+    SignedIn,
+    SignedOut,
+    UserButton,
+    useUser,
+    RedirectToSignIn,
+  } from "@clerk/clerk-react";
+  import { useHistory } from "react-router-dom";
+
+const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API;
 
 const App = () => {
 
-    const [access, setnewaccess] = useState(false)
+    const {push} = useHistory();
 
-
-    if (access) {
-        return <Appcontent />
-    } else {
-        return <Loginpage access={access} setnewaccess={setnewaccess}/>
-    }
-
+        return (
+            <ClerkProvider frontendApi={frontendApi} navigate={(to) => push(to)}>
+            <SignedIn>
+            <UserButton />
+              <Appcontent />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </ClerkProvider>
+        )
 }
 
 export default App
