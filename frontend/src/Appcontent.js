@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Message from './components/message'
-import Form from './components/InsertNew/form'
+import Form from './components/insertnew/form'
 import Personnellist from './components/personnellist/personnelList'
 import Settings from './components/settings/settings' 
 import phoneservice from './services/phoneservice'
@@ -18,9 +17,6 @@ const Appcontent = () => {
   const [newcds, setnewcds] = useState('')
   const [newcos, setnewcos] = useState('')
   const [newauthor, setnewauthor] = useState('')
-
-  const [ newMessage, setNewMessage ] = useState(null)
-
   const { firstName } = useUser();
 
   useEffect(() =>{
@@ -35,10 +31,9 @@ const Appcontent = () => {
     <Div>
       <Div d='flex' align="center"p="1rem">
       <UserButton />
-      <Text >Hello, {firstName}!</Text> 
+      <Text m={{ l: "0.5rem"}}>Hello, {firstName}!</Text> 
       </Div>
-      <Message message={newMessage}/>
-      <Form setNewMessage={setNewMessage} persons={persons} setPersons={setPersons} />
+      <Form persons={persons} setPersons={setPersons} />
       <Personnellist setPersons={setPersons} persons={persons}/>
       <Settings newcdo={newcdo}
                 setnewcdo={setnewcdo}
