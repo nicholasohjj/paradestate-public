@@ -10,7 +10,7 @@ const cors = require('cors');
 require('dotenv').config();
 const Contact = require('./models/contact');
 
-app.use(cors());
+app.use(cors()); 
 app.use(express.static('build'));
 app.use(express.json());
 
