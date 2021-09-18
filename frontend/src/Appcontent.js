@@ -7,6 +7,8 @@ import phoneservice from './services/phoneservice'
 import Greeting from './components/title/greeting'
 import Summary from './components/summary/summary'
 import ParadeState from './components/contents/paradestate'
+import { useUser, UserButton } from '@clerk/clerk-react'
+import { Div, Text } from 'atomize'
 
 //App component
 const Appcontent = () => {
@@ -19,6 +21,8 @@ const Appcontent = () => {
 
   const [ newMessage, setNewMessage ] = useState(null)
 
+  const { firstName } = useUser();
+
   useEffect(() =>{
     phoneservice
       .getAll()
@@ -28,7 +32,11 @@ const Appcontent = () => {
   },[])
 
   return (
-    <div>
+    <Div>
+      <Div d='flex' align="center"p="1rem">
+      <UserButton />
+      <Text >Hello, {firstName}!</Text> 
+      </Div>
       <Message message={newMessage}/>
       <Form setNewMessage={setNewMessage} persons={persons} setPersons={setPersons} />
       <Personnellist setPersons={setPersons} persons={persons}/>
@@ -52,7 +60,7 @@ const Appcontent = () => {
                   persons={persons}
                   newauthor={newauthor} />
 
-      </div>
+      </Div>
   )
 }
 

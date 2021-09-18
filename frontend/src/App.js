@@ -4,7 +4,6 @@ import {
     ClerkProvider,
     SignedIn,
     SignedOut,
-    UserButton,
     RedirectToSignIn,
   } from "@clerk/clerk-react";
   import { useHistory } from "react-router-dom";
@@ -18,7 +17,6 @@ const App = () => {
         return (
             <ClerkProvider frontendApi={frontendApi} navigate={(to) => push(to)}>
             <SignedIn>
-            <UserButton />
               <Appcontent />
             </SignedIn>
             <SignedOut>
