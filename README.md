@@ -69,6 +69,10 @@ The sample application deployed to the internet uses the following:
 - [Heroku](https://www.heroku.com/)
 - [MongoDB](https://www.mongodb.com/)
 
+Application Logo made with:
+
+- [Adobe Spark](https://spark.adobe.com/sp/)
+
 ## License
 
 MIT
