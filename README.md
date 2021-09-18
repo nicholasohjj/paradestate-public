@@ -23,7 +23,7 @@
 * LivePreview - Make changes, See changes
   - Instantly see your present strength and attendance as you create and update them.
 * Flavored with Atomise UI
-* Password authentication
+* Authentication with Clerk
 * Full screen mode
   - Update and edit distraction free.
 * Web Progressive App mode
@@ -61,6 +61,8 @@ This application uses the following open source packages:
 - [Create React App](https://create-react-app.dev/)
 - [Node.js](https://nodejs.org/)
 - [Atomise UI](https://atomizecode.com/)
+- [Clerk](https://clerk.dev/)
+
 
 The sample application deployed to the internet uses the following:
 
