@@ -2,16 +2,21 @@ import React, {useState} from "react";
 import Formcontent from "./formcontent";
 import { Div, Button, Icon } from "atomize";
 import phoneservice from "../../services/phoneservice";
+import Notifications from "./notifications";
+
 
 const Form = ({setNewMessage,persons,setPersons}) => {
 
-      const [ newName, setNewName ] = useState('')
+const [ newName, setNewName ] = useState('')
 const [ newStatus, setnewStatus ] = useState('')
 const [ newReason, setnewReason ] = useState('')
 const [ newGroup, setnewGroup ] = useState('')
 const [ newexcuse, setnewExcuse ] = useState('')
 const [ newRole, setnewRole ] = useState('')
-
+const [newalert, setnewalert] = useState(false)
+const [newupdate, setnewupdate] = useState(false)
+const [newwarning, setnewwarning] = useState(false)
+const [newinput, setnewinput] = useState(false)
 const addName = (event) => {
   event.preventDefault()
   console.log(newexcuse)
@@ -32,9 +37,9 @@ const addName = (event) => {
   console.log(nameCheck)
 
   if (!newName.trim() || !newStatus.trim() || !newGroup.trim() || !newRole.trim()) {
-    alert("All fields (other than medical excuses) must be filled.")
+    setnewalert(!newalert)
   } else if (nameCheck.length>0) {
-    if (window.confirm(`${newName.toUpperCase()} is already added to phonebook. Would you like to update the status?`)) {
+    if (window.confirm(`${newName.toUpperCase()} is already added to nominal roll. Would you like to update the status?`)) {
       return (
         phoneservice
           .update(nameCheck[0].id, newPerson)
@@ -42,12 +47,11 @@ const addName = (event) => {
               person.id !== nameCheck[0].id
                 ? person
                 : updatedList))
-        setNewMessage(`${newName.toUpperCase()} has been updated`)
-        setTimeout(()=>setNewMessage(null),5000)
+                setnewupdate(!newupdate)
       })
           .catch(error=> {
-            setNewMessage(`${newName.toUpperCase()} has been already been removed from the server`)
-            setTimeout(()=>setNewMessage(null),5000)
+            setnewwarning(!newwarning)
+
           })
       )}
     } else {
@@ -55,12 +59,10 @@ const addName = (event) => {
         .addNew(newPerson)
         .then(updatedList => {
             setPersons(persons.concat(updatedList))
-            setNewMessage(`${newName.toUpperCase()} has been added`)
-            setTimeout(()=>setNewMessage(null),5000)
+            setnewinput(!newinput)
           })
         .catch(error=> {
-          setNewMessage(`${newName.toUpperCase()} has already been added to the server`)
-          setTimeout(()=>setNewMessage(null),5000)
+          setnewwarning(!newwarning)
         })
       }
       setnewStatus('')
@@ -105,6 +107,15 @@ const addName = (event) => {
         )} else {
           return (
             <>
+            <Notifications newName={newName} 
+                          setnewalert ={setnewalert}
+                          newalert = {newalert}
+                          newupdate ={newupdate}
+                          setnewupdate ={setnewupdate}
+                          newwarning={newwarning}
+                          setnewwarning={setnewwarning}
+                          newinput={newinput}
+                          setnewinput={setnewinput}/>
             <Div d="flex" justify={{ xs: "space-around", lg: "center" }}>
             <Button
             textColor="black"

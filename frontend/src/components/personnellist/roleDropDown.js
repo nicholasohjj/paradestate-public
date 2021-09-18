@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import { Icon,Div, Dropdown, Anchor} from "atomize";
+import { Icon,Div, Dropdown, Anchor, Notification} from "atomize";
 import phoneservice from "../../services/phoneservice";
 
 
 
 const RoleDropDown = ({person,persons,setPersons}) => {
+  const [newinfo, setnewinfo] = useState(false)
 
     const HandleUpdateStatus = (event) => {
       setshowModal(!showModal)
@@ -30,6 +31,8 @@ const RoleDropDown = ({person,persons,setPersons}) => {
                     person.id !== nameCheck[0].id
                       ? person
                       : updatedList))
+                      setnewinfo(!newinfo)
+
             }))
           }
           }
@@ -58,6 +61,22 @@ const RoleDropDown = ({person,persons,setPersons}) => {
     }
     
     return (
+      <Div>
+      <Notification
+          bg="info700"
+          isOpen={newinfo}
+          onClose={()=> {setnewinfo(!newinfo)}}
+          prefix={
+            <Icon
+              name="InfoSolid"
+              color="white"
+              size="18px"
+              m={{ r: "0.5rem" }}
+            />
+          }
+        >
+          Role Updated
+        </Notification>
         <Dropdown  
           w="fit-content"
           isOpen={showModal}
@@ -75,6 +94,7 @@ const RoleDropDown = ({person,persons,setPersons}) => {
         >
           Role
         </Dropdown>
+        </Div>
       );
 }
 

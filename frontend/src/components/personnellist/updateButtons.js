@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import UpdateExcuse from './updateExcuse'
 import DetailModal from './detailmodal'
 import DeleteModal from './deletemodal'
 import RoleDropDown from './roleDropDown'
 import Groupdropdown from './groupDropDown'
 import StatusDropDown from './statusDropDown'
 import { Div, Button, Icon } from 'atomize'
+import UpdateexcuseModal from './updateexcusemodal'
 
 const Updatebuttons = ({person, id, setPersons, persons}) => {
 
@@ -34,7 +34,7 @@ const Updatebuttons = ({person, id, setPersons, persons}) => {
             <RoleDropDown options={show} person={person} persons={persons} setPersons={setPersons}/>
           </Div>
           <Div d="flex">
-          <UpdateExcuse options={show} person={person} persons={persons} setPersons={setPersons}/>
+          <UpdateexcuseModal id={id} setPersons={setPersons} persons={persons} person={person} />
           </Div>
 
           </>

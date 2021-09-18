@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Div, Button, Modal, Icon, Text } from "atomize";
+import { Div, Button, Modal, Icon, Text} from "atomize";
 import phoneservice from '../../services/phoneservice';
 
 const AlignCenterModal = ({ isOpen, onClose, onSubmit, person }) => {
@@ -17,7 +17,7 @@ const AlignCenterModal = ({ isOpen, onClose, onSubmit, person }) => {
       <Div d="flex" m={{ b: "4rem" }} >
         <Icon
           name="AlertSolid"
-          color="warning700"
+          color="danger700"
           m={{ t: "0.35rem", r: "0.5rem" }}
         />
         <Text p={{ l: "0.5rem", t: "0.25rem" }} textSize="subheader">
@@ -33,7 +33,7 @@ const AlignCenterModal = ({ isOpen, onClose, onSubmit, person }) => {
         >
           Cancel
         </Button>
-        <Button onClick={onSubmit} bg="info700">
+        <Button onClick={onSubmit} bg="danger700">
           Yes, Delete
         </Button>
       </Div>
@@ -42,7 +42,7 @@ const AlignCenterModal = ({ isOpen, onClose, onSubmit, person }) => {
 };
 
 const DeleteModal = ({id, setPersons, persons, person}) => {
-    const [showModal, setshowModal] = useState(false)
+  const [showModal, setshowModal] = useState(false)
 
     const Handleclick = () => {
         setshowModal(!showModal)
@@ -50,7 +50,7 @@ const DeleteModal = ({id, setPersons, persons, person}) => {
 
     const Handlesubmit = () => {
         setshowModal(!showModal)
-        
+
         phoneservice
         .removePerson(id)
         setPersons(persons.filter(person=>person.id !==id))

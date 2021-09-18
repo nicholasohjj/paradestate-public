@@ -9,6 +9,7 @@ const ModalSize = ({ isOpen, onClose, person }) => {
       onClose={onClose}
       rounded="md"
       maxW="24rem"
+      bg="success300"
     >
       <Icon
         name="Cross"
@@ -23,7 +24,8 @@ const ModalSize = ({ isOpen, onClose, person }) => {
       <Text
         p={{ l: "0.5rem", t: "0.25rem" }}
         m={{ b: "2rem" }}
-      >
+        textColor="black"
+        >
         <p>NAME: {person.name}</p>
         <p>STATUS: {person.status.toUpperCase()}</p>
         <p>REASON: {person.reason.toUpperCase()}</p>
@@ -38,8 +40,9 @@ const ModalSize = ({ isOpen, onClose, person }) => {
       <Div d="flex" justify="flex-end">
         <Button
           onClick={onClose}
-          bg="gray200"
-          textColor="medium"
+          bg="success700"
+          hoverBg="success600"
+          textColor="black"
           m={{ r: "1rem" }}
         >
           Close

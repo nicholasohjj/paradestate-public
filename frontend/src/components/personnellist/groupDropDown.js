@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import { Icon,Div, Dropdown, Anchor} from "atomize";
+import { Icon,Div, Dropdown, Anchor, Notification} from "atomize";
 import phoneservice from "../../services/phoneservice";
 
 
 
 const Groupdropdown = ({person,persons,setPersons}) => {
+  const [newinfo, setnewinfo] = useState(false)
 
     const HandleUpdateGroup = (event) => {
       setshowModal(!showModal)
@@ -30,6 +31,8 @@ const Groupdropdown = ({person,persons,setPersons}) => {
                     person.id !== nameCheck[0].id
                       ? person
                       : updatedList))
+                      setnewinfo(!newinfo)
+
             }))
           }
           }
@@ -58,6 +61,22 @@ const Groupdropdown = ({person,persons,setPersons}) => {
     }
     
     return (
+      <Div>
+        <Notification
+          bg="info700"
+          isOpen={newinfo}
+          onClose={()=> {setnewinfo(!newinfo)}}
+          prefix={
+            <Icon
+              name="InfoSolid"
+              color="white"
+              size="18px"
+              m={{ r: "0.5rem" }}
+            />
+          }
+        >
+          Group Updated
+        </Notification>
         <Dropdown
           w="fit-content"
           isOpen={showModal}
@@ -76,6 +95,7 @@ const Groupdropdown = ({person,persons,setPersons}) => {
         >
           Group
         </Dropdown>
+        </Div>
       );
 }
 

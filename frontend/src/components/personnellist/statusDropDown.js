@@ -1,12 +1,10 @@
 import React, {useState} from "react";
-import { Icon, Div, Dropdown, Anchor} from "atomize";
+import { Icon, Div, Dropdown, Anchor, Notification} from "atomize";
 import phoneservice from "../../services/phoneservice";
 import Newdate from "../reusable/newdate"
 
-
-
-
 const StatusDropDown = ({person,persons,setPersons}) => {
+  const [newinfo, setnewinfo] = useState(false)
 
     const HandleUpdateStatus = (event) => {
       setshowModal(!showModal)
@@ -62,6 +60,8 @@ const StatusDropDown = ({person,persons,setPersons}) => {
                     person.id !== nameCheck[0].id
                       ? person
                       : updatedList))
+                      setnewinfo(!newinfo)
+
             }))
           }
           }
@@ -105,6 +105,22 @@ const StatusDropDown = ({person,persons,setPersons}) => {
     }
     
     return (
+      <Div>
+      <Notification
+          bg="info700"
+          isOpen={newinfo}
+          onClose={()=> {setnewinfo(!newinfo)}}
+          prefix={
+            <Icon
+              name="InfoSolid"
+              color="white"
+              size="18px"
+              m={{ r: "0.5rem" }}
+            />
+          }
+        >
+          Status Updated
+        </Notification>
         <Dropdown
           w="fit-content"
           isOpen={showModal}
@@ -122,6 +138,7 @@ const StatusDropDown = ({person,persons,setPersons}) => {
         >
           Status
         </Dropdown>
+        </Div>
       );
 }
 
