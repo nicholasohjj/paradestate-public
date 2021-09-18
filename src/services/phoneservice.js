@@ -19,7 +19,7 @@ const removePerson = (id) => {
 
 const update = async (id,newPerson) => {
   const request = axios.put(`${baseUrl}/${id}`, newPerson)
-  const response = await request
+  const response = await request 
   return response.data
   
 }
