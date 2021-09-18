@@ -16,7 +16,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](images/loginpagescreenshot.PNG)
+![screenshot](images/homescreen.png)
 
 ## Key Features
 
