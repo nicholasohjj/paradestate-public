@@ -8,7 +8,7 @@ body {
   font-family: Helvetica,Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right,#b7ffbf,#00ab08);
+  background: #00ab08;
   display: flex;
   align-items: center;
   align-content: space-center;

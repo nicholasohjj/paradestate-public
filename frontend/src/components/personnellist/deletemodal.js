@@ -4,7 +4,13 @@ import phoneservice from '../../services/phoneservice';
 
 const AlignCenterModal = ({ isOpen, onClose, onSubmit, person }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} align="center" rounded="md">
+    <Modal
+    isOpen={isOpen}
+    onClose={onClose}
+    align="center"
+    rounded="md"
+    bg="danger400"
+    >
       <Icon
         name="Cross"
         pos="absolute"

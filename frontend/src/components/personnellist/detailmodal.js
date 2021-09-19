@@ -9,7 +9,7 @@ const ModalSize = ({ isOpen, onClose, person }) => {
       onClose={onClose}
       rounded="md"
       maxW="24rem"
-      bg="success300"
+      bg="success400"
     >
       <Icon
         name="Cross"

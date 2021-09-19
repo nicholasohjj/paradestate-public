@@ -8,6 +8,8 @@ import Summary from './components/summary/summary'
 import ParadeState from './components/contents/paradestate'
 import { useUser, UserButton } from '@clerk/clerk-react'
 import { Div, Text } from 'atomize'
+import Footer from './components/Footer'
+
 
 //App component
 const Appcontent = () => {
@@ -29,9 +31,9 @@ const Appcontent = () => {
 
   return (
     <Div>
-      <Div d='flex' align="center"p="1rem">
+      <Div d='flex' align="center"p="1rem"  justify="space-between" bg="white" rounded="md">
+      <Text m={{ l: "0.5rem"}} textWeight="500">Hello, {firstName}!</Text> 
       <UserButton />
-      <Text m={{ l: "0.5rem"}}>Hello, {firstName}!</Text> 
       </Div>
       <Form persons={persons} setPersons={setPersons} />
       <Personnellist setPersons={setPersons} persons={persons}/>
@@ -44,7 +46,8 @@ const Appcontent = () => {
                 newauthor = {newauthor}
                 setnewauthor ={setnewauthor}
                 persons={persons}/>
-      <h2>Parade State</h2>
+      <Div bg="brand100" p="1rem" rounded="xl"> 
+      <Text textSize="heading">Parade State</Text>
       <Greeting />
       <Summary persons={persons}
                newcdo={newcdo}
@@ -54,7 +57,8 @@ const Appcontent = () => {
       <ParadeState setPersons={setPersons}
                   persons={persons}
                   newauthor={newauthor} />
-
+      </Div>
+      <Footer/>
       </Div>
   )
 }
