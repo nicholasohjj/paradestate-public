@@ -41,7 +41,7 @@ $ git clone https://github.com/nicholasohjj/paradestate-public
 $ cd paradestate-public
 
 # Install dependencies
-$ npm install
+$ cd ./frontend npm install
 
 # Run the app
 $ npm start 
