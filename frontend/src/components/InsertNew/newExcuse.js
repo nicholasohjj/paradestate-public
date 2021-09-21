@@ -14,7 +14,7 @@ const NewExcuse = ({newexcuse,setnewExcuse}) => {
     rounded="xl"
     value={newexcuse}
     onChange={handleExcuseChange}
-    placeholder="Medical Excuses"
+    placeholder="Medical Excuses (Optional)"
     p={{ x: "2.5rem" }}
     prefix={
     <Icon
