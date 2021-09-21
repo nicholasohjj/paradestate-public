@@ -48,7 +48,7 @@ const NewCOS = ({persons,setnewcos}) => {
         openSuffix={<Icon name="Up" color="info700" size="16px" />}
         closeSuffix={<Icon name="Down" color="info700" size="16px" />}
         >
-          CDS
+          COS
         </Dropdown>
       );
 }

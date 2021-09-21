@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 
 const theme = {
   colors: {
-    brand100: "#F9F8FC",
+    brand100: "#b7ffbf",
     brand200: "#F3F1FA",
     brand300: "#E9E6F6",
     brand400: "#D2CCEC",
