@@ -6,7 +6,6 @@ import { Client as Styletron } from "styletron-engine-atomic";
 import { ThemeProvider, StyleReset} from "atomize";
 import { BrowserRouter } from "react-router-dom";
 
-
 const theme = {
   colors: {
     brand100: "#b7ffbf",
@@ -45,6 +44,6 @@ ReactDOM.render(
     <App />
     </ThemeProvider>
   </StyletronProvider>
-  </BrowserRouter>, 
+  </BrowserRouter>,
   document.getElementById('root')
 );
