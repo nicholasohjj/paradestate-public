@@ -52,7 +52,7 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 ## Preview
 
-You can [preview](https://paradestate-public.herokuapp.com/) a public version of Parade State for Chrome, Microsoft Edge and Firefox here.
+You can preview a public version of Parade State for Chrome, Microsoft Edge and Firefox [here](https://paradestate-public.herokuapp.com/).
 
 ## Credits
 
