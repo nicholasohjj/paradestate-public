@@ -22,7 +22,7 @@
 
 * LivePreview - Make changes, See changes
   - Instantly see your present strength and attendance as you create and update them.
-* Flavored with Atomise UI
+* Stylized with Atomise UI
 * Authentication with Clerk
 * Full screen mode
   - Update and edit distraction free.
