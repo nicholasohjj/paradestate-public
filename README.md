@@ -3,7 +3,7 @@
   <br>
   <a href="https://paradestate-public.herokuapp.com/"><img src=images/logotransparent1.png alt="Markdownify" width="200"></a>
   <br>
-    Parade State
+    Parader
   <br>
 </h1>
 
