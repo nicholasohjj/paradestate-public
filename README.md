@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://paradestate-public.herokuapp.com/"><img src=images/logotransparent1.png alt="Markdownify" width="200"></a>
+  <a href="https://parader.herokuapp.com/"><img src=images/logotransparent1.png alt="Markdownify" width="200"></a>
   <br>
     Parader
   <br>
