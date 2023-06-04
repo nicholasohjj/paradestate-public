@@ -1,45 +1,68 @@
-import React from 'react'
-import Emojidisplay from '../reusable/emoji'
+import React from 'react';
+import EmojiDisplay from '../reusable/emoji';
 
 const style = {
   padding: 0,
   margin: 0
-}
+};
 
-const Absentees = ({persons}) => {
-  
-  let mc = 0
-  persons.map(person=> (person.status==='mc') ? (mc = mc+1) : mc)
-  let ma = 0
-  persons.map(person=> (person.status==='ma') ? (ma = ma+1) : ma)
-  let off = 0
-  persons.map(person=> (person.status==='off') ? (off = off+1) : off)
-  let oncourse = 0
-  persons.map(person=> (person.status==='oncourse') ? (oncourse = oncourse+1) : oncourse)
-  let leave = 0
-  persons.map(person=> (person.status==='leave') ? (leave = leave+1) : leave)
-  let attached = 0
-  persons.map(person=> (person.status==='attached') ? (attached = attached+1) : attached)
-  let others = 0
-  persons.map(person=> (person.status==='others') ? (others = others+1) : others)
-  let stayout = 0
-  persons.map(person=> (person.status==='stayout') ? (stayout = stayout+1) : stayout)
+const Absentees = ({ persons }) => {
+  let mc = 0;
+  let ma = 0;
+  let off = 0;
+  let oncourse = 0;
+  let leave = 0;
+  let attached = 0;
+  let others = 0;
+  let stayout = 0;
 
-  const totalAbsentee = mc + ma + off + leave + attached + others + stayout + oncourse
-      return (
-      <div>
-        <p style={style}>Absentees: {totalAbsentee}</p>
-          <p style={style}> - <Emojidisplay currentStatus ="mc" /> MC: {mc} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="ma" /> MA: {ma} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="off" /> OFF: {off} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="oncourse" /> ON COURSE: {oncourse} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="leave" /> LEAVE: {leave} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="attached" /> ATTACHED OUT: {attached} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="others" /> OTHERS: {others} </p>
-          <p style={style}>- <Emojidisplay currentStatus ="stayout" /> STAY OUT: {stayout} </p>
-          <br/>
-      </div>
-    )
-  }
+  persons.forEach(person => {
+    switch (person.status) {
+      case 'mc':
+        mc++;
+        break;
+      case 'ma':
+        ma++;
+        break;
+      case 'off':
+        off++;
+        break;
+      case 'oncourse':
+        oncourse++;
+        break;
+      case 'leave':
+        leave++;
+        break;
+      case 'attached':
+        attached++;
+        break;
+      case 'others':
+        others++;
+        break;
+      case 'stayout':
+        stayout++;
+        break;
+      default:
+        break;
+    }
+  });
 
-  export default Absentees
+  const totalAbsentee = mc + ma + off + leave + attached + others + stayout + oncourse;
+
+  return (
+    <div>
+      <p style={style}>Absentees: {totalAbsentee}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="mc" /> MC: {mc}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="ma" /> MA: {ma}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="off" /> OFF: {off}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="oncourse" /> ON COURSE: {oncourse}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="leave" /> LEAVE: {leave}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="attached" /> ATTACHED OUT: {attached}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="others" /> OTHERS: {others}</p>
+      <p style={style}>- <EmojiDisplay currentStatus="stayout" /> STAY OUT: {stayout}</p>
+      <br/>
+    </div>
+  );
+};
+
+export default Absentees;
