@@ -1,30 +1,36 @@
 import React, { useState } from "react";
 import { Icon, Div, Dropdown, Anchor } from "atomize";
 
-const NewCOS = ({ persons, setnewcos }) => {
+const NewRole = ({ persons, setNewRole, roleTitle }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleCOSChange = (event) => {
-    console.log(`COS: ${event.target.getAttribute("value")}`);
-    setnewcos(event.target.getAttribute("value"));
+  const handleRoleChange = (event) => {
+    console.log(`${roleTitle}: ${event.target.getAttribute("value")}`);
+    setNewRole(event.target.getAttribute("value"));
   };
 
   const handleClick = () => {
     setShowModal(!showModal);
   };
 
-  const OprList = persons.filter(
-    (person) => String(person.role).toLowerCase() === "opr"
+  const filteredPersons = persons.filter(
+    (person) => String(person.role).toLowerCase() === roleTitle.toLowerCase()
   );
-  console.log(OprList);
+  console.log(filteredPersons);
+
   const menuList = (
-    <Div p={{ x: "1rem", y: "0.5rem" }} onClick={handleCOSChange}>
-      <Anchor value="LTA TOM SMITH" d="block" p={{ y: "0.25rem" }} onClick={handleClick}>
-        LTA TOM SMITH
-      </Anchor>
-      <Anchor value="2LT EMMA WHITE" d="block" p={{ y: "0.25rem" }} onClick={handleClick}>
-        2LT EMMA WHITE
-      </Anchor>
+    <Div p={{ x: "1rem", y: "0.5rem" }} onClick={handleRoleChange}>
+      {filteredPersons.map((person) => (
+        <Anchor
+          key={person.id}
+          value={person.name}
+          d="block"
+          p={{ y: "0.25rem" }}
+          onClick={handleClick}
+        >
+          {person.name}
+        </Anchor>
+      ))}
     </Div>
   );
 
@@ -44,9 +50,9 @@ const NewCOS = ({ persons, setnewcos }) => {
       openSuffix={<Icon name="Up" color="info700" size="16px" />}
       closeSuffix={<Icon name="Down" color="info700" size="16px" />}
     >
-      COS
+      {roleTitle}
     </Dropdown>
   );
 };
 
-export default NewCOS;
+export default NewRole;
