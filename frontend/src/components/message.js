@@ -1,28 +1,21 @@
-import React from 'react'
+import React from 'react';
 
+const Message = ({ message, backgroundColor = 'lightgrey', textColor = 'green', fontSize = 20, borderRadius = 5, padding = 10, marginBottom = 10 }) => {
+  const messageStyle = {
+    color: textColor,
+    background: backgroundColor,
+    fontSize: fontSize,
+    borderStyle: 'solid',
+    borderRadius: borderRadius,
+    padding: padding,
+    marginBottom: marginBottom,
+  };
 
-
-const Message = ({ message }) => {
-    const messagestyle = {
-        color: 'green',
-        background: 'lightgrey',
-        fontSize: 20,
-        borderStyle: 'solid',
-        borderRadius: 5,
-        padding: 10,
-        marginBottom: 10
-    }
-    
-    if (message === null) {
-    return null
+  if (!message) {
+    return null;
   }
-    return (
-        <div style={messagestyle}>
-        {message}
-        </div>
-        )
-}
 
-export default Message
+  return <div style={messageStyle}>{message}</div>;
+};
 
-//not relevant
+export default Message;
