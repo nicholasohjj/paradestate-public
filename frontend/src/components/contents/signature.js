@@ -1,18 +1,17 @@
 import React from "react";
 
 const style = {
-    padding: 0,
-    margin: 0
-  }
+  padding: 0,
+  margin: 0
+};
 
-const Signature = ({newauthor}) => {
-    return (
-        <div>
-        <p style={style}>Done by:</p>
-        {newauthor.toUpperCase()}
+const Signature = ({ newAuthor }) => {
+  return (
+    <>
+      <p style={style}>Done by:</p>
+      {newAuthor.toUpperCase()}
+    </>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Signature
+export default Signature;
