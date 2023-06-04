@@ -1,42 +1,38 @@
-import React from 'react'
+import React from 'react';
 
 const style = {
   padding: 0,
   margin: 0
-}
+};
 
-const Roles = ({persons}) => {
+const Roles = ({ persons }) => {
+  const filterPersonsByRole = (role) => persons.filter((person) => person.role === role);
 
-  const HQrolelist = persons.filter(person=> (person.role==='hq'))
-  let HQcurrent = 0
-  HQrolelist.map(person=> (person.status==='present') ? (HQcurrent = HQcurrent+1) : HQcurrent)
-  const HQtotal = HQrolelist.length
+  const HQrolelist = filterPersonsByRole('hq');
+  const HQcurrent = HQrolelist.filter((person) => person.status === 'present').length;
+  const HQtotal = HQrolelist.length;
 
-  const Specrolelist = persons.filter(person=> (person.role==='specs'))
-  let Speccurrent = 0
-  Specrolelist.map(person=> (person.status==='present') ? (Speccurrent = Speccurrent+1) : Speccurrent)
-  const Spectotal = Specrolelist.length
+  const Specrolelist = filterPersonsByRole('specs');
+  const Speccurrent = Specrolelist.filter((person) => person.status === 'present').length;
+  const Spectotal = Specrolelist.length;
 
-  const Oprrolelist = persons.filter(person=> (person.role==='opr'))
-  let Oprcurrent = 0
-  Oprrolelist.map(person=> (person.status==='present') ? (Oprcurrent = Oprcurrent+1) : Oprcurrent)
-  const Oprtotal = Oprrolelist.length
+  const Oprrolelist = filterPersonsByRole('opr');
+  const Oprcurrent = Oprrolelist.filter((person) => person.status === 'present').length;
+  const Oprtotal = Oprrolelist.length;
 
-  const Adminrolelist = persons.filter(person=> (person.role==='admin'))
-  let Admincurrent = 0
-  Adminrolelist.map(person=> (person.status==='present') ? (Admincurrent = Admincurrent+1) : Admincurrent)
-  const Admintotal = Adminrolelist.length
+  const Adminrolelist = filterPersonsByRole('admin');
+  const Admincurrent = Adminrolelist.filter((person) => person.status === 'present').length;
+  const Admintotal = Adminrolelist.length;
 
-      return (
-      <div>
-          <p style={style}> -HQ: {HQcurrent}/{HQtotal} </p>
-          <p style={style}> -Specialists: {Speccurrent}/{Spectotal} </p>
-          <p style={style}> -Operators: {Oprcurrent}/{Oprtotal} </p>
-          <p style={style}> -Administrators: {Admincurrent}/{Admintotal} </p>
+  return (
+    <div>
+      <p style={style}>- HQ: {HQcurrent}/{HQtotal}</p>
+      <p style={style}>- Specialists: {Speccurrent}/{Spectotal}</p>
+      <p style={style}>- Operators: {Oprcurrent}/{Oprtotal}</p>
+      <p style={style}>- Administrators: {Admincurrent}/{Admintotal}</p>
+      <br/>
+    </div>
+  );
+};
 
-          <br/>
-      </div>
-    )
-  }
-
-  export default Roles
+export default Roles;
