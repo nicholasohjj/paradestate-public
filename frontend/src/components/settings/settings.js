@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button, Icon, Div, Input } from "atomize";
-import NewCDO from "./newcdo";
-import NewCDS from "./newcds";
-import NewCOS from "./newcos";
+import NewRole from "./newrole";
 
 const Settings = ({
   setnewcdo,
@@ -66,9 +64,9 @@ const Settings = ({
               }
             />
           </Div>
-          <NewCDO persons={persons} setnewcdo={setnewcdo} />
-          <NewCDS persons={persons} setnewcds={setnewcds} />
-          <NewCOS persons={persons} setnewcos={setnewcos} />
+          <NewRole persons={persons} setNewRole={setnewcdo} roleTitle="CDO" />
+          <NewRole persons={persons} setNewRole={setnewcds} roleTitle="CDS" />
+          <NewRole persons={persons} setNewRole={setnewcos} roleTitle="COS" />
         </>
       )}
     </>
