@@ -1,49 +1,46 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
-import { Client as Styletron } from "styletron-engine-atomic";
-import { ThemeProvider, StyleReset} from "atomize";
-import { BrowserRouter } from "react-router-dom";
+import { Provider as StyletronProvider } from 'styletron-react';
+import { Client as Styletron } from 'styletron-engine-atomic';
+import { ThemeProvider } from 'atomize';
+import { BrowserRouter } from 'react-router-dom';
 
 const theme = {
   colors: {
-    brand100: "#b7ffbf",
-    brand200: "#F3F1FA",
-    brand300: "#E9E6F6",
-    brand400: "#D2CCEC",
-    brand500: "#BCB3E2",
-    brand600: "#9C8FD6",
-    brand700: "#6F5CC3",
-    brand800: "#553EB5",
-    brand900: "#382683",
-  },grid: {
+    brand100: '#b7ffbf',
+    brand200: '#F3F1FA',
+    brand300: '#E9E6F6',
+    brand400: '#D2CCEC',
+    brand500: '#BCB3E2',
+    brand600: '#9C8FD6',
+    brand700: '#6F5CC3',
+    brand800: '#553EB5',
+    brand900: '#382683',
+  },
+  grid: {
     containerWidth: {
-        xs: "540px",
-        sm: "720px",
-        md: "960px",
-        lg: "1156px",
-        xl: "1156px"
-    }, gutterWidth: "12px",
-  }, 
+      xs: '540px',
+      sm: '720px',
+      md: '960px',
+      lg: '1156px',
+      xl: '1156px',
+    },
+    gutterWidth: '12px',
+  },
 };
-
-const debug =
-  process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
 
 // 1. Create a client engine instance
 const engine = new Styletron();
 
 // 2. Provide the engine to the app
-// debug engine needs inlined source maps
 ReactDOM.render(
   <BrowserRouter>
-  <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-    <ThemeProvider theme={theme}>
-    <StyleReset />
-    <App />
-    </ThemeProvider>
-  </StyletronProvider>
+    <StyletronProvider value={engine}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </StyletronProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );
