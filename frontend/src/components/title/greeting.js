@@ -1,30 +1,32 @@
 import React from "react";
-import Newdate from '../reusable/newdate'
-
-let Today = new Date();
-let hours = Today.getHours()
-let minutes = Today.getMinutes()
-
-if(hours<10) hours=`0${hours}`
-if(minutes<10) minutes=`0${minutes}`
-const CurrentTime = `${hours}${minutes}`
-
-let greeting = ''
-if (CurrentTime<1200 && CurrentTime>= '0000') {
-    greeting = 'morning'
-} else if (CurrentTime>1600) {
-    greeting = 'evening'
-} else {
-    greeting = 'afternoon'
-}
+import NewDate from "../reusable/newdate";
 
 const Greeting = () => {
-    return (
-        <>
-        <p>Good {greeting} to All, this is the strength for our team as of {CurrentTime} on {Newdate}.</p>
-        </>
+  const today = new Date();
+  const hours = today.getHours();
+  const minutes = today.getMinutes();
 
-    )
-}
+  const formattedHours = hours < 10 ? `0${hours}` : hours;
+  const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const currentTime = `${formattedHours}:${formattedMinutes}`;
 
-export default Greeting
+  let greeting = "";
+  if (hours < 12 && hours >= 0) {
+    greeting = "morning";
+  } else if (hours >= 16) {
+    greeting = "evening";
+  } else {
+    greeting = "afternoon";
+  }
+
+  return (
+    <>
+      <p>
+        Good {greeting} to all, this is the strength for our team as of{" "}
+        {currentTime} on <NewDate />.
+      </p>
+    </>
+  );
+};
+
+export default Greeting;
